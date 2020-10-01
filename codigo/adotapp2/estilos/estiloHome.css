@@ -1,0 +1,10 @@
+.custom-control-input {
+    border-radius: 10px;
+}
+
+.documentoPrevio{ color: orange; }
+.documentoApos { color: rgb(147, 218, 42); }
+
+.fonteBonita{
+    font-family: Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;1,300;1,800&display=swap');
+.faq_question {
+    margin: 0px;
+    padding: 0px 0px 5px 0px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: lighter;
+    text-align: center;
+
+    font-family: 'Nunito Sans', sans-serif;
+     font-size: 1.6em; 
+     color: #e040fb ; 
+     text-align: justify;
+}
+
+.faq{
+    text-align: center;
+}
+.faq_answer{
+    font-size: 1.5rem;
+}
+
+.faq_answer_container {
+    display: none;
+    text-align: center;  
+}
+
+.titulo-FAQ{
+    text-align: center !important;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    color: #838383 !important;
+    font-family: 'Nunito Sans';
+    font-weight: lighter;
+    font-size: 3rem;
+}
+
+.pergunta {
+    color: orange;
+}
+.resposta {
+    color: rgb(147, 218, 42);
+}

@@ -1,0 +1,29 @@
+body{
+    opacity: 0;
+    transition: opacity .7s;
+}
+
+@media screen and (min-width: 431px){
+    .cardPaginaInicial{
+        background-size: 800px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .mainInicio{
+        padding-top: 14vh !important;
+    }
+}
+
+@media screen and (max-width: 430px)
+{
+    .cardPaginaInicial{
+        background-size: 700px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .mainInicio{
+        padding: 9vh 0vh !important;
+    }
+}
