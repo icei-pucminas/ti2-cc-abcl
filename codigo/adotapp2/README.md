@@ -1,5 +1,5 @@
-# adotapp
-aplicação adotapp - TIAW
+# adotapp2
+aplicação adotapp - TI2
 
 LER ESSE "README" NO MODO DE EDIÇÃO PARA VISUALIZAR MELHOR
 
