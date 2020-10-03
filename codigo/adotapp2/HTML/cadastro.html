@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar conta - Adotapp</title>
-    <link rel="icon" href="Imagens/logoSemFundo.png">
+    <link rel="icon" href="../Imagens/logoSemFundo.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
     <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="manifest" href="manifest.json">
-    <script src="scripts/script.js"></script>
-    <script src="db.js"></script>
+    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="manifest" href="../manifest.json">
+    <script src="../scripts/script.js"></script>
+    <script src="../db.js"></script>
 </head>
+
 <body class="container">
 
-    <div class="container" >
+    <div class="container">
         <div class="row">
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
 
-                <p style="text-align: center;"><a href="index.html"><img src="Imagens/logoBrancoSemFundo.png" width="200px" height="180px" alt="Adotapp"></a></p>
-                
+                <p style="text-align: center;">
+                    <a href="index.html"><img src="../Imagens/logoBrancoSemFundo.png" width="200px" height="180px" alt="Adotapp"></a>
+                </p>
+
                 <div class="card card-signin my-5">
                     <div class="card-body">
                         <h5 class="card-title text-center">Criar conta</h5>
@@ -36,12 +40,12 @@
                                 <input type="text" id="inputSobrenome" class="form-control" placeholder="Sobrenome" required autofocus>
                                 <label for="inputSobrenome">Sobrenome</label>
                             </div>
-                                
+
                             <div class="form-label-group">
                                 <input type="text" id="inputEmailCadastro" class="form-control" placeholder="Endereço de email" required autofocus>
                                 <label for="inputEmailCadastro">Endereço de email</label>
                             </div>
-                
+
                             <div class="form-label-group">
                                 <input type="password" id="inputSenhaCadastro" class="form-control" placeholder="Senha" required>
                                 <label for="inputSenhaCadastro">Senha</label>
@@ -53,19 +57,19 @@
                             </div>
 
                             <button class="btn btn-lg btn-green accent-5 btn-block text-uppercase" type="submit">Criar conta</button>
-                            
+
                             <hr class="my-4">
                         </form>
-                        
+
                         <p style="text-align: center;"><small>Já tem uma conta?</small></p>
                         <a href="login.html"><button class="btn btn-lg purple-gradient accent-5 btn-block text-uppercase" type="submit" style="border-radius: 5rem;">Entrar</button></a>
-                        
+
                         </form>
-                        
+
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 
@@ -80,7 +84,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    Para fazer cadastro, insira: 
+                    Para fazer cadastro, insira:
                     <ul>
                         <li>seu nome</li>
                         <li>seu sobrenome</li>
@@ -88,9 +92,7 @@
                         <li>sua senha</li>
                         <li>a confirmação de sua senha</li>
                     </ul>
-                    nos campos a seguir e clique em <strong class="green textoBotao">CRIAR CONTA</strong>. <br><br>
-                    
-                    Caso ainda você <strong>já possua uma conta</strong> no <em>Adotapp</em>, clique no botão <strong class="purple-gradient textoBotao">ENTRAR</strong>.
+                    nos campos a seguir e clique em <strong class="green textoBotao">CRIAR CONTA</strong>. <br><br> Caso ainda você <strong>já possua uma conta</strong> no <em>Adotapp</em>, clique no botão <strong class="purple-gradient textoBotao">ENTRAR</strong>.
                 </div>
                 <div class="modal-footer" style="justify-content: center;">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" style="border-radius: 30px;">Entendi!</button>
@@ -109,4 +111,5 @@
         });
     </script>
 </body>
+
 </html>
