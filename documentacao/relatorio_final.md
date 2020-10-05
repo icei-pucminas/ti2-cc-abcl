@@ -1,11 +1,13 @@
-# TITULO DO PROJETO
+# Morosidade no processo adotivo
 
 
-**Nome completo do Aluno 1, email do aluno 1**
+**Anna Pugga Campos Rodrigues, email do aluno 1**
 
-**Nome completo do Aluno 2, email do aluno 2**
+**Bárbara Luiza Freitas Carmo, email do aluno 2**
 
-**Nome completo do Aluno 3, email do aluno 3**
+**Carlos Henrique Cury, email do aluno 3**
+
+**Luiza Ribeiro Parente Silva , email do aluno 4**
 
 ---
 
@@ -15,8 +17,8 @@ _Instituto de Informática e Ciências Exatas – Pontifícia Universidade de Mi
 
 ---
 
-_**Resumo**. Escrever aqui o resumo. O resumo deve contextualizar rapidamente o trabalho, descrever seu objetivo e, ao final, 
-mostrar algum resultado relevante do trabalho (até 10 linhas)._
+_**Resumo**
+Considerando os trantornos causados pela morosidade atual nos processos de adoção no Brasil, foi de interesse da equipe continuar o desenvolvimento de uma plataforma para controle das etapas, documentações e experiências presentes no decorrer de um processo adotivo. Visa-se facilitar o controle passo a passo do mesmo através de um suporte informativo e interativo sobre quais são os documentos e ações necessários em cada etapa, possibilitando maior controle e organização, além de propor a interação entre adotantes atuais e aqueles que já vivenciaram esta experiência._
 
 ---
 
