@@ -1,11 +1,13 @@
-# TITULO DO PROJETO
+# Morosidade no processo adotivo
 
 
-**Nome completo do Aluno 1, email do aluno 1**
+**Anna Pugga Campos Rodrigues, email do aluno 1**
 
-**Nome completo do Aluno 2, email do aluno 2**
+**Bárbara Luiza Freitas Carmo, email do aluno 2**
 
-**Nome completo do Aluno 3, email do aluno 3**
+**Carlos Henrique Cury Ferreira Lima, email do aluno 3**
+
+**Luiza Ribeiro Parente Silva , email do aluno 4**
 
 ---
 
@@ -15,8 +17,8 @@ _Instituto de Informática e Ciências Exatas – Pontifícia Universidade de Mi
 
 ---
 
-_**Resumo**. Escrever aqui o resumo. O resumo deve contextualizar rapidamente o trabalho, descrever seu objetivo e, ao final, 
-mostrar algum resultado relevante do trabalho (até 10 linhas)._
+_**Resumo**_ 
+_Considerando os trantornos causados pela morosidade atual nos processos de adoção no Brasil, foi de interesse da equipe continuar o desenvolvimento de uma plataforma para controle das etapas, documentações e experiências presentes no decorrer de um processo adotivo. Visa-se facilitar o controle passo a passo do mesmo através de um suporte informativo e interativo sobre quais são os documentos e ações necessários em cada etapa, possibilitando maior controle e organização, além de propor a interação entre adotantes atuais e aqueles que já vivenciaram esta experiência._
 
 ---
 
@@ -24,7 +26,14 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 
 **1. Introdução**
 
-A introdução deve apresentar de dois ou quatro parágrafos de contextualização do trabalho. 
+A introdução deve apresentar de dois ou quatro parágrafos de contextualização do trabalho.
+
+No país em que vivemos, o acesso a informações confiáveis é muitas vezes dificultado. Este pode ser um problema em contextos extremamente diversos, inclusive no processo de adoção, tendo em vista que muitos dos interessados em adotar não têm suporte suficiente para se orientarem de forma clara.
+
+De acordo com entrevistas realizadas por essa equipe, saber quais são os documentos necessário para formalizar uma adoção no Brasil, onde obtê-los e suas funções no processo é algo complicado. Infelizmente, mesmo depois de tantos anos, as adoções no país continuam sendo demasiadamente burocráticas e demoradas, o que interfere diretamente no sucesso das mesmas. Considerando que a equipe não pode modificar diretamente os processos jurídicos que permeiam a formalização das adoções, foi necessário adotar uma nova perspectiva acerca do problema.  
+
+Desta forma, passou-se a propor um ambiente digital que facilite o acesso às informações necessárias, como, por exemplo, quais são os documentos e onde conseguí-los, juntamente com a possibilidade de um intercâmbio de experiências por meio de um fórum para que quem ainda esteja passando pelo processo consiga tirar dúvidas com quem já o finalizou.
+
 
 Na **contextualização**, o aluno deve dizer do que se trata o trabalho, em que área ou contexto se insere. 
 A **contextualização** deve ser desenvolvida de algo mais genérico para algo mais específico. 
@@ -35,8 +44,16 @@ O **problema** pode ser algo vivido em uma empresa específica.
 
 
     1.1 Contextualização
+Considerando que o Brasil tem atualmente 4,9 mil crianças e adolescentes no sistema de  adoção, de acordo com pesquisa realizada pela Agência Brasil, mas que cada processo iniciado pode demorar anos para ser efetivado, propôs-se a busca por soluções que possam facilitá-los por meio dos conhecimentos da equipe acerca da área de desenvolvimento de software.
+
     1.2 Problema
+Conforme explicitado, no país em que vivemos, a burocracia e a ineficácia do sistema pelo qual é implementado o processo de adoção acaba forçando esses casais a esperar muito mais tempo do que seria necessário até que consigam algum avanço no procedimento.
+
+Devido à má implementação, ao excessivo tempo de espera, à legislação precária e a muitos outros fatores, os cônjuges que têm a intenção de adotar sofrem com a morosidade do sistema proposto pelo governo brasileiro.
+
     1.3 Objetivo geral
+Frente ao problema salientado, procurou-se utilizar os recursos tecnológicos a disposição  para criar um ambiente online que ajude os futuros pais e mães a orientarem-se durante essa jornada burocrática. Ademais, empenhar-se-á na tarefa de oferecer recursos além dos oferecidos pelo programa governamental, permitindo aos usuários o usufruto de artifícios que permitam maior liberdade aos que buscam sucesso na adoção, inserindo-os diretamente no processo, e, permitindo maior transparência no procedimento.
+
 
 O aluno deve escrever um pequeno parágrafo ou frase com o **objetivo geral** do trabalho. 
 O objetivo deve ser bem direto, específico e definido com verbos de ação (elaborar, propor, ava-liar, comparar etc.).
