@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#56ae44">
     <title>Entrar - Adotapp</title>
     <link rel="icon" href="../Imagens/logoSemFundo.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
@@ -17,34 +19,46 @@
     <script src="../scripts/script.js"></script>
     <script src="../db.js"></script>
 </head>
-<body class="container">
 
-    <div class="container">
+<body>
+
+    <div class= "container">
         <div class="row">
-            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class=" col-lg-12 esconder" style="margin-top: 100px; align-content: center;"> </div>
+            <div class="col-lg-6">
+                <div class="card1 pb-5 esconder">
+                    <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img
+                            src="/Imagens/familia_vetor.png" class="image"> </div>
+                </div>
+            </div>
+            <!--col-sm-9 col-md-7 col-lg-5 mx-auto-->
+            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                <p style="text-align: center;"><a href="index.html"><img src="../Imagens/logoBrancoSemFundo.png"
+                            max-width="100%" height="180px" alt="Adotapp"></a></p>
 
-                <p style="text-align: center;"><a href="index.html"><img src="../Imagens/logoBrancoSemFundo.png" width="200px" height="180px" alt="Adotapp"></a></p>
-                
                 <div class="card card-signin my-5">
                     <div class="card-body">
                         <h5 class="card-title text-center">Entrar</h5>
                         <form class="form-signin" onsubmit="checaUsuario()" id="formLogin" action="">
                             <div class="form-label-group">
-                                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                                <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+                                    required autofocus>
                                 <label for="inputEmail">Endereço de email</label>
                             </div>
-                
+
                             <div class="form-label-group">
-                                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                <input type="password" id="inputPassword" class="form-control" placeholder="Password"
+                                    required>
                                 <label for="inputPassword">Senha</label>
                             </div>
 
-                            <button class="btn btn-lg btn-block text-uppercase btn-green accent-2" type="submit">Entrar</button>
+                            <button class="btn btn-lg btn-block text-uppercase btn-green accent-2"
+                                type="submit" style="background-color: #023e8a; color: white;">Entrar</button>
                             <hr class="my-4">
                         </form>
-                        
-                        <p style="text-align: center;"><small>Ainda não tem uma conta?</small></p>
-                        <a href="cadastro.html"><button class="btn btn-lg purple-gradient btn-block text-uppercase" type="submit" style="border-radius: 5rem;">Cadastrar</button></a>
+
+                        <p style="text-align: center;">Ainda não tem uma conta?</p>
+                        <p class = "text-center"><a href="cadastro.html">Inscreva-se</a></p>
                     </div>
                 </div>
             </div>
@@ -52,28 +66,31 @@
     </div>
 
 
-    <div class="modal fade left" id="modalAjudaLogin" tabindex="-1" role="dialog" aria-labelledby="modalAjudaLogin" aria-hidden="true">
+    <div class="modal fade left" id="modalAjudaLogin" tabindex="-1" role="dialog" aria-labelledby="modalAjudaLogin"
+        aria-hidden="true">
         <div class="modal-dialog modal-side modal-top-left" role="document">
 
             <div class="modal-content" style="border-radius: 30px;">
                 <div class="modal-header">
                     <h4 class="modal-title w-100" id="myModalLabel" style="text-align: center;">Login</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    Para fazer login, insira: 
+                    Para fazer login, insira:
                     <ul>
                         <li>seu endereço de email</li>
                         <li>sua senha</li>
                     </ul>
                     nos campos a seguir e clique em <strong class="green textoBotao">ENTRAR</strong>. <br><br>
-                    
-                    Caso ainda não possua uma conta no <em>Adotapp</em>, clique no botão <strong class="purple-gradient textoBotao">CADASTRAR</strong>.
+
+                    Caso ainda não possua uma conta no <em>Adotapp</em>, clique no botão <strong
+                        class="purple-gradient textoBotao">CADASTRAR</strong>.
                 </div>
                 <div class="modal-footer" style="justify-content: center;">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="border-radius: 30px;">Entendi!</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                        style="border-radius: 30px;">Entendi!</button>
                 </div>
             </div>
         </div>
@@ -84,10 +101,10 @@
     <script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
     <script>
-        $('document').ready(function() {
+        $('document').ready(function () {
             $('#modalAjudaLogin').modal('show');
         });
     </script>
 </body>
-</html>
 
+</html>

@@ -5,13 +5,28 @@
 
 body {
     background: #007bff;
-    background: linear-gradient(to right, #e040fb, #ec407a);
+    background: linear-gradient(to right, #007bff, #48cae4);
     opacity: 0;
     transition: opacity .7s;
 }
-
+.image {
+    display: grid;
+    margin-top: 5rem;
+    max-width: 120%;
+}
 .rounded {
     border-radius: 30px !important;
+}
+
+a {
+    color: #0077B6;
+    text-decoration: none;
+    background-color: transparent;
+  }
+
+a:hover {
+    color: #03045E;
+    text-decoration: double;
 }
 
 .textoBotao{
@@ -120,7 +135,19 @@ body {
     color: white;
     background-color: #3b5998;
 }
+.esconder{
+    display: flex;
+}
 
+@media (max-width: 1024px) {
+    .image{
+        display: none;
+    }
+
+    .esconder{
+        display: none;
+    }
+}
 /* Fallback for Edge
 -------------------------------------------------- */
 
@@ -145,4 +172,5 @@ body {
     color: #777;
     }
 }
+
 

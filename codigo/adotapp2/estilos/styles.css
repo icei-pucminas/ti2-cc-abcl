@@ -165,13 +165,13 @@ sup {
 }
 
 a {
-  color: #e040fb;
+  color: #0077B6;
   text-decoration: none;
   background-color: transparent;
 }
 a:hover {
-  color: #d6370c;
-  text-decoration: underline;
+  color: #03045E;
+  text-decoration: double;
 }
 
 a:not([href]) {
@@ -565,6 +565,11 @@ pre code {
   }
 }
 @media (min-width: 992px) {
+  .image {
+    width: 300px;
+    height: 220px
+}
+
   .container {
     max-width: 960px;
   }
@@ -2222,7 +2227,6 @@ textarea.form-control {
   border-color: #28a745;
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
-
 .was-validated textarea.form-control:valid, textarea.form-control.is-valid {
   padding-right: calc(1.5em + 0.75rem);
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
@@ -6071,9 +6075,11 @@ a.close.disabled {
 .align-text-top {
   vertical-align: text-top !important;
 }
-
+.bg-white{
+  background-image: linear-gradient(to bottom,rgb(0, 80, 157), rgb(255, 255, 255));
+}
 .bg-primary {
-  background-color: #e040fb !important;
+  background-color: rgba(0, 119, 182,0.7) !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -7585,6 +7591,10 @@ button.bg-dark:focus {
 
 .m-5 {
   margin: 3rem !important;
+}
+
+.mt-8{
+  margin-top: 10rem;
 }
 
 .mt-5,
@@ -9754,7 +9764,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #e040fb !important;
+  color: #FF5964 !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -9977,14 +9987,22 @@ hr.light {
 }
 
 .btn-xl {
-  padding: 1.25rem 2.25rem;
+  padding: 1rem 10rem;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
   border: none;
-  border-radius: 10rem;
+  border-radius: rem;
 }
 
+.div_fundo{
+  
+  background-image: url(../Imagens/foto2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
 .page-section {
   padding: 8rem 0;
 }
@@ -10054,14 +10072,14 @@ hr.light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(224, 64, 251, 0.1) 0%, rgba(224, 64, 251, 0.2) 100%), url(../Imagens/stock-pais-filhos.jpg);
+  background-image: linear-gradient(to bottom, rgba(27, 27, 27, 0.1) 0%, rgba(22, 22, 22, 0.2) 100%), url(../Imagens/stock-pais-filhos.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
 }
 header.masthead h1 {
-  font-size: 2.25rem;
+  font-size: 3rem;
 }
 @media (min-width: 992px) {
   header.masthead {
@@ -10071,7 +10089,8 @@ header.masthead h1 {
     padding-bottom: 0;
   }
   header.masthead p {
-    font-size: 1.15rem;
+    opacity: 88%;
+    font-size: 1.2rem;
   }
   header.masthead h1 {
     font-size: 3rem;
@@ -10079,8 +10098,13 @@ header.masthead h1 {
 }
 @media (min-width: 1200px) {
   header.masthead h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
+  header.masthead p {
+    opacity: 90%;
+    font-size: 1.5rem;
+  }
+
 }
 
 #portfolio .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl {
@@ -10121,4 +10145,6 @@ header.masthead h1 {
 
 .text-white-75 {
   color: rgba(255, 255, 255, 0.75);
+  font-family: "Segoe UI", Roboto;
+
 }
