@@ -53,7 +53,6 @@ public class ProcessosService{
 		DAOProcessos dao = new DAOProcessos();
         DAOUsuarios daoU = new DAOUsuarios();
         dao.conectar();
-        daoU.conectar();
         int user_id = Integer.parseInt(request.queryParams("codigo"));
         
         Usuario user = daoU.getUsuario(user_id);
