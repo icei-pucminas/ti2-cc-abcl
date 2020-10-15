@@ -1,0 +1,12 @@
+.icones{
+  display: inline; 
+}
+
+@media (max-width: 1024px){
+  .icones{
+    display: none;
+  }
+  .titulo{
+    margin-top: 0px;
+  }
+}

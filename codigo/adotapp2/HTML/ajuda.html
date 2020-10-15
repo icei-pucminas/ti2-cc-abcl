@@ -9,11 +9,13 @@
 
 
   <title>Adotapp - Painel inicial</title>
-  <link rel="icon" href="../Imagens/logoSemFundo.png">
+  <link rel="icon" href="../Imagens/logos/1.png">
 
   <!-- Custom fonts for this template-->
   <link href="../recursos/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
@@ -21,7 +23,7 @@
 
   <!-- Custom styles for this template-->
   <link href="../estilos/sb-admin-2.min.css" rel="stylesheet">
-  
+
   <script src="../db.js"></script>
   <script>
     window.onpageshow = () => {
@@ -38,34 +40,32 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-0000 sidebar sidebar-dark accordion" style=" background-color: #e040fb;" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-0000 sidebar sidebar-dark accordion" style=" background-color: rgba(0, 119, 182);"
+      id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <div class="sidebar-brand d-flex align-items-center justify-content-center">
         <div class="sidebar-brand-icon">
-          <i><img src="../Imagens/logoBrancoSemFundo.png" width="40px" height="45px" alt="Logo Adotapp"></i>
+          <i><img src="../Imagens/logos/3.png" style="width: 9rem; margin-top: 4rem;" alt="Logo Adotapp"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Adotapp</div>
       </div>
 
       <!-- Divider -->
-      <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item">
+      <li style="margin-top: 3rem;" class="nav-item">
         <a class="nav-link" href="home.html">
           <i class="fas fa-fw fa-home"></i>
-          <span>Painel inicial</span></a>
+          <span>Home</span></a>
       </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider">
 
-      <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="documentacao.html">
+        <a class="nav-link collapsed" href="perfilUsuario.html">
           <i class="fas fa-file-alt"></i>
-          <span>Documentação</span>
+          <span>Perfil</span>
         </a>
       </li>
 
@@ -84,13 +84,12 @@
           <span>Ajuda</span>
         </a>
       </li>
-
       <li class="nav-item">
         <a class="nav-link collapsed" href="chat.html">
-            <i class="fas fa-comments"></i>
-            <span>Chat Social</span>
+          <i class="fas fa-comments"></i>
+          <span>Chat Social</span>
         </a>
-    </li>
+      </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
@@ -105,7 +104,8 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#modalConfirmDelete" aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link" data-toggle="modal" data-target="#modalConfirmDelete" aria-expanded="true"
+          aria-controls="collapsePages">
           <i class="fas fa-fw fa-sign-out-alt"></i>
           <span>Sair</span>
         </a>
@@ -135,33 +135,36 @@
             <i class="fa fa-bars"></i>
           </button>
 
-        
+
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-              <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
+            <!-- Dropdown - Messages -->
+            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+              aria-labelledby="searchDropdown">
+              <form class="form-inline mr-auto w-100 navbar-search">
+                <div class="input-group">
+                  <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                    aria-label="Search" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                      <i class="fas fa-search fa-sm"></i>
+                    </button>
                   </div>
-                </form>
-              </div>
+                </div>
+              </form>
+            </div>
             </li>
 
             <!-- 
                 Informações do usuário - quando clicar: vai para a página do perfil
             -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="nomeUsuario"></span>
               </a>
-              
+
             </li>
 
           </ul>
@@ -173,110 +176,120 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Ajuda</h1>
-          </div>
-
           <div class="row">
-            <div class="col-lg-12 mb-4">
+            <div class="col-lg-4 col-sm-12">
+              <h1 class="h3 mb-0 text-gray-800">Ajuda</h1>
+              <h4 class="mt-0 font-weight-bold text-000" style="color: rgba(0, 119, 182);">Precisa de ajuda? Entre em
+                contato conosco!</h4>
+              <img src="/Imagens/undraw_Questions_re_1fy7.svg" style="width: 80%;">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <p class="h3 mb-0 text-gray-800" style="font-size: 18px; margin-top: 20px; margin-bottom: 20px;">Complete o formulário abaixo e deixe que responderemos o mais rápido possível.</p>
               <div class="card shadow mb-4">
 
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-000" style="color: #e040fb;">Precisa de ajuda? Entre em contato conosco!</h6>
-                </div>
                 <div class="card-body">
                   <div class="row">
-              
+
                     <!--Grid column-->
                     <div class="col-md-9 mb-md-0 mb-5">
-                      <form id="contact-form" name="contact-form" action="https://formspree.io/mpzyjeww" method="POST" >
-          
-                        <!--Grid row-->
-                        <div class="row">
-        
-                            <!--Grid column-->
-                            <div class="col-md-6">
-                                <div class="md-form mb-0">
-                                    <input type="text" id="name" name="name" class="form-control">
-                                    <label for="name" class="">Seu nome</label>
-                                </div>
-                            </div>
-                            <!--Grid column-->
+                      <form id="contact-form" name="contact-form" action="https://formspree.io/mpzyjeww" method="POST">
 
-                            <!--Grid column-->
-                            <div class="col-md-6">
-                                <div class="md-form mb-0">
-                                    <input type="text" id="email" name="email" class="form-control">
-                                    <label for="email" class="">Seu endereço de email</label>
-                                </div>
-                            </div>
-                            <!--Grid column-->
-        
-                        </div>
-                        <!--Grid row-->
-        
-                        <!--Grid row-->
-                          <div class="row">
-                              <div class="col-md-12">
-                                  <div class="md-form mb-0">
-                                      <input type="text" id="subject" name="subject" class="form-control">
-                                      <label for="subject" class="">Assunto</label>
-                                  </div>
-                              </div>
-                          </div>
-                        <!--Grid row-->
-        
                         <!--Grid row-->
                         <div class="row">
-        
-                            <!--Grid column-->
-                            <div class="col-md-12">
-        
-                                <div class="md-form">
-                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                                    <label for="message">Sua mensagem</label>
-                                </div>
-        
+
+                          <!--Grid column-->
+                          <div class="col-md-6">
+                            <div class="md-form mb-0">
+                              <input type="text" id="name" name="name" class="form-control">
+                              <label for="name" class="">Seu nome</label>
                             </div>
+                          </div>
+                          <!--Grid column-->
+
+                          <!--Grid column-->
+                          <div class="col-md-6">
+                            <div class="md-form mb-0">
+                              <input type="text" id="email" name="email" class="form-control">
+                              <label for="email" class="">Seu endereço de email</label>
+                            </div>
+                          </div>
+                          <!--Grid column-->
+
                         </div>
                         <!--Grid row-->
-          
+
+                        <!--Grid row-->
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="md-form mb-0">
+                              <input type="text" id="subject" name="subject" class="form-control">
+                              <label for="subject" class="">Assunto</label>
+                            </div>
+                          </div>
+                        </div>
+                        <!--Grid row-->
+
+                        <!--Grid row-->
+                        <div class="row">
+
+                          <!--Grid column-->
+                          <div class="col-md-12">
+
+                            <div class="md-form">
+                              <textarea type="text" id="message" name="message" rows="2"
+                                class="form-control md-textarea"></textarea>
+                              <label for="message">Sua mensagem</label>
+                            </div>
+
+                          </div>
+                        </div>
+                        <!--Grid row-->
+
                       </form>
-            
+
                       <div class="text-center text-md-left">
-                        <button class="btn btn-pink btn-icon rounded-circle" onclick="validateForm()" id="sendMail" type="submit" style="color: white; background-color: #e040fb; padding: 15px 20px;">
+                        <button class="btn btn-pink btn-icon rounded-circle" onclick="validateForm()" id="sendMail"
+                          type="submit" style="color: white; background-color: rgba(0, 119, 182); padding: 15px 20px;">
                           <i class="fas fa-paper-plane"></i>
                         </button>
                       </div>
                       <div class="status" id="status"></div>
                     </div>
-                        <!--Grid column-->
+                    <!--Grid column-->
 
-                       
-                
+
+
                     <!--Grid column-->
                     <div class="col-md-3 text-center">
-                        <ul class="list-unstyled mb-0">
-                            <li><i class="fab fa-whatsapp mt-4 fa-2x"></i>
-                                <p>(31) 9 9999-0000</p>
-                            </li>
-            
-                            <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                                <p>contato.adotapp@gmail.com</p>
-                            </li>
-                        </ul>
+                      <ul class="list-unstyled mb-0">
+                        <li><i class="fab fa-whatsapp mt-4 fa-2x"></i>
+                          <p>(31) 9 9999-0000</p>
+                        </li>
+
+                        <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                          <p>A.DotaABCL@gmail.com</p>
+                        </li>
+                      </ul>
                     </div>
                     <!--Grid column-->
-              
+
                   </div>
                 </div>
               </div>
+              
+            </div>
+
+            
+          </div>
+          <div class="row">
+            <div class="col-lg-12 mb-4">
+              
             </div>
           </div>
 
         </div>
 
-        
+
         <!-- /.container-fluid -->
 
       </div>
@@ -286,7 +299,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Adotapp 2020</span>
+            <span>Copyright &copy; A.DOTA 2020</span>
           </div>
         </div>
       </footer>
@@ -305,17 +318,19 @@
 
 
   <!--Modal: modalConfirmDelete-->
-  <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="modalSair" aria-hidden="true">
+
+  <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="modalSair"
+    aria-hidden="true">
     <div class="modal-dialog modal-sm modal-notify modal-000" role="document">
       <!--Content-->
       <div class="modal-content text-center" style="border-radius: 15px;">
         <!--Header-->
-        <div class="modal-header d-flex justify-content-center" style="background-color: #e040fb;">
-          <p class="heading">Quer sair de sua conta?</p>
+        <div class="modal-header d-flex justify-content-center" style="background-color: rgba(0, 119, 182);">
+          <p class="heading" style="color: white; font-size: 1.5rem;">Quer sair de sua conta?</p>
         </div>
 
         <!--Body-->
-        <div class="modal-body" style="color: #e040fb;">
+        <div class="modal-body" style="color: rgba(0, 119, 182);">
 
           <i class="fas fa-times fa-4x animated rotateIn"></i>
 
@@ -323,8 +338,10 @@
 
         <!--Footer-->
         <div class="modal-footer flex-center">
-          <a href="index.html" class="btn btn-outline-000" style="color: #e040fb;">Sair</a>
-          <a type="button" class="btn  btn-000 waves-effect" data-dismiss="modal" style="background-color: #e040fb;">Cancelar</a>
+          <a href="index.html" class="btn btn-outline-000"
+            style="color: rgba(0, 119, 182); font-weight: bolder;">Sair</a>
+          <a type="button" class="btn  btn-000 waves-effect" data-dismiss="modal"
+            style="background-color: rgba(0, 119, 182); color: white;">Cancelar</a>
         </div>
       </div>
       <!--/.Content-->
@@ -359,42 +376,42 @@
   <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <script>
-    window.addEventListener("DOMContentLoaded", function() {
-  
+    window.addEventListener("DOMContentLoaded", function () {
+
       // get the form elements defined in your form HTML above
-      
+
       var form = document.getElementById("contact-form");
       var button = document.getElementById("sendMail");
       var status = document.getElementById("status");
-  
+
       // Success and Error functions for after the form is submitted
-      
+
       function success() {
         form.reset();
         button.style = "display: none ";
         status.innerHTML = "Thanks!";
       }
-  
+
       function error() {
         status.innerHTML = "Oops! There was a problem.";
       }
-  
+
       // handle the form submission event
-  
-      form.addEventListener("submit", function(ev) {
+
+      form.addEventListener("submit", function (ev) {
         ev.preventDefault();
         var data = new FormData(form);
         ajax(form.method, form.action, data, success, error);
       });
     });
-    
+
     // helper function for sending an AJAX request
-  
+
     function ajax(method, url, data, success, error) {
       var xhr = new XMLHttpRequest();
       xhr.open(method, url);
       xhr.setRequestHeader("Accept", "application/json");
-      xhr.onreadystatechange = function() {
+      xhr.onreadystatechange = function () {
         if (xhr.readyState !== XMLHttpRequest.DONE) return;
         if (xhr.status === 200) {
           success(xhr.response, xhr.responseType);

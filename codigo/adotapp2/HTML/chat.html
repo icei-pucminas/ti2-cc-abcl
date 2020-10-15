@@ -9,7 +9,7 @@
 
 
     <title>Adotapp - Painel inicial</title>
-    <link rel="icon" href="../Imagens/logoSemFundo.png">
+    <link rel="icon" href="../Imagens/logos/1.png">
 
     <!-- Custom fonts for this template-->
     <link href="../recursos/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -29,7 +29,7 @@
     <script src="../scripts/db_cadastro.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
-    <script src="../estilos/chat.css"></script>
+    <link rel="stylesheet" href="../estilos/chat.css">
     <script src="../scripts/chat.js"></script>
 
 
@@ -41,35 +41,32 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-0000 sidebar sidebar-dark accordion" style=" background-color: #e040fb;"
-            id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-0000 sidebar sidebar-dark accordion"
+            style=" background-color: rgba(0, 119, 182);" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <div class="sidebar-brand d-flex align-items-center justify-content-center">
                 <div class="sidebar-brand-icon">
-                    <i><img src="../Imagens/logoBrancoSemFundo.png" width="40px" height="45px" alt="Logo Adotapp"></i>
+                    <i><img src="../Imagens/logos/3.png" style="width: 9rem; margin-top: 4rem;" alt="Logo Adotapp"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Adotapp</div>
             </div>
 
             <!-- Divider -->
-            <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
+            <li style="margin-top: 3rem;" class="nav-item">
                 <a class="nav-link" href="home.html">
                     <i class="fas fa-fw fa-home"></i>
-                    <span>Painel inicial</span></a>
+                    <span>Home</span></a>
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="documentacao.html">
+                <a class="nav-link collapsed" href="perfilUsuario.html">
                     <i class="fas fa-file-alt"></i>
-                    <span>Documentação</span>
+                    <span>Perfil</span>
                 </a>
             </li>
 
@@ -88,7 +85,6 @@
                     <span>Ajuda</span>
                 </a>
             </li>
-
             <li class="nav-item active">
                 <a class="nav-link collapsed" href="chat.html">
                     <i class="fas fa-comments"></i>
@@ -122,7 +118,7 @@
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
+            
         </ul>
         <!-- End of Sidebar -->
 
@@ -165,14 +161,12 @@
                         <!-- 
                 Informações do usuário - quando clicar: vai para a página do perfil
             -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="nomeUsuario"></span>
-                                <!-- Nome do usuario -->
-                            </a>
-
-                        </li>
+            <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="/HTML/perfilUsuario.html" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="nomeUsuario"></span><i class="fas fa-user"></i>
+                </a>
+                
+              </li>
 
                     </ul>
 
@@ -197,25 +191,20 @@
                                 <div class="col-lg-12 mb-4">
 
                                     <!-- Illustrations -->
-                                    <div class="card shadow mb-4">
-                                        <div class="card-body">
-                                            <p
-                                                style="font-family: Optima; font-size: 1.3em; color: #838383; text-align: justify;">
-                                                Neste local, você poderá entrar em contato com os diversos usuários que
-                                                usufrem de nosso aplicativo, compartilhando histórias e dúvidas. Um
-                                                ótimo
-                                                local de entreterimento e aprendizado!
-                                            </p>
-                                            <p
-                                                style="font-family: Optima; font-size: 1.3em; color: #838383; text-align: justify;">
-                                                Nós do Adotapp estaremos presentes aqui também, qualquer urgência basta
-                                                nos contatar por <strong style=" color: #e040fb;">@Adotapp</strong> via
-                                                chat, que assim que possível
-                                                responderemos você!
-                                            </p>
-
-                                        </div>
-                                    </div>
+                                    <p
+                                        style="font-family: Optima; font-size: 1.3em; color: #838383; text-align: justify;">
+                                        Neste local, você poderá entrar em contato com os diversos usuários que
+                                        usufrem de nosso aplicativo, compartilhando histórias e dúvidas. Um
+                                        ótimo
+                                        local de entreterimento e aprendizado!
+                                    </p>
+                                    <p
+                                        style="font-family: Optima; font-size: 1.3em; color: #838383; text-align: justify;">
+                                        Nós do Adotapp estaremos presentes aqui também, qualquer urgência basta
+                                        nos contatar por <strong style=" color: rgba(0, 119, 182);">@Adotapp</strong> via
+                                        chat, que assim que possível
+                                        responderemos você!
+                                    </p>
 
                                 </div>
 
@@ -224,76 +213,138 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center" style="height: 600px;">
-                        <script id="cid0020000254451620625" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 80%; height: 100%;">
-                            {
-                                "handle": "adotapp-",
-                                "arch": "js",
-                                "styles": {
-                                    "a": "cc33cc",
-                                    "b": 100,
-                                    "c": "000000",
-                                    "d": "000000",
-                                    "k": "cc33cc",
-                                    "l": "cc33cc",
-                                    "m": "cc33cc",
-                                    "p": "10",
-                                    "q": "cc33cc",
-                                    "r": 100,
-                                    "fwtickm": 1
+                        <script id="cid0020000254451620625" data-cfasync="false" async
+                            src="//st.chatango.com/js/gz/emb.js" style="width: 80%; height: 100%;">
+                                {
+                                    "handle": "adotapp-",
+                                        "arch": "js",
+                                            "styles": {
+                                        "a": "cc33cc",
+                                            "b": 100,
+                                                "c": "000000",
+                                                    "d": "000000",
+                                                        "k": "cc33cc",
+                                                            "l": "cc33cc",
+                                                                "m": "cc33cc",
+                                                                    "p": "10",
+                                                                        "q": "cc33cc",
+                                                                            "r": 100,
+                                                                                "fwtickm": 1
+                                    }
                                 }
-                            }
-                        </script>
+                            </script>
                     </div>
 
                     <br> <br>
 
+                    <h1>Perguntas frequentes</h1>
+
                     <div class="row">
-                        <div class="col-12">
-                            <h1 class="titulo-FAQ">PERGUNTAS MAIS FREQUENTES</h1>
-                        </div>
-                    </div>
-
-                    <div class="faq_container d-flex justify-content-center">
-                        <div class="col-6 ">
-                            <div class="card shadow mb-4">
-                                <div class="card-body ">
-                                    <div class="faq">
-                                        <div class="faq_question pergunta" style="color: orange;">Carregando Perguntas</div>
-                                        <div class="faq_answer_container" style="display: block;">
-                                            <div class="faq_answer resposta">Carregando Respostas</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="faq">
-                                        <div class="faq_question pergunta" style="color: orange;">Carregando Perguntas</div>
-                                        <div class="faq_answer_container">
-                                            <div class="faq_answer resposta">Carregando Respostas</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="faq">
-                                        <div class="faq_question pergunta" style="color: orange;">Carregando Perguntas</div>
-                                        <div class="faq_answer_container">
-                                            <div class="faq_answer resposta">Carregando Respostas</div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
 
                 </div>
                 <!-- /.container-fluid -->
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">
+                        <img src="/Imagens/FAQ_Cards/user_group (1).svg"  style="max-width: 100%; vertical-align: middle;">
+                    </div>
+                    <div class="col-6">
+                        <div class="card-body" style="background-color: white; max-width: 100%;">
+                            <!-- Title -->
+                            <h4 class="faq_question pergunta">Quem pode adotar?</h4>
+                            <!-- Text -->
+                            <p class="faq_answer resposta" style="text-align: end;">Carregando...</p>
+                            <!-- Button -->
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-12 ">
+                                <div class="card-body" style="background-color: white; max-width: 100%; margin-top: 20px;">
+                                    <!-- Title -->
+                                    <h4 class="faq_question pergunta">Quem pode adotar?</h4>
+                                    <!-- Text -->
+                                    <p class="faq_answer resposta" style="text-align: end;">Carregando...</p>
+                                    <!-- Button -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
 
+
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-6">
+                        <div class="card-body" style="background-color: white; max-width: 100%; margin-top: 20px;">
+                            <!-- Title -->
+                            <h4 class="faq_question pergunta">Quem pode adotar?</h4>
+                            <!-- Text -->
+                            <p class="faq_answer resposta" style="text-align: end;">Carregando...</p>
+                            <!-- Button -->
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-12 ">
+                                <div class="card-body" style="background-color: white; max-width: 100%; margin-top: 20px;">
+                                    <!-- Title -->
+                                    <h4 class="faq_question pergunta">Quem pode adotar?</h4>
+                                    <!-- Text -->
+                                    <p class="faq_answer resposta" style="text-align: end;">Carregando...</p>
+                                    <!-- Button -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="/Imagens/FAQ_Cards/undraw_Savings_re_eq4w.svg"  style="max-width: 100%;">
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">
+                        <img src="/Imagens/FAQ_Cards/undraw_toy_car_7umw.svg"  style="max-width: 100%; margin-top: 20px;">
+                    </div>
+                    <div class="col-6">
+                        <div class="card-body" style="background-color: white; max-width: 100%;  margin-top: 20px;">
+                            <!-- Title -->
+                            <h4 class="faq_question pergunta">Quem pode adotar?</h4>
+                            <!-- Text -->
+                            <p class="faq_answer resposta" style="text-align: end;">Carregando...</p>
+                            <!-- Button -->
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-12 ">
+                                <div class="card-body" style="background-color: white; max-width: 100%; margin-top: 20px;">
+                                    <!-- Title -->
+                                    <h4 class="faq_question pergunta">Quem pode adotar?</h4>
+                                    <!-- Text -->
+                                    <p class="faq_answer resposta" style="text-align: end;">Carregando...</p>
+                                    <!-- Button -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+
+                
             </div>
+
+
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <footer class="sticky-footer bg-white" style="position: relative; margin-top: 20px;">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Adotapp 2020</span>
+                        <span>Copyright &copy; A.dota 2020</span>
                     </div>
                 </div>
             </footer>
@@ -318,12 +369,12 @@
             <!--Content-->
             <div class="modal-content text-center" style="border-radius: 15px;">
                 <!--Header-->
-                <div class="modal-header d-flex justify-content-center" style="background-color: #e040fb;">
-                    <p class="heading">Quer sair de sua conta?</p>
+                <div class="modal-header d-flex justify-content-center" style="background-color: rgba(0, 119, 182);;">
+                    <p class="heading" style="color: white; font-size: 1.5rem;">Quer sair de sua conta?</p>
                 </div>
 
                 <!--Body-->
-                <div class="modal-body" style="color: #e040fb;">
+                <div class="modal-body" style="color: rgba(0, 119, 182);">
 
                     <i class="fas fa-times fa-4x animated rotateIn"></i>
 
@@ -331,9 +382,10 @@
 
                 <!--Footer-->
                 <div class="modal-footer flex-center">
-                    <a href="index.html" class="btn btn-outline-000" style="color: #e040fb;">Sair</a>
+                    <a href="index.html" class="btn btn-outline-000"
+                        style="color: rgba(0, 119, 182); font-weight: bolder;">Sair</a>
                     <a type="button" class="btn  btn-000 waves-effect" data-dismiss="modal"
-                        style="background-color: #e040fb;">Cancelar</a>
+                        style="background-color: rgba(0, 119, 182); color: white;">Cancelar</a>
                 </div>
             </div>
             <!--/.Content-->
@@ -366,9 +418,9 @@
     <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
 
-            $('.faq_question').click(function() {
+            $('.faq_question').click(function () {
 
                 if ($(this).parent().is('.open')) {
                     $(this).closest('.faq').find('.faq_answer_container').slideUp();

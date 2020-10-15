@@ -9,11 +9,13 @@
 
 
   <title>Adotapp - Painel inicial</title>
-  <link rel="icon" href="../Imagens/logoSemFundo.png">
+  <link rel="icon" href="../Imagens/logos/1.png">
 
   <!-- Custom fonts for this template-->
-  <link href="recursos/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="../recursos/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
@@ -21,10 +23,11 @@
 
   <!-- Custom styles for this template-->
   <link href="../estilos/sb-admin-2.min.css" rel="stylesheet">
-  
-    <script src="../db.js"></script>
-    <script src="../scripts/db_cadastro.js"></script>
-  
+  <link href="../estilos/home.css" rel="stylesheet">
+
+  <script src="../db.js"></script>
+  <script src="../scripts/db_cadastro.js"></script>
+
   <script>
     window.onload = () => {
       mostraUsuario();
@@ -40,40 +43,38 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-0000 sidebar sidebar-dark accordion" style=" background-color: rgba(0, 119, 182);" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-0000 sidebar sidebar-dark accordion" style=" background-color: rgba(0, 119, 182);"
+      id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <div class="sidebar-brand d-flex align-items-center justify-content-center">
         <div class="sidebar-brand-icon">
-          <i><img src="../Imagens/logoBrancoSemFundo.png" width="40px" height="45px" alt="Logo Adotapp"></i>
+          <i><img src="../Imagens/logos/3.png" style="width: 9rem; margin-top: 4rem;" alt="Logo Adotapp"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Adotapp</div>
       </div>
 
       <!-- Divider -->
-      <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+      <li style="margin-top: 3rem;" class="nav-item active">
         <a class="nav-link" href="home.html">
           <i class="fas fa-fw fa-home"></i>
-          <span>Painel inicial</span></a>
+          <span>Home</span></a>
       </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider">
 
-      <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="documentacao.html" >
+        <a class="nav-link collapsed" href="perfilUsuario.html">
           <i class="fas fa-file-alt"></i>
-          <span>Documentação</span>
+          <span>Perfil</span>
         </a>
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="passo-a-passo.html" >
+        <a class="nav-link collapsed" href="passo-a-passo.html">
           <i class="fas fa-fw fa-list"></i>
           <span>Passo a passo</span>
         </a>
@@ -81,21 +82,21 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="ajuda.html" >
+        <a class="nav-link collapsed" href="ajuda.html">
           <i class="fas fa-fw fa-lightbulb"></i>
           <span>Ajuda</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="chat.html">
-            <i class="fas fa-comments"></i>
-            <span>Chat Social</span>
+          <i class="fas fa-comments"></i>
+          <span>Chat Social</span>
         </a>
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="sobre.html" >
+        <a class="nav-link collapsed" href="sobre.html">
           <i class="fas fa-fw fa-info-circle"></i>
           <span>Sobre</span>
         </a>
@@ -106,7 +107,8 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#modalConfirmDelete" aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link" data-toggle="modal" data-target="#modalConfirmDelete" aria-expanded="true"
+          aria-controls="collapsePages">
           <i class="fas fa-fw fa-sign-out-alt"></i>
           <span>Sair</span>
         </a>
@@ -136,33 +138,37 @@
             <i class="fa fa-bars"></i>
           </button>
 
-        
+
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-              <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
+            <!-- Dropdown - Messages -->
+            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+              aria-labelledby="searchDropdown">
+              <form class="form-inline mr-auto w-100 navbar-search">
+                <div class="input-group">
+                  <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                    aria-label="Search" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                      <i class="fas fa-search fa-sm"></i>
+                    </button>
                   </div>
-                </form>
-              </div>
+                </div>
+              </form>
+            </div>
             </li>
 
             <!-- 
                 Informações do usuário - quando clicar: vai para a página do perfil
             -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="nomeUsuario"></span> <!-- Nome do usuario -->
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="nomeUsuario"></span>
+                <!-- Nome do usuario -->
               </a>
-              
+
             </li>
 
           </ul>
@@ -172,166 +178,77 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Painel inicial</h1>
-          </div>
-
-          <!-- Content Row -->
-
-          <div class="row">
-
-            <!-- Pie Chart -->
-            <div class="col-xl-4 col-lg-5">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-000" style="color: #e040fb;">Processo
-                    <a href="#" data-toggle="tooltip" title="Representação das partes do processo em relação ao todo"><i class="fas fa-info-circle grey-text"></i></a>
-                  </h6>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="chart-pie pt-4 pb-2">
-                    <canvas id="myPieChart"></canvas>
-                  </div>
-                  <div class="mt-4 text-center small">
-                    <span class="mr-2">
-                      <i class="fas fa-circle" style="color: #36b9cc;"></i> Preparação
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle" style="color: #1cc88a;"></i> Aprovação
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle" style="color: #e040fb;"></i> Petição
-                    </span>
-                  </div>
+          <div class="row d-flex align-items-center">
+            <div class="col-lg-6 col-sm-12">
+              <img src="../Imagens/undraw_newspaper_k72w.svg"
+                style="max-width: 100%; align-self: center; position: relative;">
+              <div class="row">
+                <div class="col-12">
+                  <h1 class="h3 mb-0 text-gray-800 titulo" style="margin-top: 6rem;">Atualidades</h1>
+                  <p class="icones" style="text-align:left; justify-content: left;">Nessa secção você encontrá notícias,
+                    vídeos intressantes e novidades sobre o sistema de adoção do Brasil.</p>
                 </div>
               </div>
             </div>
 
-            <div class="col-xl-8 col-lg-7 mb-4">
-              <!-- Project Card Example -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-000" style="color: #e040fb;">Detalhes
-                    <a href="#" data-toggle="tooltip" title='Aqui você pode ver o seu progresso no procedimento de adoção. Caso você tenha completado alguma fase, clique em "Já realizou?" para confirmar sua conclusão.'>
-                      <i class="fas fa-info-circle grey-text"></i>
-                    </a>
-                  </h6>
-                </div>
-                <div class="card-body py-4">
-                  <h4 class="small font-weight-bold">Aulas de capacitação parental<span class="float-right" id="progressoDetalhe4"><button type="button" class="btn btn-outline-danger waves-effect" data-toggle="modal" data-target="#modalAulasCapacitacao" style="border-radius: 30px;">Já realizou?</button></span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" id="progresso4" role="progressbar" style="width: 1%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Entrevista preliminar<span class="float-right" id="progressoDetalhe3"><button type="button" class="btn btn-outline-warning waves-effect" data-toggle="modal" data-target="#modalEntrevista" style="border-radius: 30px;">Já realizou?</button></span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-warning" id="progresso3" role="progressbar" style="width: 1%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Petição de inscrição para adoção<span class="float-right" id="progressoDetalhe2"><button type="button" class="btn btn-outline-info waves-effect" data-toggle="modal" data-target="#modalPeticao" style="border-radius: 30px;">Já realizou?</button></span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-info" id="progresso2" role="progressbar" style="width: 1%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Documentação ajuntada<span class="float-right" id="progressoDetalhe1"><button type="button" class="btn btn-outline-primary waves-effect" data-toggle="modal" data-target="#modalDocumentacao" style="border-radius: 30px;">Já realizou?</button></span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar" id="progresso1" role="progressbar" style="width: 1%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Configuração da conta<span class="float-right">Completo!</span></h4>
-                  <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
+            <div class="col-2" >
+              <img src="/Imagens/tela-do-monitor.svg" style="max-width: 100%;">
+              <div class="row">
+                <div class="col-12 d-flex justify-content-center" style="margin-top: 10px;">
+                    <button style="width: 200px; border-style:solid; border-color: rgba(0, 119, 182); border-radius: 5rem; "><a style = "font-weight: bolder;" href="/HTML/home_Paginas/videos.html">Vídeos</a></button>
                 </div>
               </div>
             </div>
 
+            <div class="col-2" >
+              <img src="/Imagens/undraw_post2_19cj (1).svg" style="max-width: 100%;">
+              <div class="row">
+                <div class="col-12 d-flex justify-content-center" style="margin-top: 10px;">
+                    <button style="width: 200px; border-style:solid; border-color: rgba(0, 119, 182); border-radius: 5rem; "><a style = "font-weight: bolder;" href="/HTML/home_Paginas/noticias.html">Notícias</a></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-2">
+              <img src="/Imagens/marteloJustica.png" style="max-width: 100%;">
+              <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    <button style="width: 200px; border-style:solid; border-color: rgba(0, 119, 182); border-radius: 5rem; "><a style = "font-weight: bolder;" href="/HTML/home_Paginas/leis.html">Leis</a></button>
+                </div>
+              </div>
+            </div>
           </div>
-
-
         </div>
-        <!-- /.container-fluid -->
-
       </div>
-      <!-- End of Main Content -->
+      <!-- /.container-fluid -->
 
-      <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Adotapp 2020</span>
+            <span>Copyright &copy; A.dota 2020</span>
           </div>
         </div>
       </footer>
-      <!-- End of Footer -->
-
-    </div>
-    <!-- End of Content Wrapper -->
-
-  </div>
-  <!-- End of Page Wrapper -->
-
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-
-
-  <!--Modal: instruções-->
-  <div class="modal fade left" id="tutStep1" tabindex="-1" role="dialog" aria-labelledby="tutStep1"
-    aria-hidden="true" data-backdrop="true">
-    <div class="modal-dialog modal-side modal-top-left modal-notify" role="document">
-      <!--Content-->
-      <div class="modal-content">
-        <!--Header-->
-        <div class="modal-header purple-gradient">
-          <p class="heading">Esse é o seu painel inicial, <br>
-            <strong>feito especialmente para você.</strong>
-          </p>
-
-        </div>
-
-        <!--Body-->
-        <div class="modal-body">
-
-          <div class="row">
-            <div class="col-3">
-              <p></p>
-              <p class="text-center">
-                <i class="fas fa-child fa-4x pink-text"></i>
-              </p>
-            </div>
-
-            <div class="col-9">
-              <p>Aqui você terá acesso a diversas funcionalidades para te ajudar com o processo de adoção.</p>
-            </div>
-          </div>
-        </div>
-
-        <!--Footer-->
-        <div class="modal-footer flex-center">
-          <a data-dismiss="modal" class="btn purple-gradient"> OK <i class="fas fa-check ml-1 light-green-text"></i> </a>
-        </div>
-      </div>
-      <!--/.Content-->
     </div>
   </div>
-  <!--Modal: instruções-->
+  
+  <!-- End of Content Wrapper -->
 
+  </div>
 
   <!--Modal: modalConfirmDelete-->
-  <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="modalSair" aria-hidden="true">
+  <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="modalSair"
+    aria-hidden="true">
     <div class="modal-dialog modal-sm modal-notify modal-000" role="document">
       <!--Content-->
       <div class="modal-content text-center" style="border-radius: 15px;">
         <!--Header-->
-        <div class="modal-header d-flex justify-content-center" style="background-color: #e040fb;">
-          <p class="heading">Quer sair de sua conta?</p>
+        <div class="modal-header d-flex justify-content-center" style="background-color: rgba(0, 119, 182);;">
+          <p class="heading" style="color: white; font-size: 1.5rem;">Quer sair de sua conta?</p>
         </div>
 
         <!--Body-->
-        <div class="modal-body" style="color: #e040fb;">
+        <div class="modal-body" style="color: rgba(0, 119, 182);">
 
           <i class="fas fa-times fa-4x animated rotateIn"></i>
 
@@ -339,171 +256,30 @@
 
         <!--Footer-->
         <div class="modal-footer flex-center">
-          <a href="index.html" class="btn btn-outline-000" style="color: #e040fb;">Sair</a>
-          <a type="button" class="btn  btn-000 waves-effect" data-dismiss="modal" style="background-color: #e040fb;">Cancelar</a>
+          <a href="index.html" class="btn btn-outline-000"
+            style="color: rgba(0, 119, 182); font-weight: bolder;">Sair</a>
+          <a type="button" class="btn  btn-000 waves-effect" data-dismiss="modal"
+            style="background-color: rgba(0, 119, 182); color: white;">Cancelar</a>
         </div>
       </div>
       <!--/.Content-->
     </div>
   </div>
-  <!--Modal: modalConfirmDelete-->
-
-
-
-  <!-- Modal Aulas de Capacitação -->
-  <div class="modal fade right" id="modalAulasCapacitacao" tabindex="-1" role="dialog" aria-labelledby="modalAulasCapacitacao" aria-hidden="true">
-    <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
-    <div class="modal-dialog modal-full-height modal-right" role="document">
-
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">Você confirma que já realizou as <strong>Aulas de Capacitação Parental</strong>?</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Você já completou o curso de capacitação - em que são explicados os aspectos jurídicos da adoção, a gestação do filho adotivo, a espera e os medos que envolvem o processo?
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Ainda não</button>
-          <button type="button" class="btn btn-outline-default" data-dismiss="modal" onclick="realizado(4)" style="width: 100px;">Já!</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Full Height Modal Right -->
-
-  <!-- Modal Entrevista -->
-  <div class="modal fade right" id="modalEntrevista" tabindex="-1" role="dialog" aria-labelledby="modalEntrevista" aria-hidden="true">
-    <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
-    <div class="modal-dialog modal-full-height modal-right" role="document">
-
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">Você confirma que já realizou a <strong>Entrevista Preliminar</strong>?</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-        Você já participou <strong>e</strong> foi aprovado na entrevista preliminar - dividida em avaliações sociais e emocionais, ministradas por assistentes sociais e psicólogos?
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Ainda não</button>
-          <button type="button" class="btn btn-outline-default" data-dismiss="modal" onclick="realizado(3)" style="width: 100px;">Já!</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Full Height Modal Right -->
-
-  <!-- Modal Petição -->
-  <div class="modal fade right" id="modalPeticao" tabindex="-1" role="dialog" aria-labelledby="modalPeticao" aria-hidden="true">
-    <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
-    <div class="modal-dialog modal-full-height modal-right" role="document">
-
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">Você confirma que já realizou a sua <strong>Petição</strong>?</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-        Você já realizou uma petição de inscrição para adoção (no cartório da Vara de Infância)?
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Ainda não</button>
-          <button type="button" class="btn btn-outline-default" data-dismiss="modal" onclick="realizado(2)" style="width: 100px;">Já!</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Full Height Modal Right -->
-
-  <!-- Modal Documentação -->
-  <div class="modal fade right" id="modalDocumentacao" tabindex="-1" role="dialog" aria-labelledby="modalDocumentacao" aria-hidden="true">
-    <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
-    <div class="modal-dialog modal-full-height modal-right" role="document">
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">Você confirma que obteve toda a <strong>Documentação Necesária</strong>?</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Você já tem todos os seguintes documentos guardados?
-          <ul>
-            <li>Cópias autenticadas: da Certidão de nascimento ou casamento, ou declaração relativa ao período de união estável</li>
-            <li>Cópias da Cédula de identidade e da Inscrição no Cadastro de Pessoas Físicas (CPF)</li>
-            <li>Comprovante de renda e de residência</li>
-            <li>Atestados de sanidade física e mental</li>
-            <li>Certidão negativa de distribuição cível</li>
-            <li>Certidão de antecedentes criminal</li>
-          </ul>
-
-          <br><br>
-
-          Você pode saber mais sobre isso <a href="documentacao.html">aqui</a>.
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Ainda não</button>
-          <button type="button" class="btn btn-outline-default" data-dismiss="modal" onclick="realizado(1)" style="width: 100px;">Já!</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Full Height Modal Right -->
-
 
 
   <!-- Bootstrap core JavaScript-->
   <script src="../recursos/jquery/jquery.min.js"></script>
-  <script src="recursos/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../recursos/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
   <script src="../recursos/jquery-easing/jquery.easing.js"></script>
-  <script src="recursos/jquery-easing/jquery.easing.compatibility.js"></script>
+  <script src="../recursos/jquery-easing/jquery.easing.compatibility.js"></script>
 
   <!-- Custom scripts for all pages-->
   <script src="../scripts/sb-admin-2.js"></script>
 
-  <!-- Page level plugins -->
-  <script src="../recursos/chart.js/Chart.js"></script>
-  <script src="../recursos/chart.js/Chart.bundle.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="../scripts/demo/chart-area-demo.js"></script>
-  <script src="../scripts/demo/chart-pie-demo.js"></script>
-  <script src="../scripts/demo/chart-bar-demo.js"></script>
-
   <script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
   <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
-
-  <script>
-    $('document').ready(function() {
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-      });
-
-      let jaViuModal = JSON.parse(sessionStorage.getItem("jaViuModal"))
-      console.log("Modal:", jaViuModal);
-      
-      if(!jaViuModal){
-        $('#tutStep1').modal('show');
-        $("#tutStep1").on('hide.bs.modal', function(){
-          jaViuModal = true
-          sessionStorage.setItem("jaViuModal", JSON.stringify(jaViuModal))
-        });
-      }
-    });
-  </script>
 
 </body>
 

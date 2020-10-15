@@ -9,11 +9,13 @@
 
 
   <title>Adotapp - Painel inicial</title>
-  <link rel="icon" href="../Imagens/logoSemFundo.png">
+  <link rel="icon" href="../Imagens/logos/1.png">
 
   <!-- Custom fonts for this template-->
   <link href="../recursos/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
@@ -21,11 +23,11 @@
 
   <!-- Custom styles for this template-->
   <link href="../estilos/sb-admin-2.min.css" rel="stylesheet">
-  
+
   <script src="../recursos/jquery/jquery.min.js"></script>
-  
+
   <script src="../db.js"></script>
-  
+
   <script>
     window.onload = () => {
       mostraUsuario();
@@ -41,35 +43,29 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-0000 sidebar sidebar-dark accordion" style=" background-color: #e040fb;" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-0000 sidebar sidebar-dark accordion" style=" background-color:rgba(0, 119, 182);"
+      id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <div class="sidebar-brand d-flex align-items-center justify-content-center">
         <div class="sidebar-brand-icon">
-          <i><img src="../Imagens/logoBrancoSemFundo.png" width="40px" height="45px" alt="Logo Adotapp"></i>
+          <div class="sidebar-brand d-flex align-items-center justify-content-center">
+            <div class="sidebar-brand-icon">
+              <i><img src="../Imagens/logos/3.png" style="width: 9rem; margin-top: 4rem;" alt="Logo Adotapp"></i>
+            </div>
+          </div>
         </div>
-        <div class="sidebar-brand-text mx-3">Adotapp</div>
       </div>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider my-0">
 
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fas fa-fw fa-home"></i>
-          <span>Cadastro do processo</span>
-        </a>
-      </li>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#modalConfirmDelete" aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link" style="margin-top: 4rem;" data-toggle="modal" data-target="#modalConfirmDelete"
+          aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-sign-out-alt"></i>
-          <span>Sair</span>
+          <span style="margin-top: 2rem;">Sair</span>
         </a>
       </li>
       <!-- Divider -->
@@ -97,76 +93,75 @@
             <i class="fa fa-bars"></i>
           </button>
 
-        
+
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-              <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
+            <!-- Dropdown - Messages -->
+            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+              aria-labelledby="searchDropdown">
+              <form class="form-inline mr-auto w-100 navbar-search">
+                <div class="input-group">
+                  <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                    aria-label="Search" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                      <i class="fas fa-search fa-sm"></i>
+                    </button>
                   </div>
-                </form>
-              </div>
+                </div>
+              </form>
+            </div>
             </li>
-          
+
             <!--
                 Informações do usuário - quando clicar: vai para a página do perfil
             -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="nomeUsuario"></span>
               </a>
-              
+
             </li>
 
           </ul>
 
         </nav>
         <!-- End of Topbar -->
-        <div class="container" >
+        <div class="container">
           <div class="row">
-            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">    
-              <div class="card card-signin my-5">
-
-                <div class="card-body" id="display">
-                  <h5 id="pergunta" class="card-title text-center">Clique o botão abaixo para iniciar o questionário</h5>
-                    <div class="respostas">
-                      <div class="row" style="justify-content: space-evenly;">
-                        <div class="custom-control custom-radio">
-                            <input class="custom-control-input" id="sim" type="radio" placeholder="Sim" name="Resposta">
-                            <label class="custom-control-label" for="sim">Sim</label>
-                        </div>
-
-                        <div class="custom-control custom-radio">
-                            <input class="custom-control-input" id="nao" type="radio" placeholder="Não" name="Resposta">
-                            <label class="custom-control-label" for="nao">Não</label>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <hr class="my-4">
-                    <button id="proximo" class="btn btn-lg btn-purple accent-5 btn-block text-uppercase" style="border-radius: 5rem;">Próximo <i class="fas fa-arrow-right"> </i></button>
-                    
-                  </div>
+            <div class="col-3"></div>
+            <div class="col-6">
+              <img src="/Imagens/undraw_fill_forms_yltj.svg" style="max-width: 100%;">
+              <div class="row">
+                <div class="col-12">
+                  <p style="font-size: larger; font-weight: bolder; text-align: center;">Falta pouco para você desfrutar
+                    de A.dota, basta completar o formulário abaixo....</p>
                 </div>
-
+              </div>
             </div>
-              
+            <div class="col-3"></div>
           </div>
+
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+              <form>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+            <div class="col-2"></div>
+          </div>
+
         </div>
-        
+
 
       </div>
-      <!-- End of Main Content -->
-
-      <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
@@ -174,32 +169,26 @@
           </div>
         </div>
       </footer>
-      <!-- End of Footer -->
-
     </div>
-    <!-- End of Content Wrapper -->
-
   </div>
-  <!-- End of Page Wrapper -->
-
-  <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
 
 
   <!--Modal: modalConfirmDelete-->
-  <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="modalSair" aria-hidden="true">
+  <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="modalSair"
+    aria-hidden="true">
     <div class="modal-dialog modal-sm modal-notify modal-000" role="document">
       <!--Content-->
       <div class="modal-content text-center" style="border-radius: 15px;">
         <!--Header-->
-        <div class="modal-header d-flex justify-content-center" style="background-color: #e040fb;">
-          <p class="heading">Quer sair de sua conta?</p>
+        <div class="modal-header d-flex justify-content-center" style="background-color: rgba(0, 119, 182);;">
+          <p class="heading" style="color: white; font-size: 1.5rem;">Quer sair de sua conta?</p>
         </div>
 
         <!--Body-->
-        <div class="modal-body" style="color: #e040fb;">
+        <div class="modal-body" style="color: rgba(0, 119, 182);">
 
           <i class="fas fa-times fa-4x animated rotateIn"></i>
 
@@ -207,8 +196,10 @@
 
         <!--Footer-->
         <div class="modal-footer flex-center">
-          <a href="index.html" class="btn btn-outline-000" style="color: #e040fb;">Sair</a>
-          <a type="button" class="btn  btn-000 waves-effect" data-dismiss="modal" style="background-color: #e040fb;">Cancelar</a>
+          <a href="index.html" class="btn btn-outline-000"
+            style="color: rgba(0, 119, 182); font-weight: bolder;">Sair</a>
+          <a type="button" class="btn  btn-000 waves-effect" data-dismiss="modal"
+            style="background-color: rgba(0, 119, 182); color: white;">Cancelar</a>
         </div>
       </div>
       <!--/.Content-->

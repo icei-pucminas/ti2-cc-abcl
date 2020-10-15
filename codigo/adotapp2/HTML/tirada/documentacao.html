@@ -12,7 +12,7 @@
   <link rel="icon" href="../Imagens/logoSemFundo.png">
 
   <!-- Custom fonts for this template-->
-  <link href="recursos/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../recursos/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
@@ -41,7 +41,11 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-0000 sidebar sidebar-dark accordion" style=" background-color: #e040fb;" id="accordionSidebar">
+     <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-0000 sidebar sidebar-dark accordion" style=" background-color: rgba(0, 119, 182);" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <div class="sidebar-brand d-flex align-items-center justify-content-center">
@@ -55,18 +59,25 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="home.html">
           <i class="fas fa-fw fa-home"></i>
-          <span>Painel inicial</span></a>
+          <span>Home</span></a>
       </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider">
 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="perfilUsuario.html" >
+          <i class="fas fa-file-alt"></i>
+          <span>Perfil</span>
+        </a>
+      </li>
+
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item active">
-        <a class="nav-link collapsed" href="documentacao.html">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="documentacao.html" >
           <i class="fas fa-file-alt"></i>
           <span>Documentação</span>
         </a>
@@ -74,7 +85,7 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="passo-a-passo.html">
+        <a class="nav-link collapsed" href="passo-a-passo.html" >
           <i class="fas fa-fw fa-list"></i>
           <span>Passo a passo</span>
         </a>
@@ -87,13 +98,12 @@
           <span>Ajuda</span>
         </a>
       </li>
-
       <li class="nav-item">
         <a class="nav-link collapsed" href="chat.html">
             <i class="fas fa-comments"></i>
             <span>Chat Social</span>
         </a>
-    </li>
+      </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
