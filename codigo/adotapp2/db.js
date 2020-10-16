@@ -20,7 +20,7 @@ function adicionaUsuario() { // tela de cadastro -> checa se o usuario já exist
         localStorage.setItem("indexDoUsuario", JSON.stringify(usuarios.length - 1));
         localStorage.setItem("emailLogado", JSON.stringify(usuario.email));
 
-        document.getElementById('formCadastro').action = "processo.html";
+        //document.getElementById('formCadastro').action = "processo.html";
         
         
         
@@ -52,7 +52,7 @@ function adicionaUsuario() { // tela de cadastro -> checa se o usuario já exist
             localStorage.setItem("indexDoUsuario", JSON.stringify(usuarios.length - 1));
             localStorage.setItem("emailLogado", JSON.stringify(usuario.email));
 
-            document.getElementById('formCadastro').action = "processo.html";
+            //document.getElementById('formCadastro').action = "processo.html";
         }
     }
 

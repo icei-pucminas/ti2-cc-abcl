@@ -22,6 +22,7 @@
   <!-- Custom styles for this template-->
   <link href="../estilos/sb-admin-2.min.css" rel="stylesheet">
   
+  
     <script src="../db.js"></script>
     <script src="../scripts/db_cadastro.js"></script>
   
@@ -175,73 +176,63 @@
             <h1 class="h3 mb-0 text-gray-800">Painel inicial</h1>
           </div>
 
-          <!-- Content Row -->
-
           <div class="row">
+            <div class="col-4 aleatorio">
+              <img src="/Imagens/Imagens_Perfil/abelha.png" style="max-width: 30%;">
+            </div>
 
-            <!-- Pie Chart -->
-            <div class="col-xl-4 col-lg-5">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-000" style="color: #e040fb;">Processo
-                    <a href="#" data-toggle="tooltip" title="Representação das partes do processo em relação ao todo"><i class="fas fa-info-circle grey-text"></i></a>
-                  </h6>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="chart-pie pt-4 pb-2">
-                    <canvas id="myPieChart"></canvas>
+            <div class="col-8">
+              <h1>COLOCAR DEPOIS!!!!!!!!!!!!!!!!!!!!!!</h1>
+              <p>NOME USUÁRIO:</p>
+              <p>email:</p>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-1"></div>
+              <div class="courses-container col-5">
+                <div class="course">
+                  <div class="course-preview">
+                    <h6>Course</h6>
+                    <h2>JavaScript Fundamentals</h2>
+                    <a href="#">View all chapters <i class="fas fa-chevron-right"></i></a>
                   </div>
-                  <div class="mt-4 text-center small">
-                    <span class="mr-2">
-                      <i class="fas fa-circle" style="color: #36b9cc;"></i> Preparação
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle" style="color: #1cc88a;"></i> Aprovação
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle" style="color: #e040fb;"></i> Petição
-                    </span>
+                  <div class="course-info">
+                    <div class="progress-container">
+                      <div class="progress"></div>
+                      <span class="progress-text">
+                        6/9 Challenges
+                      </span>
+                    </div>
+                    <h6>Chapter 4</h6>
+                    <h2>Callbacks & Closures</h2>
+                    <button class="btn">Continue</button>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div class="col-xl-8 col-lg-7 mb-4">
-              <!-- Project Card Example -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-000" style="color: #e040fb;">Detalhes
-                    <a href="#" data-toggle="tooltip" title='Aqui você pode ver o seu progresso no procedimento de adoção. Caso você tenha completado alguma fase, clique em "Já realizou?" para confirmar sua conclusão.'>
-                      <i class="fas fa-info-circle grey-text"></i>
-                    </a>
-                  </h6>
-                </div>
-                <div class="card-body py-4">
-                  <h4 class="small font-weight-bold">Aulas de capacitação parental<span class="float-right" id="progressoDetalhe4"><button type="button" class="btn btn-outline-danger waves-effect" data-toggle="modal" data-target="#modalAulasCapacitacao" style="border-radius: 30px;">Já realizou?</button></span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" id="progresso4" role="progressbar" style="width: 1%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            
+              <div class="courses-container col-5"">
+                <div class="course">
+                  <div class="course-preview">
+                    <h6>Course</h6>
+                    <h2>JavaScript Fundamentals</h2>
+                    <a href="#">View all chapters <i class="fas fa-chevron-right"></i></a>
                   </div>
-                  <h4 class="small font-weight-bold">Entrevista preliminar<span class="float-right" id="progressoDetalhe3"><button type="button" class="btn btn-outline-warning waves-effect" data-toggle="modal" data-target="#modalEntrevista" style="border-radius: 30px;">Já realizou?</button></span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-warning" id="progresso3" role="progressbar" style="width: 1%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Petição de inscrição para adoção<span class="float-right" id="progressoDetalhe2"><button type="button" class="btn btn-outline-info waves-effect" data-toggle="modal" data-target="#modalPeticao" style="border-radius: 30px;">Já realizou?</button></span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-info" id="progresso2" role="progressbar" style="width: 1%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Documentação ajuntada<span class="float-right" id="progressoDetalhe1"><button type="button" class="btn btn-outline-primary waves-effect" data-toggle="modal" data-target="#modalDocumentacao" style="border-radius: 30px;">Já realizou?</button></span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar" id="progresso1" role="progressbar" style="width: 1%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Configuração da conta<span class="float-right">Completo!</span></h4>
-                  <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="course-info">
+                    <div class="progress-container">
+                      <div class="progress"></div>
+                      <span class="progress-text">
+                        6/9 Challenges
+                      </span>
+                    </div>
+                    <h6>Chapter 4</h6>
+                    <h2>Callbacks & Closures</h2>
+                    <button class="btn">Continue</button>
                   </div>
                 </div>
               </div>
-            </div>
+            <div class="col-1"></div>
+          </div>
 
           </div>
 
@@ -250,6 +241,7 @@
         <!-- /.container-fluid -->
 
       </div>
+  </div>
       <!-- End of Main Content -->
 
       <!-- Footer -->
@@ -501,6 +493,17 @@
       }
     });
   </script>
+
+
+<script type="text/javascript">
+  (function() {
+    // Necessário declarar a variável img 
+    var img = ["/Imagens/"];
+    var mudar = Math.floor(Math.random() * img.length);
+    document.getElementById("aleatorio").innerHTML = "<img src='" + img[mudar] + "'>";
+  })();
+</script>
+<link rel="stylesheet" href="/estilos/perfil.css">
 
 </body>
 

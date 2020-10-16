@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar conta - A.dota</title>
     <link rel="icon" href="../Imagens/logos/1.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
@@ -21,13 +22,14 @@
 <body>
 
     <div class="container">
-            <div class="row">
-                <div class=" col-lg-12 esconder" style="margin-top: 10px; align-content: center;"> </div>
-                <div class="col-lg-6 esconder">
-                    <div class="card1 pb-5">
-                        <div class=" px-3 row justify-content-center border-line"> <img src="/Imagens/familia_vetor2.png" class="image" style="max-width: 90%;"> </div>
-                    </div>
+        <div class="row">
+            <div class=" col-lg-12 esconder" style="margin-top: 10px; align-content: center;"> </div>
+            <div class="col-lg-6 esconder">
+                <div class="card1 pb-5">
+                    <div class=" px-3 row justify-content-center border-line"> <img src="/Imagens/familia_vetor2.png"
+                            class="image" style="max-width: 90%;"> </div>
                 </div>
+            </div>
             <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
 
                 <p style="text-align: center;">
@@ -39,30 +41,36 @@
                         <h5 class="card-title text-center">Criar conta</h5>
                         <form class="form-signin" onsubmit="adicionaUsuario()" id="formCadastro" action="home.html">
                             <div class="form-label-group">
-                                <input type="text" id="inputNome" class="form-control" placeholder="Nome" required autofocus>
+                                <input type="text" id="inputNome" class="form-control" placeholder="Nome" required
+                                    autofocus>
                                 <label for="inputNome">Nome</label>
                             </div>
                             <div class="form-label-group">
-                                <input type="text" id="inputSobrenome" class="form-control" placeholder="Sobrenome" required autofocus>
+                                <input type="text" id="inputSobrenome" class="form-control" placeholder="Sobrenome"
+                                    required autofocus>
                                 <label for="inputSobrenome">Sobrenome</label>
                             </div>
-
+                            
                             <div class="form-label-group">
-                                <input type="text" id="inputEmailCadastro" class="form-control" placeholder="Endereço de email" required autofocus>
+                                <input type="text" id="inputEmailCadastro" class="form-control"
+                                    placeholder="Endereço de email" required autofocus>
                                 <label for="inputEmailCadastro">Endereço de email</label>
                             </div>
 
                             <div class="form-label-group">
-                                <input type="password" id="inputSenhaCadastro" class="form-control" placeholder="Senha" required>
+                                <input type="password" id="inputSenhaCadastro" class="form-control" placeholder="Senha"
+                                    required>
                                 <label for="inputSenhaCadastro">Senha</label>
                             </div>
 
                             <div class="form-label-group">
-                                <input type="password" id="inputSenhaConfirma" class="form-control" placeholder="Confirme a senha" required>
+                                <input type="password" id="inputSenhaConfirma" class="form-control"
+                                    placeholder="Confirme a senha" required>
                                 <label for="inputSenhaConfirma">Confirme a senha</label>
                             </div>
 
-                            <button class="btn btn-lg btn-green accent-5 btn-block text-uppercase" style="background-color: #023e8a; color: white;" type="submit">Criar conta</button>
+                            <button class="btn btn-lg btn-green accent-5 btn-block text-uppercase"
+                                style="background-color: #023e8a; color: white;" type="submit">Criar conta</button>
 
                             <hr class="my-4">
                         </form>
@@ -78,43 +86,47 @@
 
         </div>
 
-    <div class="modal fade left" id="modalAjudaCadastro" tabindex="-1" role="dialog" aria-labelledby="modalAjudaCadastro" aria-hidden="true">
-        <div class="modal-dialog modal-side modal-top-left" role="document">
+        <div class="modal fade left" id="modalAjudaCadastro" tabindex="-1" role="dialog"
+            aria-labelledby="modalAjudaCadastro" aria-hidden="true">
+            <div class="modal-dialog modal-side modal-top-left" role="document">
 
-            <div class="modal-content" style="border-radius: 30px;">
-                <div class="modal-header">
-                    <h4 class="modal-title w-100" id="myModalLabel" style="text-align: center;">Cadastro</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Para fazer cadastro, insira:
-                    <ul>
-                        <li>seu nome</li>
-                        <li>seu sobrenome</li>
-                        <li>seu endereço de email</li>
-                        <li>sua senha</li>
-                        <li>a confirmação de sua senha</li>
-                    </ul>
-                    nos campos a seguir e clique em <strong class="green textoBotao">CRIAR CONTA</strong>. <br><br> Caso ainda você <strong>já possua uma conta</strong> no <em>Adotapp</em>, clique no botão <strong class="purple-gradient textoBotao">ENTRAR</strong>.
-                </div>
-                <div class="modal-footer" style="justify-content: center;">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="border-radius: 30px;">Entendi!</button>
+                <div class="modal-content" style="border-radius: 30px;">
+                    <div class="modal-header">
+                        <h4 class="modal-title w-100" id="myModalLabel" style="text-align: center;">Cadastro</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Para fazer cadastro, insira:
+                        <ul>
+                            <li>seu nome</li>
+                            <li>seu sobrenome</li>
+                            <li>seu endereço de email</li>
+                            <li>sua senha</li>
+                            <li>a confirmação de sua senha</li>
+                        </ul>
+                        nos campos a seguir e clique em <strong class="green textoBotao">CRIAR CONTA</strong>. <br><br>
+                        Caso ainda você <strong>já possua uma conta</strong> no <em>Adotapp</em>, clique no botão
+                        <strong class="purple-gradient textoBotao">ENTRAR</strong>.
+                    </div>
+                    <div class="modal-footer" style="justify-content: center;">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                            style="border-radius: 30px;">Entendi!</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
-    <script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
-    <script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
-    <script>
-        $('document').ready(function() {
-            $('#modalAjudaCadastro').modal('show');
-        });
-    </script>
+        <script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
+        <script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
+        <script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
+        <script>
+            $('document').ready(function () {
+                $('#modalAjudaCadastro').modal('show');
+            });
+        </script>
 </body>
 
 </html>
