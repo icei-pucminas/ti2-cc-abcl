@@ -15,6 +15,11 @@ _Curso de Ciência da Computação, Unidade Coração Eucarístico_
 
 _Instituto de Informática e Ciências Exatas – Pontifícia Universidade de Minas Gerais (PUC MINAS), Belo Horizonte – MG – Brasil_
 
+Lembretes: 
+
+Fazer: Objetivos específicos e tudo a partir do 2.3
+
+Completar: Tecnologias e talvez contextualização; descobrir onde explicar a parte de bd de forma mais específica
 ---
 
 _**Resumo**_ 
@@ -38,9 +43,6 @@ Desta forma, passou-se a propor um ambiente digital que facilite o acesso às in
 Na **contextualização**, o aluno deve dizer do que se trata o trabalho, em que área ou contexto se insere. 
 A **contextualização** deve ser desenvolvida de algo mais genérico para algo mais específico. 
 A citação de pesquisas quantitativas é bem aceita aqui (corretamente referenciadas).
-
-Em seguida o aluno deve caminhar a contextualização para descrever o **problema** que o artigo trata. 
-O **problema** pode ser algo vivido em uma empresa específica.
 
 
     1.1 Contextualização
@@ -87,14 +89,21 @@ de acordo com as definições do modelo de negócio.
 
     2.2. Tecnologias
 
-.   Linguagens de desenvolvimento web front-end: HTML, CSS, PHP e JavaScript;
-.   Linguagens de desenvolvimento back-end: Java;
-.   Repositório: GitHub; 
-·   Frameworks: Bootstrap, MDB e Spark;
-.   Integração BD com o site: Eclipse, Maven e PostgreSQL;
-·   Service Worker para permitir ao smartphone reconhecer o site como app;
-.   Microsoft Azure;
-·   IDE: Microsoft Visual Studio Code.
+Linguagens de desenvolvimento web front-end: HTML, CSS, PHP e JavaScript;
+
+Linguagens de desenvolvimento back-end: Java;
+
+Repositório: GitHub; 
+
+Frameworks: Bootstrap, MDB e Spark;
+
+Integração BD com o site: Eclipse, Maven e PostgreSQL;
+
+Service Worker para permitir ao smartphone reconhecer o site como app;
+
+Microsoft Azure;
+
+IDE: Microsoft Visual Studio Code.
 
 Apresente também uma figura explicando como as tecnologias estão 
 relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até 
