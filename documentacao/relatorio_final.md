@@ -73,39 +73,16 @@ de acordo com as definições do modelo de negócio.
 
 | No.           | Descrição                                         | Prioridade |
 | ------------- |:-------------------------------------------------:| ----------:|
-| RF-01         | O site apresenta uma versão clássica e outra otimizada especificamente para dispositivos móveis (web app).    | Alta
-| ------------- |:-------------------------------------------------:| ----------:|
-|               | O site oferece uma plataforma de cadastro, que    |            |
-| RF-02         | permite que cada usuário seja direcionado para a  | Alta       |
-|               | criação de seu perfil.                            |            |
-| ------------- |:-------------------------------------------------:| ----------:|
-| RF-03         | O site oferece informações necessárias para o     | Alta       |
-|               | processo de adoção.                               |            | 
-| ------------- |:-------------------------------------------------:| ----------:|
-| RF-04         | O site permite a checagem do andamento do         | Alta       |
-|               | processo de adoção de cada usuário.               |            |
-| ------------- |:-------------------------------------------------:| ----------:|
-|               | O site, por meio das informações disponibilizadas |            |
-| RF-05         | pelo usuário, ilustra graficamente a porcentagem  | Alta       |
-|               | do andamento do processo.                         |            |
-| ------------- |:-------------------------------------------------:| ----------:|
-|               | O site apresenta a documentação necessária para   |            |
-| RF-06         | cada etapa do processo de adoção, explicando      | Alta       |
-|               | cada uma.                                         |            |
-| ------------- |:-------------------------------------------------:| ----------:|
-| RF-07         | O site indica os locais e os órgãos responsáveis  | Alta       |
-|               | pela emissão de cada documento.                   |            |
-| ------------- |:-------------------------------------------------:| ----------:|
-|               | A cada etapa concluída, o site indica os próximos |            |  
-| RF-08         | passos a serem seguidos em relação às             | Alta       |
-|               | documentações.                                    |            |  
-| ------------- |:-------------------------------------------------:| ----------:|
-| RF-09         | O site apresenta veículos de comunicação em que   | Baixa      |
-|               | o usuário pode expressar dúvidas.                 |            |
-| ------------- |:-------------------------------------------------:| ----------:|
-|               | O site permite que o usuário crie uma listagem    |            |
-| RF-10         | personalizada de compromissos relacionados        | Baixa      |
-|               | à adoção                                          |            |
+| RF-01         | O site apresenta uma versão clássica e outra otimizada especificamente para dispositivos móveis (web app).    | Alta  |
+| RF-02         | O site oferece uma plataforma de cadastro, que permite que cada usuário seja direcionado para a criação de seu perfil.    | Alta  |
+| RF-03         | O site oferece informações necessárias para o processo de adoção. | Alta  |
+| RF-04         | O site permite a checagem do andamento do processo de adoção de cada usuário. | Alta  |
+| RF-05         | O site, por meio das informações disponibilizadas pelo usuário, ilustra graficamente a porcentagem do andamento do processo.  | Alta  |
+| RF-06         | O site apresenta a documentação necessária para cada etapa do processo de adoção, explicando cada uma.    | Alta  |
+| RF-07         | O site indica os locais e os órgãos responsáveis pela emissão de cada documento.  | Alta  |
+| RF-08         | A cada etapa concluída, o site indica os próximos passos a serem seguidos em relação às documentações.    | Alta  | 
+| RF-09         | O site apresenta veículos de comunicação em que o usuário pode expressar dúvidas. | Baixa |
+| RF-10         | O site permite que o usuário crie uma listagem personalizada de compromissos relacionados à adoção.   | Baixa |    
 
 
     2.2. Tecnologias
