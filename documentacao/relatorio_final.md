@@ -1,17 +1,17 @@
-# Morosidade no processo adotivo
+# A.DOTA
 
 
-**Anna Pugga Campos Rodrigues, email do aluno 1**
+**Anna Pugga Campos Rodrigues, anna.campos@sga.pucminas.br**
 
-**Bárbara Luiza Freitas Carmo, email do aluno 2**
+**Bárbara Luiza Freitas Carmo, babi.carmo@outlook.com**
 
-**Carlos Henrique Cury Ferreira Lima, email do aluno 3**
+**Carlos Henrique Cury Ferreira Lima, chcfl2002@gmail.com**
 
-**Luiza Ribeiro Parente Silva , email do aluno 4**
+**Luiza Ribeiro Parente Silva , luizarparentesilva@gmail.com**
 
 ---
 
-_Curso de Ciência da Computação, Unidade {Coração Eucarístico | Praça da Liberdade}_
+_Curso de Ciência da Computação, Unidade Coração Eucarístico_
 
 _Instituto de Informática e Ciências Exatas – Pontifícia Universidade de Minas Gerais (PUC MINAS), Belo Horizonte – MG – Brasil_
 
@@ -26,11 +26,11 @@ _Considerando os trantornos causados pela morosidade atual nos processos de ado�
 
 **1. Introdução**
 
-A introdução deve apresentar de dois ou quatro parágrafos de contextualização do trabalho.
-
+*A introdução deve apresentar de dois ou quatro parágrafos de contextualização do trabalho.*
+ 
 No país em que vivemos, o acesso a informações confiáveis é muitas vezes dificultado. Este pode ser um problema em contextos extremamente diversos, inclusive no processo de adoção, tendo em vista que muitos dos interessados em adotar não têm suporte suficiente para se orientarem de forma clara.
 
-De acordo com entrevistas realizadas por essa equipe, saber quais são os documentos necessário para formalizar uma adoção no Brasil, onde obtê-los e suas funções no processo é algo complicado. Infelizmente, mesmo depois de tantos anos, as adoções no país continuam sendo demasiadamente burocráticas e demoradas, o que interfere diretamente no sucesso das mesmas. Considerando que a equipe não pode modificar diretamente os processos jurídicos que permeiam a formalização das adoções, foi necessário adotar uma nova perspectiva acerca do problema.  
+De acordo com entrevistas realizadas posteriormente e um recente contato com uma advogada especialista, saber quais são os documentos necessário para formalizar uma adoção no Brasil, onde obtê-los e suas funções no processo é algo complicado para os futuros pais e mães. Infelizmente, mesmo depois de tantos anos, as adoções no país continuam sendo demasiadamente burocráticas e demoradas, o que interfere diretamente no sucesso das mesmas. Considerando que a equipe não pode modificar diretamente os processos jurídicos que permeiam a formalização das adoções, foi necessário adotar uma nova perspectiva acerca do problema.  
 
 Desta forma, passou-se a propor um ambiente digital que facilite o acesso às informações necessárias, como, por exemplo, quais são os documentos e onde conseguí-los, juntamente com a possibilidade de um intercâmbio de experiências por meio de um fórum para que quem ainda esteja passando pelo processo consiga tirar dúvidas com quem já o finalizou.
 
@@ -44,7 +44,7 @@ O **problema** pode ser algo vivido em uma empresa específica.
 
 
     1.1 Contextualização
-Considerando que o Brasil tem atualmente 4,9 mil crianças e adolescentes no sistema de  adoção, de acordo com pesquisa realizada pela Agência Brasil, mas que cada processo iniciado pode demorar anos para ser efetivado, propôs-se a busca por soluções que possam facilitá-los por meio dos conhecimentos da equipe acerca da área de desenvolvimento de software.
+O projeto se trata de uma plataforma que integra conhecimentos de desenvolvimento web, banco de dados e sistemas inteligentes com o intuito de instruir e facilitar os processos daqueles que pretendem realizar uma adoção. Segundo o Cadastro Nacional de Adoção, em 2019 foram registradas 9.548 crianças e adolescentes estão na fila para a adoção e o número de interessados em adotar é cerca de quatro vezes maior, porém, a morosidade do processo e algumas questões de preferência impedem que estes processos tenham sucesso.
 
     1.2 Problema
 Conforme explicitado, no país em que vivemos, a burocracia e a ineficácia do sistema pelo qual é implementado o processo de adoção acaba forçando esses casais a esperar muito mais tempo do que seria necessário até que consigam algum avanço no procedimento.
@@ -52,11 +52,7 @@ Conforme explicitado, no país em que vivemos, a burocracia e a ineficácia do s
 Devido à má implementação, ao excessivo tempo de espera, à legislação precária e a muitos outros fatores, os cônjuges que têm a intenção de adotar sofrem com a morosidade do sistema proposto pelo governo brasileiro.
 
     1.3 Objetivo geral
-Frente ao problema salientado, procurou-se utilizar os recursos tecnológicos a disposição  para criar um ambiente online que ajude os futuros pais e mães a orientarem-se durante essa jornada burocrática. Ademais, empenhar-se-á na tarefa de oferecer recursos além dos oferecidos pelo programa governamental, permitindo aos usuários o usufruto de artifícios que permitam maior liberdade aos que buscam sucesso na adoção, inserindo-os diretamente no processo, e, permitindo maior transparência no procedimento.
-
-
-O aluno deve escrever um pequeno parágrafo ou frase com o **objetivo geral** do trabalho. 
-O objetivo deve ser bem direto, específico e definido com verbos de ação (elaborar, propor, ava-liar, comparar etc.).
+Frente ao problema salientado, procurou-se utilizar os recursos tecnológicos a disposição para criar um ambiente online que ajude os futuros pais e mães a orientarem-se durante essa jornada burocrática. Ademais, empenhar-se-á na tarefa de oferecer recursos além dos oferecidos pelo programa governamental, permitindo aos usuários o usufruto de artifícios que permitam maior liberdade aos que buscam sucesso na adoção, inserindo-os diretamente no processo, e, permitindo maior transparência no procedimento.
 
         1.3.1 Objetivos específicos
 
@@ -64,9 +60,7 @@ Apresente também alguns (pelo menos 2) **objetivos específicos** depende
 ndo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
 
     1.4 Justificativas
-
-Mostre também as **justificativas** para o 
-desenvolvimento do seu trabalho e caso deseje, desta-que alguma contribuição do trabalho.
+Considerando que o Brasil tem atualmente 4,9 mil crianças e adolescentes no sistema de  adoção, de acordo com pesquisa realizada pela Agência Brasil, mas que cada processo iniciado pode demorar anos para ser efetivado, propôs-se a busca por soluções que possam facilitá-los por meio dos conhecimentos da equipe acerca da área de desenvolvimento de software, sistemas inteligentes e banco de dados.
 
 
 **2. Projeto da Solução**
@@ -77,17 +71,57 @@ Enumere os requisitos funcionais previstos para a sua aplicação.
 Use a tabela abaixo para enumerá-lo.  Esses requisitos devem estar 
 de acordo com as definições do modelo de negócio.
 
-| No.           | Descrição                       | Prioridade |
-| ------------- |:-------------------------------:| ----------:|
-| {número       | Descrição resumida do requisito | {Alta      |
-| sequencial    |                                 |  média     |
-| identificador |                                 |  ou baixa  | 
+| No.           | Descrição                                         | Prioridade |
+| ------------- |:-------------------------------------------------:| ----------:|
+|               | O site apresenta uma versão clássica e outra      |            |
+| RF-01         | otimizada especificamente para dispositivos       | Alta       |
+|               | móveis (web app).                                 |            |
+| ------------- |:-------------------------------------------------:| ----------:|
+|               | O site oferece uma plataforma de cadastro, que    |            |
+| RF-02         | permite que cada usuário seja direcionado para a  | Alta       |
+|               | criação de seu perfil.                            |            |
+| ------------- |:-------------------------------------------------:| ----------:|
+| RF-03         | O site oferece informações necessárias para o     | Alta       |
+|               | processo de adoção.                               |            | 
+| ------------- |:-------------------------------------------------:| ----------:|
+| RF-04         | O site permite a checagem do andamento do         | Alta       |
+|               | processo de adoção de cada usuário.               |            |
+| ------------- |:-------------------------------------------------:| ----------:|
+|               | O site, por meio das informações disponibilizadas |            |
+| RF-05         | pelo usuário, ilustra graficamente a porcentagem  | Alta       |
+|               | do andamento do processo.                         |            |
+| ------------- |:-------------------------------------------------:| ----------:|
+|               | O site apresenta a documentação necessária para   |            |
+| RF-06         | cada etapa do processo de adoção, explicando      | Alta       |
+|               | cada uma.                                         |            |
+| ------------- |:-------------------------------------------------:| ----------:|
+| RF-07         | O site indica os locais e os órgãos responsáveis  | Alta       |
+|               | pela emissão de cada documento.                   |            |
+| ------------- |:-------------------------------------------------:| ----------:|
+|               | A cada etapa concluída, o site indica os próximos |            |  
+| RF-08         | passos a serem seguidos em relação às             | Alta       |
+|               | documentações.                                    |            |  
+| ------------- |:-------------------------------------------------:| ----------:|
+| RF-09         | O site apresenta veículos de comunicação em que   | Baixa      |
+|               | o usuário pode expressar dúvidas.                 |            |
+| ------------- |:-------------------------------------------------:| ----------:|
+|               | O site permite que o usuário crie uma listagem    |            |
+| RF-10         | personalizada de compromissos relacionados        | Baixa      |
+|               | à adoção                                          |            |
+
 
     2.2. Tecnologias
 
-Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou seja implementar a sua solução. 
-Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, 
-IDEs de desenvolvimento, e ferramentas.  Apresente também uma figura explicando como as tecnologias estão 
+.   Linguagens de desenvolvimento web front-end: HTML, CSS, PHP e JavaScript;
+.   Linguagens de desenvolvimento back-end: Java;
+.   Repositório: GitHub; 
+·   Frameworks: Bootstrap, MDB e Spark;
+.   Integração BD com o site: Eclipse, Maven e PostgreSQL;
+·   Service Worker para permitir ao smartphone reconhecer o site como app;
+.   Microsoft Azure;
+·   IDE: Microsoft Visual Studio Code.
+
+Apresente também uma figura explicando como as tecnologias estão 
 relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até 
 retornar uma resposta ao usuário. 
 
