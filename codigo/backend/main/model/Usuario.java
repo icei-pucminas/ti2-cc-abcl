@@ -17,6 +17,9 @@ public class Usuario {
 		this.email = email;
 		this.telefone = telefone;
 	}
+	public Usuario() {
+		// TODO Auto-generated constructor stub
+	}
 	public int getId() {
 		return id;
 	}

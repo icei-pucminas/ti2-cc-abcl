@@ -101,6 +101,30 @@ public class DAOProcessos {
 		return processos[0];
 	}
 	
+	public static Processo getProcesso(int id) {
+		Processo[] processos = null;
+		
+		try {
+			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+			ResultSet rs = st.executeQuery("SELECT * FROM processo WHERE user_id = " + id);		
+	         if(rs.next()){
+	             rs.last();
+	             processos = new Processo[rs.getRow()];
+	             rs.beforeFirst();
+
+	             for(int i = 0; rs.next(); i++) {
+	            	 processos[i] = new Processo(rs.getBoolean("ajuda"), rs.getBoolean("completo"),
+	                		                  rs.getInt("user_id"), rs.getInt("codigo_processo"), rs.getString("nome"));
+	             }
+	          }
+	          st.close();
+	          st.close();
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
+		return processos[0];
+	}
+	
 	public static Processo[] getProcessos(Usuario usuario) {
 		Processo[] processos = null;
 		

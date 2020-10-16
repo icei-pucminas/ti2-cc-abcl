@@ -11,6 +11,32 @@ public class DAOUsuarios {
 		conexao = null;
 	}
 	
+	public boolean conectar() {
+		String driverName = "org.postgresql.Driver";                    
+		String serverName = "abcl-adota.postgres.database.azure.com";
+		String mydatabase = "ABCLdb";
+		int porta = 5432;
+		String url = "jdbc:postgresql://" + serverName + ":" + porta +"/" + mydatabase;
+		String username = "abcl_Adm@abcl-adota";
+		String password = "adota@ti22020";
+		boolean status = false;
+
+		try {
+			Class.forName(driverName);
+			conexao = DriverManager.getConnection(url, username, password);
+			status = (conexao == null);
+			System.out.println("Conexão efetuada com o postgres!");
+		} catch (ClassNotFoundException e) { 
+//			System.err.println("Conexão NÃO efetuada com o postgres -- Driver não encontrado -- " + e.getMessage());
+			e.printStackTrace();
+		} catch (SQLException e) {
+//			System.err.println("Conexão NÃO efetuada com o postgres -- " + e.getMessage());
+			e.printStackTrace();
+		}
+
+		return status;
+	}
+	
 	public boolean close() {
 		boolean status = false;
 		
@@ -25,11 +51,11 @@ public class DAOUsuarios {
 	
 
 	
-	public static Usuario getUsuario(int codigo) { // LUIZA VOCE TEM Q DEIXAR ESSE TO USANDO ELE NA DAO DE PROCESSOS
-		Usuario[] usuarios = null;
+	public static Object getUsuario(int id) { // LUIZA VOCE TEM Q DEIXAR ESSE TO USANDO ELE NA DAO DE PROCESSOS
+		Usuario[] usuarios = new Usuario[1];
 		try {
 			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-			ResultSet rs = st.executeQuery("SELECT * FROM tablex WHERE codigo = " + codigo);		
+			ResultSet rs = st.executeQuery("SELECT * FROM usuario WHERE id = " + id);		
 	         if(rs.next()){
 	             rs.last();
 	             usuarios = new Usuario[rs.getRow()];
@@ -44,6 +70,8 @@ public class DAOUsuarios {
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 		}
+
 		return usuarios[0];
+		
 	}
 }

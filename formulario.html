@@ -61,10 +61,10 @@
     <section class="section--container__responsive">
 
         <section class="section--row__responsive">
-            <h1 class="generaltext">Todos os Usu�rios</h1>
-            <form onsubmit="addIdToPath('form-get', 'http://localhost:6789/processos/')" method="get" id="form-get">
-                <input class="input--down" type="text" id="codigo" value="" placeholder="codigo do usuario...">
-                <input type="submit" value="consultar" class="input--button input--consult__style">
+            <h1 class="generaltext">Remover Usu�rios</h1>
+            <form action="http://localhost:6789/processos/delete/" method="get" id="form-delete">
+				<input class="input--down" type="number" name="codigo" id="codigo_remov" value="" placeholder="codigo do usuario...">
+                <input type="submit" value="remover" class="input--button input--consult__style">
             </form>
         </section>
 

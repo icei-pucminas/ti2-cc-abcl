@@ -27,11 +27,14 @@ public class ProcessosService{
 
 		Processo processo = new Processo(ajuda, completo, user_id, codigo_processo, nome);
 
-		dao.addProcesso(processo);
+		boolean status = dao.addProcesso(processo);
 
 		response.status(201); // 201 Created
 		dao.close();
-		return nome;
+		if(status)
+			return nome;
+		else 
+			return "não foi possível localizar usuario";
 	}
 
 	public String update(Request request, Response response) {
@@ -41,7 +44,7 @@ public class ProcessosService{
 		int user_id = Integer.parseInt(request.queryParams("user_id"));
 		int codigo_processo = Integer.parseInt(request.queryParams("codigo_processo"));
 	    
-	    Processo processo = dao.getProcesso(user_id, codigo_processo);
+	    Processo processo = dao.getProcesso(user_id);
 		dao.atualizarStatusProcesso(processo);
 
 		response.status(201); // 201 Created
@@ -53,13 +56,17 @@ public class ProcessosService{
 		DAOProcessos dao = new DAOProcessos();
         DAOUsuarios daoU = new DAOUsuarios();
         dao.conectar();
+        daoU.conectar();
         int user_id = Integer.parseInt(request.queryParams("codigo"));
         
-        Usuario user = daoU.getUsuario(user_id);
+        Usuario user = (Usuario) daoU.getUsuario(user_id);
+        
+        if(user.getId() != user_id)
+			return "não foi possível localizar usuario";
         
 		StringBuffer returnValue = new StringBuffer("<processos type=\"array\">");
 		for (Processo processos : dao.getProcessos(user)) {
-			Processo processo = (Processo) processos;
+			Processo processo = dao.getProcesso(user_id);
 			returnValue.append("<processo>\n" + 
             		"\t<nome> " + processo.getNome() + "</nome>\n" +
             		"\t<status> " + (processo.isCompleto()? "completo" : "nao completo") + "</status>\n" +
@@ -70,6 +77,7 @@ public class ProcessosService{
 	    response.header("Content-Encoding", "UTF-8");
 	    dao.close();
 		return returnValue.toString();
+//        return request.queryParams("codigo");
 	}
 
 }
