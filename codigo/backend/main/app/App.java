@@ -14,7 +14,7 @@ public class App{
 
         post("/processos/update/:codigo", (request, response) -> Service.update(request, response));
 
-        get("/processos/delete/", (request, response) -> Service.getAll(request, response));   
+        get("/processos/usuario/", (request, response) -> Service.getAll(request, response));   
         
     }
 }

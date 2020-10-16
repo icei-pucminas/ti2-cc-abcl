@@ -28,6 +28,7 @@ public class ProcessosService{
 		Processo processo = new Processo(ajuda, completo, user_id, codigo_processo, nome);
 
 		boolean status = dao.addProcesso(processo);
+		dao.excluirProcesso(codigo_processo, user_id);
 
 		response.status(201); // 201 Created
 		dao.close();
@@ -39,12 +40,14 @@ public class ProcessosService{
 
 	public String update(Request request, Response response) {
 		DAOProcessos dao = new DAOProcessos();
+		DAOUsuarios daoU = new DAOUsuarios();
         dao.conectar();
+        daoU.conectar();
             
-		int user_id = Integer.parseInt(request.queryParams("user_id"));
-		int codigo_processo = Integer.parseInt(request.queryParams("codigo_processo"));
+		int id = Integer.parseInt(request.queryParams("codigo"));
+	   
+	    Processo processo = dao.getProcesso(id);
 	    
-	    Processo processo = dao.getProcesso(user_id);
 		dao.atualizarStatusProcesso(processo);
 
 		response.status(201); // 201 Created
@@ -59,14 +62,18 @@ public class ProcessosService{
         daoU.conectar();
         int user_id = Integer.parseInt(request.queryParams("codigo"));
         
-        Usuario user = (Usuario) daoU.getUsuario(user_id);
+        Usuario user = daoU.getUsuario(user_id);
         
-        if(user.getId() != user_id)
+        if(user == null)
 			return "não foi possível localizar usuario";
         
 		StringBuffer returnValue = new StringBuffer("<processos type=\"array\">");
 		for (Processo processos : dao.getProcessos(user)) {
 			Processo processo = dao.getProcesso(user_id);
+			
+			if(processo == null)
+				return "nao ha processos para este usuario";
+			
 			returnValue.append("<processo>\n" + 
             		"\t<nome> " + processo.getNome() + "</nome>\n" +
             		"\t<status> " + (processo.isCompleto()? "completo" : "nao completo") + "</status>\n" +

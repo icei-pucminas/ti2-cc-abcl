@@ -51,7 +51,7 @@ public class DAOUsuarios {
 	
 
 	
-	public static Object getUsuario(int id) { // LUIZA VOCE TEM Q DEIXAR ESSE TO USANDO ELE NA DAO DE PROCESSOS
+	public static Usuario getUsuario(int id) { // LUIZA VOCE TEM Q DEIXAR ESSE TO USANDO ELE NA DAO DE PROCESSOS
 		Usuario[] usuarios = new Usuario[1];
 		try {
 			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
@@ -72,6 +72,5 @@ public class DAOUsuarios {
 		}
 
 		return usuarios[0];
-		
 	}
 }
