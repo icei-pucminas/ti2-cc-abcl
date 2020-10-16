@@ -1,0 +1,8 @@
+@media (max-width: 1366px){
+    .cadastro {
+        margin-top: 0px !important ;
+    }
+    .btn{
+        margin-top: 2px !important;
+    }
+}
