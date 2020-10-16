@@ -13,10 +13,10 @@ public class ProcessosService{
 
 	public ProcessosService(){
 		dao = new DAOProcessos();
+		daoU = new DAOUsuarios();
 	}
 
-	public Object add(Request request, Response response) {
-		DAOProcessos dao = new DAOProcessos();
+	public Object addProcessos(Request request, Response response) {
         dao.conectar();
         
 		boolean ajuda = Boolean.parseBoolean(request.queryParams("ajuda"));
@@ -35,12 +35,10 @@ public class ProcessosService{
 		if(status)
 			return nome;
 		else 
-			return "não foi possível localizar usuario";
+			return "nï¿½o foi possï¿½vel localizar usuario";
 	}
 
-	public String update(Request request, Response response) {
-		DAOProcessos dao = new DAOProcessos();
-		DAOUsuarios daoU = new DAOUsuarios();
+	public String updateProcessos(Request request, Response response) {
         dao.conectar();
         daoU.conectar();
             
@@ -52,20 +50,17 @@ public class ProcessosService{
 
 		response.status(201); // 201 Created
 		dao.close();
+		daoU.close();
 		return "atualizado";
 	}
 
-	public Object getAll(Request request, Response response) {
-		DAOProcessos dao = new DAOProcessos();
-        DAOUsuarios daoU = new DAOUsuarios();
-        dao.conectar();
-        daoU.conectar();
+	public Object getAllProcessos(Request request, Response response) {
         int user_id = Integer.parseInt(request.queryParams("codigo"));
         
         Usuario user = daoU.getUsuario(user_id);
         
         if(user == null)
-			return "não foi possível localizar usuario";
+			return "nï¿½o foi possï¿½vel localizar usuario";
         
 		StringBuffer returnValue = new StringBuffer("<processos type=\"array\">");
 		for (Processo processos : dao.getProcessos(user)) {
@@ -82,7 +77,8 @@ public class ProcessosService{
 		returnValue.append("</processos>");
 	    response.header("Content-Type", "application/xml");
 	    response.header("Content-Encoding", "UTF-8");
-	    dao.close();
+		dao.close();
+		daoU.close();
 		return returnValue.toString();
 //        return request.queryParams("codigo");
 	}

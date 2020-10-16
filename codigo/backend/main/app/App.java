@@ -10,11 +10,11 @@ public class App{
     public static void main(String[] args) {
         port(6789); 
 
-        post("/processos", (request, response) -> Service.add(request, response));
+        post("/processos", (request, response) -> Service.addProcessos(request, response));
 
-        post("/processos/update/:codigo", (request, response) -> Service.update(request, response));
+        post("/processos/update/:codigo", (request, response) -> Service.updateProcessos(request, response));
 
-        get("/processos/usuario/", (request, response) -> Service.getAll(request, response));   
+        get("/processos/usuario/", (request, response) -> Service.getAllProcessos(request, response));   
         
     }
 }
