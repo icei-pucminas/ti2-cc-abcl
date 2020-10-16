@@ -73,8 +73,7 @@ de acordo com as definições do modelo de negócio.
 
 | No.           | Descrição                                         | Prioridade |
 | ------------- |:-------------------------------------------------:| ----------:|
-|               | O site apresenta uma versão clássica e outra      |            |
-| RF-01         | otimizada especificamente para dispositivos       | Alta       |
+| RF-01         | O site apresenta uma versão clássica e outra otimizada especificamente para dispositivos  | Alta       |
 |               | móveis (web app).                                 |            |
 | ------------- |:-------------------------------------------------:| ----------:|
 |               | O site oferece uma plataforma de cadastro, que    |            |
