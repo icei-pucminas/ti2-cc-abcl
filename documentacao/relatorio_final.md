@@ -105,9 +105,7 @@ Microsoft Azure;
 
 IDE: Microsoft Visual Studio Code.
 
-Apresente também uma figura explicando como as tecnologias estão 
-relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até 
-retornar uma resposta ao usuário. 
+![Relação entre as tecnologias](tecnologias.png "Relação entre as tecnologias")
 
     2.3. Serviços inteligentes
 
@@ -124,7 +122,7 @@ Apresente o modelo de dados. Defina o dicionário de dados com os respectivos fo
 
 Adicionar explicação do diagrama.
 
-![Diagrama de Entidade Relacionamento](diagramaER.jpeg "Diagrama de Entidade Relacionamento de Exemplo")
+![Diagrama de Entidade Relacionamento](diagramaER.jpeg "Diagrama de Entidade Relacionamento")
 
 **4. Sistema desenvolvido**
 
