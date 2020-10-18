@@ -1,8 +1,8 @@
 package dao;
 
 import java.sql.*;
-
 import model.Usuario;
+
 
 public class DAOUsuarios {
 	private static Connection conexao;
@@ -47,6 +47,21 @@ public class DAOUsuarios {
 			System.err.println(e.getMessage());
 		}
 		return status;
+	}
+	
+	public boolean addUsuarios (Usuario user){
+		boolean status = false;
+		try {  
+			Statement st = conexao.createStatement();
+			st.executeUpdate("INSERT INTO usuario "
+					       + "VALUES ( '"+ user.getNome()+ "', '" + user.getSobrenome() + "', '" + user.getTelefone()+"', '" + user.getEmail() +"', '" + user.getSenha()+  "');");
+			st.close();
+			status = true;
+		} catch (SQLException u) {  
+			throw new RuntimeException(u);
+		}
+		return status;
+		
 	}
 	
 

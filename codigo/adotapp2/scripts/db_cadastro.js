@@ -22,12 +22,12 @@ onload = () => {
         atualizaTabela();
     }*/
 
-    var titulo = document.getElementById("pergunta");
+    /*var titulo = document.getElementById("pergunta");
     document.querySelector(".respostas").style.display = "none";
 
     let radioNao = document.getElementById("nao");
     let radioSim = document.getElementById("sim");
-
+    */
     let email = JSON.parse(localStorage.getItem("emailLogado"));
 
     let respostas = [];
@@ -62,8 +62,7 @@ onload = () => {
             document.querySelector(".respostas").style.display = "block";
         }
     }
-
-    
+        
 }
 
 function atualizaTabela() {
@@ -96,3 +95,4 @@ function realizado(i) {
 
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 }
+

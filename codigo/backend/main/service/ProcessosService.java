@@ -7,10 +7,12 @@ import dao.DAOUsuarios;
 import model.Processo;
 import model.Usuario;
 
+
 public class ProcessosService{
 
 	private DAOProcessos dao;
-
+	private DAOUsuarios daoU;
+	
 	public ProcessosService(){
 		dao = new DAOProcessos();
 		daoU = new DAOUsuarios();
@@ -82,5 +84,6 @@ public class ProcessosService{
 		return returnValue.toString();
 //        return request.queryParams("codigo");
 	}
+	
 
 }

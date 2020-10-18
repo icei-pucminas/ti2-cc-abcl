@@ -80,7 +80,7 @@ function checaUsuario() {    // tela de login -> checa se o usuario já existe, 
                 localStorage.setItem("indexDoUsuario", JSON.stringify(i));
                 jaFoiCadastrado = true; // se der verdadeiro ele automaticamente para esse script
                 if(usuarios[i].senha == senhaParaLogin){
-                    document.getElementById('formLogin').action = "home.html"; // se a senha informada for igual à existente no localstorage, login
+                   //document.getElementById('formLogin').action = "home.html"; // se a senha informada for igual à existente no localstorage, login
                     localStorage.setItem("emailLogado", JSON.stringify(emailParaLogin));
                 }
                 else alert("Senha incorreta."); // senha fornecida não bate com a cadastrada no localstorage
