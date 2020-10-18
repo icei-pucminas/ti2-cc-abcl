@@ -3,7 +3,7 @@
 <head>
     <meta content="text/html; charset = "UTF-8" http-equiv="content-type">
 
-    <title>Controle de Usu�rios</title>
+    <title>Controle de Processos</title>
 </head>
 
 <script type="text/javascript">
@@ -18,34 +18,37 @@
 
 <body>
     <p>
-        <h1>Controle de Usu�rios</h1>
+        <h1>Controle de Processos</h1>
     </p>
 
 
     <section class="section--container__responsive">
 
         <section class="section--mainrow__responsive first--section">
-            <h1 class="generaltext">Cadastramento de Processos</h1>
+            <h1 class="generaltext">Cadastro Novo Processo</h1>
             <form class="form--register" action="http://localhost:6789/processos" method="post" id="form-add">
-				<p>id_usuario:</p>
-                <input class="input--register" type="number" name="user_id" value="">
-                <p>Ajuda:</p>
-                <input class="input--register" type="checkbox" name="ajuda" value="true" checked="checked">
-                <br><p>Completo:</p>
-                <input class="input--register" type="checkbox" name="completo" value="true" checked="checked">
+				<p>Usuario:</p>
+                <input class="input--register" type="number" name="user_id" value="" placeholder="codigo do usuario..."><br>
                 <p>Codigo processo:</p>
-                <input class="input--register" type="number" name="codigo_processo" value="">
+                <input class="input--register" type="number" name="codigo_processo" value=""><br>
 				<p>Nome do processo:</p>
                 <input class="input--register" type="text" name="nome" value="">
-                <input type="submit" value="cadastrar" class="input--main__style input--button">
+                
+				<div class = "checagem">
+	                <p>Ajuda:</p>
+	                <input class="input--register" type="checkbox" name="ajuda" value="true">
+	                <br><p>Completo:</p>
+	                <input class="input--register" type="checkbox" name="completo" value="true"><br>
+				</div>
+				<input type="submit" value="cadastrar" class="input--main__style input--button">
             </form>
         </section>
         
         <section class="section--mainrow__responsive first--section">
-            <h1 class="generaltext">Atualiza��o de Usu�rio</h1>
+            <h1 class="generaltext">Atualização de Status do Processo Ativo</h1>
             <form class="form--register" action="http://localhost:6789/processos/update/:codigo" method="post" id="form-update">
-                <p>id_usuario:</p>
-                <input class="input--register" type="text" name="codigo" value="">        
+                <p>Usuario:</p>
+                <input class="input--register" type="text" name="codigo" value="" placeholder="codigo do usuario...">        
                 <input type="submit" value="atualizar" class="input--main__style input--button">
             </form>
         </section>
@@ -55,7 +58,7 @@
     <section class="section--container__responsive">
 
         <section class="section--row__responsive">
-            <h1 class="generaltext">Processo Atual Usu�rios</h1>
+            <h1 class="generaltext">Processo Atual Usuário</h1>
             <form action="http://localhost:6789/processos/usuario" method="get" id="form-delete">
 				<input class="input--down" type="number" name="codigo" id="codigo_remov" value="" placeholder="codigo do usuario...">
                 <input type="submit" value="enviar" class="input--button input--consult__style">
@@ -108,7 +111,11 @@
         .section--mainrow__responsive{
         	margin: 20px;
         }
-        
+
+		.checagem{
+			justify-content: center;
+		}
+     
         .section--container__responsive {
             display: flex;
             flex-direction: row;
@@ -127,6 +134,11 @@
         .input--main__style {
             background-color: #00FF00;
         }
+
+		.input--register{
+			margin: 20px;
+		}
+			
         
         .input--remove__style {
             background-color: red;
