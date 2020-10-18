@@ -30,9 +30,9 @@
 				<p>id_usuario:</p>
                 <input class="input--register" type="number" name="user_id" value="">
                 <p>Ajuda:</p>
-                <input class="input--register" type="checkbox" name="ajuda" value="">
+                <input class="input--register" type="checkbox" name="ajuda" value="true" checked="checked">
                 <br><p>Completo:</p>
-                <input class="input--register" type="checkbox" name="completo" value="">
+                <input class="input--register" type="checkbox" name="completo" value="true" checked="checked">
                 <p>Codigo processo:</p>
                 <input class="input--register" type="number" name="codigo_processo" value="">
 				<p>Nome do processo:</p>
@@ -44,14 +44,8 @@
         <section class="section--mainrow__responsive first--section">
             <h1 class="generaltext">Atualiza��o de Usu�rio</h1>
             <form class="form--register" action="http://localhost:6789/processos/update/:codigo" method="post" id="form-update">
-                <p>Codigo:</p>
-                <input class="input--register" type="text" name="codigo" value="">
-                <p>Login:</p>
-                <input class="input--register" type="text" name="login" value="">
-                <br><p>Senha:</p>
-                <input class="input--register" type="text" name="senha" value="">
-                <p>Sexo:</p>
-                <input class="input--register" type="text" name="sexo" value="">
+                <p>id_usuario:</p>
+                <input class="input--register" type="text" name="codigo" value="">        
                 <input type="submit" value="atualizar" class="input--main__style input--button">
             </form>
         </section>
@@ -61,10 +55,10 @@
     <section class="section--container__responsive">
 
         <section class="section--row__responsive">
-            <h1 class="generaltext">Todos os Usu�rios</h1>
-            <form onsubmit="addIdToPath('form-get', 'http://localhost:6789/processos/')" method="get" id="form-get">
-                <input class="input--down" type="text" id="codigo" value="" placeholder="codigo do usuario...">
-                <input type="submit" value="consultar" class="input--button input--consult__style">
+            <h1 class="generaltext">Processo Atual Usu�rios</h1>
+            <form action="http://localhost:6789/processos/usuario" method="get" id="form-delete">
+				<input class="input--down" type="number" name="codigo" id="codigo_remov" value="" placeholder="codigo do usuario...">
+                <input type="submit" value="enviar" class="input--button input--consult__style">
             </form>
         </section>
 

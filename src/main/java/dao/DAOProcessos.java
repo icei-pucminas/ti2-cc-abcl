@@ -50,11 +50,31 @@ public class DAOProcessos {
 	
 	public boolean addProcesso(Processo processo) {
 		boolean status = false;
+		DAOUsuarios dao = new DAOUsuarios();
+		dao.conectar();
 		try {  
 			Statement st = conexao.createStatement();
-			st.executeUpdate("INSERT INTO processo (ajuda, completo, user_id, codigo_processo, nome) "
+			
+			Usuario user = (Usuario) dao.getUsuario(processo.getUser_id());
+			if(user == null)
+				return false;
+			
+			st.executeUpdate("INSERT INTO processo (ajuda, completo, user_id, codigo_processo, nome_processo) "
 					       + "VALUES ("+ processo.isAjuda()+ ", '" + processo.isCompleto() + "', '" + processo.getUser_id() +
 					       "', '" + processo.getCodigo_processo() + "', '" + processo.getNome() + "');");
+			st.close();
+			status = true;
+		} catch (SQLException u) {  
+			throw new RuntimeException(u);
+		}
+		return status;
+	}
+	
+	public static boolean excluirProcesso(int codigo, int id) {
+		boolean status = false;
+		try {  
+			Statement st = conexao.createStatement();
+			st.executeUpdate("DELETE FROM processo WHERE codigo_processo != " + codigo + " AND user_id = " + id);
 			st.close();
 			status = true;
 		} catch (SQLException u) {  
@@ -67,7 +87,7 @@ public class DAOProcessos {
 		boolean status = false;
 		try {  
 			Statement st = conexao.createStatement();
-			String sql = "UPDATE processo SET completo = '" + true + " WHERE processo = " + processo.getCodigo_processo();
+			String sql = "UPDATE processo SET completo = " + true + " WHERE codigo_processo = " + processo.getCodigo_processo();
 			st.executeUpdate(sql);
 			st.close();
 			status = true;
@@ -90,7 +110,31 @@ public class DAOProcessos {
 
 	             for(int i = 0; rs.next(); i++) {
 	            	 processos[i] = new Processo(rs.getBoolean("ajuda"), rs.getBoolean("completo"),
-	                		                  rs.getInt("user_id"), rs.getInt("codigo_processo"), rs.getString("nome"));
+	                		                  rs.getInt("user_id"), rs.getInt("codigo_processo"), rs.getString("nome_processo"));
+	             }
+	          }
+	          st.close();
+	          st.close();
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
+		return processos[0];
+	}
+	
+	public static Processo getProcesso(int id) {
+		Processo[] processos = null;
+		
+		try {
+			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+			ResultSet rs = st.executeQuery("SELECT * FROM processo WHERE user_id = " + id);		
+	         if(rs.next()){
+	             rs.last();
+	             processos = new Processo[rs.getRow()];
+	             rs.beforeFirst();
+
+	             for(int i = 0; rs.next(); i++) {
+	            	 processos[i] = new Processo(rs.getBoolean("ajuda"), rs.getBoolean("completo"),
+	                		                  rs.getInt("user_id"), rs.getInt("codigo_processo"), rs.getString("nome_processo"));
 	             }
 	          }
 	          st.close();
@@ -114,7 +158,7 @@ public class DAOProcessos {
 
 	             for(int i = 0; rs.next(); i++) {
 	            	 processos[i] = new Processo(rs.getBoolean("ajuda"), rs.getBoolean("completo"),
-	                		                  rs.getInt("user_id"), rs.getInt("codigo_processo"), rs.getString("nome"));
+	                		                  rs.getInt("user_id"), rs.getInt("codigo_processo"), rs.getString("nome_processo"));
 	             }
 	          }
 	          st.close();

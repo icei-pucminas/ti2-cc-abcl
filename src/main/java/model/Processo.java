@@ -5,13 +5,13 @@ public class Processo {
 	private boolean completo;
 	private int user_id;
 	private int codigo_processo;
-	private String nome;
+	private String nome_processo;
 	
 	public String getNome() {
-		return nome;
+		return nome_processo;
 	}
 	public void setNome(String nome) {
-		this.nome = nome;
+		this.nome_processo = nome;
 	}
 	
 	public Processo(boolean ajuda, boolean completo, int user_id, int codigo_processo, String nome) {
@@ -20,7 +20,7 @@ public class Processo {
 		this.completo = completo;
 		this.user_id = user_id;
 		this.codigo_processo = codigo_processo;
-		this.nome = nome;
+		this.nome_processo = nome;
 	}
 	
 	public Processo(boolean ajuda, int user_id, int codigo_processo, String nome) {
@@ -29,7 +29,7 @@ public class Processo {
 		this.completo = false;
 		this.user_id = user_id;
 		this.codigo_processo = codigo_processo;
-		this.nome = nome;
+		this.nome_processo = nome;
 	}
 	
 	public boolean isAjuda() {
@@ -59,7 +59,7 @@ public class Processo {
 	@Override
 	public String toString() {
 		return "Processo [ajuda=" + ajuda + ", completo=" + completo + ", user_id=" + user_id + ", codigo_processo="
-				+ codigo_processo + ", nome=" + nome + "]";
+				+ codigo_processo + ", nome=" + nome_processo + "]";
 	}
 
 	

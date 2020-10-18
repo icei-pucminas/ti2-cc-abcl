@@ -17,6 +17,13 @@ public class Usuario {
 		this.email = email;
 		this.telefone = telefone;
 	}
+	public Usuario(String nome, String sobrenome, String senha, String email, String telefone) {
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.senha = senha;
+		this.email = email;
+		this.telefone = telefone;
+	}
 	public int getId() {
 		return id;
 	}

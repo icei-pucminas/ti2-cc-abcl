@@ -7,16 +7,18 @@ import dao.DAOUsuarios;
 import model.Processo;
 import model.Usuario;
 
+
 public class ProcessosService{
 
 	private DAOProcessos dao;
-
+	private DAOUsuarios daoU;
+	
 	public ProcessosService(){
 		dao = new DAOProcessos();
+		daoU = new DAOUsuarios();
 	}
 
-	public Object add(Request request, Response response) {
-		DAOProcessos dao = new DAOProcessos();
+	public Object addProcessos(Request request, Response response) {
         dao.conectar();
         
 		boolean ajuda = Boolean.parseBoolean(request.queryParams("ajuda"));
@@ -27,39 +29,50 @@ public class ProcessosService{
 
 		Processo processo = new Processo(ajuda, completo, user_id, codigo_processo, nome);
 
-		dao.addProcesso(processo);
+		boolean status = dao.addProcesso(processo);
+		dao.excluirProcesso(codigo_processo, user_id);
 
 		response.status(201); // 201 Created
 		dao.close();
-		return nome;
+		if(status)
+			return nome;
+		else 
+			return "n�o foi poss�vel localizar usuario";
 	}
 
-	public String update(Request request, Response response) {
-		DAOProcessos dao = new DAOProcessos();
+	public String updateProcessos(Request request, Response response) {
         dao.conectar();
+        daoU.conectar();
             
-		int user_id = Integer.parseInt(request.queryParams("user_id"));
-		int codigo_processo = Integer.parseInt(request.queryParams("codigo_processo"));
+		int id = Integer.parseInt(request.queryParams("codigo"));
+	   
+	    Processo processo = dao.getProcesso(id);
 	    
-	    Processo processo = dao.getProcesso(user_id, codigo_processo);
 		dao.atualizarStatusProcesso(processo);
 
 		response.status(201); // 201 Created
 		dao.close();
+		daoU.close();
 		return "atualizado";
 	}
 
-	public Object getAll(Request request, Response response) {
-		DAOProcessos dao = new DAOProcessos();
-        DAOUsuarios daoU = new DAOUsuarios();
-        dao.conectar();
+	public Object getAllProcessos(Request request, Response response) {
+		daoU.conectar();
+		dao.conectar();
         int user_id = Integer.parseInt(request.queryParams("codigo"));
         
         Usuario user = daoU.getUsuario(user_id);
         
+        if(user == null)
+			return "n�o foi poss�vel localizar usuario";
+        
 		StringBuffer returnValue = new StringBuffer("<processos type=\"array\">");
 		for (Processo processos : dao.getProcessos(user)) {
-			Processo processo = (Processo) processos;
+			Processo processo = dao.getProcesso(user_id);
+			
+			if(processo == null)
+				return "nao ha processos para este usuario";
+			
 			returnValue.append("<processo>\n" + 
             		"\t<nome> " + processo.getNome() + "</nome>\n" +
             		"\t<status> " + (processo.isCompleto()? "completo" : "nao completo") + "</status>\n" +
@@ -68,8 +81,11 @@ public class ProcessosService{
 		returnValue.append("</processos>");
 	    response.header("Content-Type", "application/xml");
 	    response.header("Content-Encoding", "UTF-8");
-	    dao.close();
+		dao.close();
+		daoU.close();
 		return returnValue.toString();
+//        return request.queryParams("codigo");
 	}
+	
 
 }
