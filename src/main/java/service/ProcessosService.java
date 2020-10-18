@@ -67,11 +67,13 @@ public class ProcessosService{
 			return "nï¿½o foi possï¿½vel localizar usuario";
         
 		StringBuffer returnValue = new StringBuffer("<processos type=\"array\">");
+		
+		Processo processo_teste[] = dao.getProcessos(user);
+		if(processo_teste == null)
+				return "não há processos ativos para este usuario";
+		
 		for (Processo processos : dao.getProcessos(user)) {
 			Processo processo = dao.getProcesso(user_id);
-			
-			if(processo == null)
-				return "nao ha processos para este usuario";
 			
 			returnValue.append("<processo>\n" + 
             		"\t<nome> " + processo.getNome() + "</nome>\n" +
