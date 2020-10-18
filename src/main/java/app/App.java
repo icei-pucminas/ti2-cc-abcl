@@ -15,24 +15,26 @@ public class App{
 	
     public static void main(String[] args) {
     	
+    	port(6789); 
+    	
     	staticFiles.location("/");
     	
-    	get("/", (request, response) -> {
-            Map<String, Object> model = new HashMap<>();
-            return new VelocityTemplateEngine().render(
-                new ModelAndView(model, "index.html")
-            );
-        });
+//    	get("/adotapp2/HTML", (request, response) -> {
+////    		return "Hello world";
+//            Map<String, Object> model = new HashMap<>();
+//            return new VelocityTemplateEngine().render(
+//                new ModelAndView(model, "adotapp2/HTML/index.html")
+//            );
+//        });
     	
-        //port(6789); 
-
+        
         post("/processos", (request, response) -> Service.addProcessos(request, response));
 
         post("/processos/update/:codigo", (request, response) -> Service.updateProcessos(request, response));
         
         post("/adicionarUsuario", (request, response) -> user.addUsuarios(request, response));
 
-        get("/processos/usuario/", (request, response) -> Service.getAllProcessos(request, response));   
+        get("/processos/usuario", (request, response) -> Service.getAllProcessos(request, response));   
         
     }
 }

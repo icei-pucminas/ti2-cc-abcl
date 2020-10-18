@@ -57,6 +57,8 @@ public class ProcessosService{
 	}
 
 	public Object getAllProcessos(Request request, Response response) {
+		daoU.conectar();
+		dao.conectar();
         int user_id = Integer.parseInt(request.queryParams("codigo"));
         
         Usuario user = daoU.getUsuario(user_id);
