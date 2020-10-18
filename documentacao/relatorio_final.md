@@ -18,8 +18,8 @@ _Instituto de Informática e Ciências Exatas – Pontifícia Universidade de Mi
 Lembretes: 
 
 Fazer: Objetivos específicos e tudo a partir do 2.3
-
 Completar: Tecnologias e talvez contextualização; descobrir onde explicar a parte de bd de forma mais específica
+
 ---
 
 _**Resumo**_ 
@@ -122,10 +122,9 @@ Apresente o modelo de dados. Defina o dicionário de dados com os respectivos fo
 
     3.1. Diagrama de Entidade-Relacionamento
 
-Apresente a estrutura das tabelas de banco de dados no modelo Diagrama de Entidade-Relacionamento. 
-A Seguir, segue um exemplo de imagem adicionada ao documento.
+Adicionar explicação do diagrama.
 
-![Diagrama de Entidade Relacionamento de Exemplo](imagens/er_diagram.png "Diagrama de Entidade Relacionamento de Exemplo")
+![Diagrama de Entidade Relacionamento](diagramaER.jpeg "Diagrama de Entidade Relacionamento de Exemplo")
 
 **4. Sistema desenvolvido**
 
