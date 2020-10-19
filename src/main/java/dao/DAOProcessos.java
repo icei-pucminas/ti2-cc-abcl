@@ -65,7 +65,7 @@ public class DAOProcessos {
 			st.close();
 			status = true;
 		} catch (SQLException u) {  
-			throw new RuntimeException(u);
+			status = false;
 		}
 		return status;
 	}
@@ -87,7 +87,7 @@ public class DAOProcessos {
 		boolean status = false;
 		try {  
 			Statement st = conexao.createStatement();
-			String sql = "UPDATE processo SET completo = " + true + " WHERE codigo_processo = " + processo.getCodigo_processo();
+			String sql = "UPDATE processo SET completo = " + true + " WHERE user_id = " + processo.getUser_id() + "AND codigo_processo = " + processo.getCodigo_processo();
 			st.executeUpdate(sql);
 			st.close();
 			status = true;
