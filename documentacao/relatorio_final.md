@@ -7,18 +7,13 @@
 
 **Carlos Henrique Cury Ferreira Lima, chcfl2002@gmail.com**
 
-**Luiza Ribeiro Parente Silva , luizarparentesilva@gmail.com**
+**Luiza Ribeiro Parente Silva, luizarparentesilva@gmail.com**
 
 ---
 
 _Curso de Ciência da Computação, Unidade Coração Eucarístico_
 
 _Instituto de Informática e Ciências Exatas – Pontifícia Universidade de Minas Gerais (PUC MINAS), Belo Horizonte – MG – Brasil_
-
-Lembretes: 
-
-Fazer: Objetivos específicos e tudo a partir do 2.3
-Completar: Tecnologias e talvez contextualização; descobrir onde explicar a parte de bd de forma mais específica
 
 ---
 
@@ -30,19 +25,12 @@ _Considerando os trantornos causados pela morosidade atual nos processos de ado�
 
 
 **1. Introdução**
-
-*A introdução deve apresentar de dois ou quatro parágrafos de contextualização do trabalho.*
  
 No país em que vivemos, o acesso a informações confiáveis é muitas vezes dificultado. Este pode ser um problema em contextos extremamente diversos, inclusive no processo de adoção, tendo em vista que muitos dos interessados em adotar não têm suporte suficiente para se orientarem de forma clara.
 
 De acordo com entrevistas realizadas posteriormente e um recente contato com uma advogada especialista, saber quais são os documentos necessário para formalizar uma adoção no Brasil, onde obtê-los e suas funções no processo é algo complicado para os futuros pais e mães. Infelizmente, mesmo depois de tantos anos, as adoções no país continuam sendo demasiadamente burocráticas e demoradas, o que interfere diretamente no sucesso das mesmas. Considerando que a equipe não pode modificar diretamente os processos jurídicos que permeiam a formalização das adoções, foi necessário adotar uma nova perspectiva acerca do problema.  
 
 Desta forma, passou-se a propor um ambiente digital que facilite o acesso às informações necessárias, como, por exemplo, quais são os documentos e onde conseguí-los, juntamente com a possibilidade de um intercâmbio de experiências por meio de um fórum para que quem ainda esteja passando pelo processo consiga tirar dúvidas com quem já o finalizou.
-
-
-Na **contextualização**, o aluno deve dizer do que se trata o trabalho, em que área ou contexto se insere. 
-A **contextualização** deve ser desenvolvida de algo mais genérico para algo mais específico. 
-A citação de pesquisas quantitativas é bem aceita aqui (corretamente referenciadas).
 
 
     1.1 Contextualização
@@ -57,6 +45,7 @@ Devido à má implementação, ao excessivo tempo de espera, à legislação pre
 Frente ao problema salientado, procurou-se utilizar os recursos tecnológicos a disposição para criar um ambiente online que ajude os futuros pais e mães a orientarem-se durante essa jornada burocrática. Ademais, empenhar-se-á na tarefa de oferecer recursos além dos oferecidos pelo programa governamental, permitindo aos usuários o usufruto de artifícios que permitam maior liberdade aos que buscam sucesso na adoção, inserindo-os diretamente no processo, e, permitindo maior transparência no procedimento.
 
         1.3.1 Objetivos específicos
+Pendente.
 
 Apresente também alguns (pelo menos 2) **objetivos específicos** depende
 ndo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
@@ -69,9 +58,7 @@ Considerando que o Brasil tem atualmente 4,9 mil crianças e adolescentes no sis
 
     2.1. Requisitos funcionais
 	
-Enumere os requisitos funcionais previstos para a sua aplicação. 
-Use a tabela abaixo para enumerá-lo.  Esses requisitos devem estar 
-de acordo com as definições do modelo de negócio.
+A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade de cada um.
 
 | No.           | Descrição                                         | Prioridade |
 | ------------- |:-------------------------------------------------:| ----------:|
@@ -89,7 +76,7 @@ de acordo com as definições do modelo de negócio.
 
     2.2. Tecnologias
 
-Linguagens de desenvolvimento web front-end: HTML, CSS, PHP e JavaScript;
+Linguagens de desenvolvimento web front-end: HTML, CSS e JavaScript;
 
 Linguagens de desenvolvimento back-end: Java;
 
@@ -97,17 +84,22 @@ Repositório: GitHub;
 
 Frameworks: Bootstrap, MDB e Spark;
 
-Integração BD com o site: Eclipse, Maven e PostgreSQL;
+Integração BD com o site: Eclipse, Maven; 
+
+Banco de dados: PostgreSQL;
 
 Service Worker para permitir ao smartphone reconhecer o site como app;
 
-Microsoft Azure;
+Microsoft Azure como servidor em nuvem para o banco de dados;
 
 IDE: Microsoft Visual Studio Code.
 
 ![Relação entre as tecnologias](tecnologias.png "Relação entre as tecnologias")
 
     2.3. Serviços inteligentes
+Pendente.
+
+Nosso objetivo é desenvolver um chatbot para facilitar e melhorar a experiência dos usuários com o sistema A.DOTA. Este teria a função de responder dúvidas básicas e fornecer mais uma forma de suporte aos futuros pais e mães.
 
 Descreva o mecanismo de inteligência que será utilizado no seu sistema. Utilize a modelagem baseada em agente
 para definir as entradas e saídas do seu módulo de serviço inteligente. Apresente quem irá fornecer o serviço
@@ -115,25 +107,40 @@ e em que módulo será utilizado.
 
 	
 **3. Modelagem de dados**
+Pendente.
 
 Apresente o modelo de dados. Defina o dicionário de dados com os respectivos formatos e significados.
 
     3.1. Diagrama de Entidade-Relacionamento
 
-Adicionar explicação do diagrama.
+O diagrama abaixo ilustra a estrutura base para o funcionamento do nosso sistema. Nele podemos observar as entidades Usuario, Processo e Tarefa que estão ligadase ntre si de forma que, um usuário passa por vários processos e cada processo tem várias tarefas.
 
 ![Diagrama de Entidade Relacionamento](diagramaER.jpeg "Diagrama de Entidade Relacionamento")
 
 **4. Sistema desenvolvido**
+Pendente.
 
 Faça aqui uma breve descrição do software e coloque as principais telas com uma explicação de como usar cada uma.
 
 **5. Avaliação**
+Refazer.
 
 Faça aqui sobre a avaliação do software. Indique se ele atendeu as expectativas e ele é viável. 
 Para não ficar subjetivo, o ideal é fazer um questionário e pedir ao usuário do processo que faça a avaliação.
 
+| Usuário       | Registro do resultado                             |
+| ------------- |:-------------------------------------------------:|
+| Usuário #1 ~ 50 anos | O resultado dos testes do sistema foram satisfatórios, com o usuário obtendo sucesso em quase todas as tarefas do sistema, tendo apenas dificuldades em saber quando fazer login ou quando cadastrar. |
+| Usuário #2 - menos de 20 anos | O teste obteve resultados satisfatórios. O usuário não apresentou nenhuma dificuldade em realizar o cadastro pelo site ou em responder o questionário, conseguindo compreender o que foi solicitado com clareza. |
+| Usuário #3 - entre 20 e 30 anos | O teste realizado obteve resultados positivos. O usuário foi capaz de realizar todo o procedimento necessário para ingressar ao sistema sem nenhuma dificuldade. |
+| Usuário #4 - entre 50 e 60 anos | O teste apresentou resultados positivos, mas o usuários teve certo impasse ao navegar pela primeira vez nas funcionalidades propostas pelo aplicativo, ficando com dúvidas de como prosseguir a navegação. No entanto, o usuário foi capaz de usufruir da aplicação. |
+| Usuário #5 - menos de 20 anos | O teste obteve resultados satisfatórios, o usuário foi capaz de realizar o cadastro e responder todo o questionário sem nenhuma dificuldade, compreendendo o objetivo proposto pela site. |
+| Usuário #6 - entre 20 e 30 anos | O teste obteve excelentes resultados. O usuário conseguiu realizar seu cadastro com clareza sem nenhuma dúvida. Elogiou o site e seu manejo e conseguiu realizar todas as funções pedidas. |
+| Usuário #7 ~ 50 anos | A utilização do site foi bem sucedida, tendo sido bem explicado o que fazer no cadastro e perguntas de fácil entendimento no questionário. |
+| Usuário #8 ~ 40 anos | O usuário realizou seus primeiros passos de maneira lenta mas depois se adaptou e entendeu como funcionava a plataforma e conseguiu de maneira clara realizar seu cadastro. Fez comentários positivos sobre o site e conseguiu navegar por ele sem dificuldades. |
+
 **6. Conclusão**
+Pendente.
 
 Apresente aqui a conclusão do seu trabalho. Discussão dos resultados obtidos no trabalho, onde se verifica as 
 observações pessoais de cada aluno. Poderá também apresentar sugestões de novas linhas de estudo.  
@@ -142,12 +149,12 @@ observações pessoais de cada aluno. Poderá também apresentar sugestões de n
 **REFERÊNCIAS**
 
 
-**[1.1]** - _ELMASRI, Ramez; NAVATHE, Sham. **Sistemas de banco de dados**. 7. ed. São Paulo: Pearson, c2019. E-book. ISBN 9788543025001._
+**[1.1]** - _Littlefield, A. **Guia da metodologia ágil e scrum para iniciantes**. 2016. Disponível em: https://blog.trello.com/br/scrum-metodologia-agil._
 
-**[1.2]** - _COPPIN, Ben. **Inteligência artificial**. Rio de Janeiro, RJ: LTC, c2010. E-book. ISBN 978-85-216-2936-8._
+**[1.2]** - _Gigante, E. A. **Como funciona o processo de adoção no brasil?**. 2018. Disponível em: https://www.politize.com.br/adocao-no-brasil/._
 
-**[1.3]** - _CORMEN, Thomas H. et al. **Algoritmos: teoria e prática**. Rio de Janeiro, RJ: Elsevier, Campus, c2012. xvi, 926 p. ISBN 9788535236996._
+**[1.3]** - _Albuquerque, F. **Adoção sempre foi difícil no Brasil, diz advogada**. 2016. Disponível em: https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2016-10/tema-da-adocao-sempre-foi-dificil-no-brasil-cadastros-dificultam._
 
-**[1.4]** - _SUTHERLAND, Jeffrey Victor. **Scrum: a arte de fazer o dobro do trabalho na metade do tempo**. 2. ed. rev. São Paulo, SP: Leya, 2016. 236, [4] p. ISBN 9788544104514._
+**[1.4]** - _Pignato, C.; Zanlorenssi, G.; Ostetti, V. **Adoção no Brasil: perfil de crianças e pretendentes e como funciona o processo**. 2018. Disponível em https://www.nexojornal.com.br/grafico/2017/08/11/Ado%C3%A7%C3%A3o-no-Brasil-perfil-de-crian%C3%A7as-e-pretendentes-e-como-funciona-o-processo._
 
-**[1.5]** - _RUSSELL, Stuart J.; NORVIG, Peter. **Inteligência artificial**. Rio de Janeiro: Elsevier, c2013. xxi, 988 p. ISBN 9788535237016._
+**[1.5]** - _Reis, T. **Demora da Justiça faz criança perder chance de adoção, mostra estudo.**. 2015. Disponível em: http://g1.globo.com/bemestar/noticia/2015/06/demora-da-justica-faz-crianca-perder-chance-de-adocao-mostra-estudo.html._
