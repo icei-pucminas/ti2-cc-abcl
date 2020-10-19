@@ -90,11 +90,11 @@ function checaUsuario() {    // tela de login -> checa se o usuario já existe, 
         }
 
     
-        if(!jaFoiCadastrado){
+        /*if(!jaFoiCadastrado){
             alert("Email não cadastrado.");
             document.getElementById('formLogin').action = "cadastro.html";  
             
-        }
+        }*/
     }
 }
 

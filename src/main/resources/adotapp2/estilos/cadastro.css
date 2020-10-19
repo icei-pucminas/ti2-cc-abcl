@@ -1,3 +1,14 @@
+.p-bold{
+    font-weight: lighter;
+    color: white;
+    font-size: 17pt !important;
+    margin-top: 5pt;
+}
+
+.titulo2{
+    padding-top: 0; margin-top: 0;
+    text-align: end;
+}
 @media (max-width: 1366px){
     .cadastro {
         margin-top: 0px !important ;

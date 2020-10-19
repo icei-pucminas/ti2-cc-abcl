@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.*;
 import model.Usuario;
+import modelo.Produtos;
 
 
 public class DAOUsuarios {
@@ -25,12 +26,12 @@ public class DAOUsuarios {
 			Class.forName(driverName);
 			conexao = DriverManager.getConnection(url, username, password);
 			status = (conexao == null);
-			System.out.println("Conexão efetuada com o postgres!");
+			System.out.println("Conexï¿½o efetuada com o postgres!");
 		} catch (ClassNotFoundException e) { 
-//			System.err.println("Conexão NÃO efetuada com o postgres -- Driver não encontrado -- " + e.getMessage());
+//			System.err.println("Conexï¿½o Nï¿½O efetuada com o postgres -- Driver nï¿½o encontrado -- " + e.getMessage());
 			e.printStackTrace();
 		} catch (SQLException e) {
-//			System.err.println("Conexão NÃO efetuada com o postgres -- " + e.getMessage());
+//			System.err.println("Conexï¿½o Nï¿½O efetuada com o postgres -- " + e.getMessage());
 			e.printStackTrace();
 		}
 
@@ -64,6 +65,44 @@ public class DAOUsuarios {
 		
 	}
 	
+	public static boolean encontrarUsuario(String email){
+		boolean encontrado = true;;
+		
+		try{
+			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+			ResultSet rs = st.executeQuery("SELECT email FROM usuarios WHERE email LIKE â€˜%" + email + "%â€™");	
+			if(rs == null)
+					encontrado = false;
+		}catch(Exception e) {
+			System.err.println(e.getMessage());
+		}
+
+		return encontrado;
+	}
+	
+	public static Usuario[] getUsuarios() {
+		Usuario[] user = null;
+		
+		try {
+			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+			ResultSet rs = st.executeQuery("SELECT * FROM usuarios");		
+	         if(rs.next()){
+	             rs.last();
+	             user = new Usuario[rs.getRow()];
+	             rs.beforeFirst();
+
+	             for(int i = 0; rs.next(); i++) {
+	                user[i] = new Usuario(rs.getString("nome"),rs.getString("sobrenome"),  rs.getString("telefone"), rs.getString("email"), rs.getString("senha"));
+	             }
+	          }
+	          st.close();
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
+
+		return user;		
+	}
+
 
 	
 	public static Usuario getUsuario(int id) { // LUIZA VOCE TEM Q DEIXAR ESSE TO USANDO ELE NA DAO DE PROCESSOS

@@ -5,7 +5,7 @@
 
 body {
     background: #007bff;
-    background: linear-gradient(to right, #007bff, #48cae4);
+    background: linear-gradient(to right, #00b4d8, #d4d4e6da);
     opacity: 0;
     transition: opacity .7s;
 }
