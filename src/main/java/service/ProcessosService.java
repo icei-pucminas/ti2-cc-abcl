@@ -29,15 +29,18 @@ public class ProcessosService{
 
 		Processo processo = new Processo(ajuda, completo, user_id, codigo_processo, nome);
 
-		boolean status = dao.addProcesso(processo);
 		dao.excluirProcesso(codigo_processo, user_id);
+		boolean status = dao.addProcesso(processo);
+		if(status == false)
+			return "processo já existente no banco de dados";
+		
 
 		response.status(201); // 201 Created
 		dao.close();
 		if(status)
 			return nome;
 		else 
-			return "nï¿½o foi possï¿½vel localizar usuario";
+			return "não foi possível localizar usuario";
 	}
 
 	public String updateProcessos(Request request, Response response) {
@@ -64,7 +67,7 @@ public class ProcessosService{
         Usuario user = daoU.getUsuario(user_id);
         
         if(user == null)
-			return "nï¿½o foi possï¿½vel localizar usuario";
+			return "não foi possível localizar usuario";
         
 		StringBuffer returnValue = new StringBuffer("<processos type=\"array\">");
 		
@@ -76,8 +79,8 @@ public class ProcessosService{
 			Processo processo = dao.getProcesso(user_id);
 			
 			returnValue.append("<processo>\n" + 
-            		"\t<nome> " + processo.getNome() + "</nome>\n" +
-            		"\t<status> " + (processo.isCompleto()? "completo" : "nao completo") + "</status>\n" +
+            		"\t<nome> " + processo.getNome() + " </nome>\n" +
+            		"\t<status> " + (processo.isCompleto()? "completo" : "nao completo") + " </status>\n" +
             		"</processo>\n");
 		}
 		returnValue.append("</processos>");

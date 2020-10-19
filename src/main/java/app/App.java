@@ -19,13 +19,12 @@ public class App{
     	
     	staticFiles.location("/");
     	
-//    	get("/adotapp2/HTML", (request, response) -> {
-////    		return "Hello world";
-//            Map<String, Object> model = new HashMap<>();
-//            return new VelocityTemplateEngine().render(
-//                new ModelAndView(model, "adotapp2/HTML/index.html")
-//            );
-//        });
+    	get("/adotapp2/HTML", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new VelocityTemplateEngine().render(
+                new ModelAndView(model, "adotapp2/HTML/index.html")
+            );
+        });
     	
         
         post("/processos", (request, response) -> Service.addProcessos(request, response));

@@ -58,7 +58,7 @@ public class DAOUsuarios {
 			st.close();
 			status = true;
 		} catch (SQLException u) {  
-			throw new RuntimeException(u);
+			status = false;
 		}
 		return status;
 		
