@@ -26,6 +26,7 @@ public class usuariosServico {
 			dao.addUsuarios(user);
 			response.status(201);
 		}else{
+			//NÃO MANDAR RESPOSTA DE ERRO!!!
 			response.status(400);
 		}
 
