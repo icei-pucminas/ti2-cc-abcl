@@ -1,6 +1,9 @@
 onload = () => {
     let btn = document.getElementById("confirma");
-    btn.onclick = senhasCheck;
+    btn.onclick = ( )=> {
+		senhasCheck();
+		local();
+	};
 }
 
 function enviarDados(senha) {
@@ -14,9 +17,8 @@ function enviarDados(senha) {
     //identificar o formato do envio das informações
     req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
     req.send(`senha=${senha}&nome=${nome}&sobrenome=${sobrenome}&email=${email}&telefone=${telefone}`)
+	local()
 }
-
-
 
 function senhasCheck(i) {
     let senha = document.getElementById("inputSenhaCadastro").value;

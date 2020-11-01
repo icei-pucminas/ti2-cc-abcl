@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.*;
 import model.Usuario;
+import model.Processo;
 
 
 public class DAOUsuarios {
@@ -64,27 +65,29 @@ public class DAOUsuarios {
 		
 	}
 	
-	public static boolean encontrarUsuario(String email){
-		boolean encontrado = true;;
-		
-		try{
-			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-			ResultSet rs = st.executeQuery("SELECT email FROM usuarios WHERE email LIKE ‘%" + email + "%’");	
-			if(rs == null)
-					encontrado = false;
-		}catch(Exception e) {
-			System.err.println(e.getMessage());
-		}
-
-		return encontrado;
-	}
+//	public static boolean encontrarUsuario(String email){
+//		boolean encontrado = true;
+//		
+//		try{
+//			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+//			ResultSet rs = st.executeQuery("SELECT email FROM usuario WHERE email LIKE '%%" + email + "%%'");	
+//			System.out.println(rs);
+//			
+//			if(rs.next())
+//					encontrado = false;
+//		}catch(Exception e) {
+//			System.err.println(e.getMessage());
+//		}
+//
+//		return encontrado;
+//	}
 	
 	public static Usuario[] getUsuarios() {
 		Usuario[] user = null;
 		
 		try {
 			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-			ResultSet rs = st.executeQuery("SELECT * FROM usuarios");		
+			ResultSet rs = st.executeQuery("SELECT * FROM usuario");		
 	         if(rs.next()){
 	             rs.last();
 	             user = new Usuario[rs.getRow()];
@@ -109,6 +112,29 @@ public class DAOUsuarios {
 		try {
 			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
 			ResultSet rs = st.executeQuery("SELECT * FROM usuario WHERE id = " + id);		
+	         if(rs.next()){
+	             rs.last();
+	             usuarios = new Usuario[rs.getRow()];
+	             rs.beforeFirst();
+
+	             for(int i = 0; rs.next(); i++) {
+	                usuarios[i] = new Usuario(rs.getInt("id"), rs.getString("nome"), 
+	                		                  rs.getString("sobrenome"), rs.getString("senha"),rs.getString("email"), rs.getString("telefone"));
+	             }
+	          }
+	          st.close();
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
+
+		return usuarios[0];
+	}
+	
+	public static Usuario getUsuario(String email) { // LUIZA VOCE TEM Q DEIXAR ESSE TO USANDO ELE NA DAO DE PROCESSOS
+		Usuario[] usuarios = new Usuario[1];
+		try {
+			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+			ResultSet rs = st.executeQuery("SELECT * FROM usuario WHERE email LIKE '%%" + email + "%%'");		
 	         if(rs.next()){
 	             rs.last();
 	             usuarios = new Usuario[rs.getRow()];

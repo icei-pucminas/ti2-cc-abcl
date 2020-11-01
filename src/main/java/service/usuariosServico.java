@@ -21,7 +21,7 @@ public class usuariosServico {
 		String telefone = request.queryParams("telefone");
 		String senha = request.queryParams("senha");
 		
-		if(!DAOUsuarios.encontrarUsuario(email)){
+		if(DAOUsuarios.getUsuario(email) == null){
 			Usuario user = new Usuario(nome, sobrenome, senha, email, telefone);
 			dao.addUsuarios(user);
 			response.status(201);
@@ -33,6 +33,23 @@ public class usuariosServico {
 		dao.close();
 		
 		return nome;
+		
+	}
+	
+	public Object getUsuario (Request request, Response response){
+		dao.conectar();
+		DAOUsuarios daoU = new DAOUsuarios();
+		daoU.conectar();
+		
+		String email = request.queryParams("email");
+
+			Usuario user = daoU.getUsuario(email);
+			response.status(201);
+
+
+		dao.close();
+		
+		return user.toString();
 		
 	}
 	
