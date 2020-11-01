@@ -2,7 +2,6 @@ package dao;
 
 import java.sql.*;
 import model.Usuario;
-import modelo.Produtos;
 
 
 public class DAOUsuarios {

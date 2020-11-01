@@ -1,0 +1,24 @@
+{
+  "name": "ti2-cc-abcl",
+  "version": "1.0.0",
+  "description": "No país em que vivemos, o acesso a informações confiáveis é muitas vezes dificultado. Este pode ser um problema em contextos extremamente diversos, inclusive no processo de adoção, tendo em vista que muitos dos interessados em adotar não têm suporte suficiente para se orientarem de forma clara.",
+  "main": "index.js",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "googleapis": "^62.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icei-pucminas/ti2-cc-abcl.git"
+  },
+  "author": "ABCL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icei-pucminas/ti2-cc-abcl/issues"
+  },
+  "homepage": "https://github.com/icei-pucminas/ti2-cc-abcl#readme"
+}

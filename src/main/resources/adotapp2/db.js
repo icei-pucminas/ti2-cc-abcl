@@ -165,3 +165,37 @@ function validateForm() {  /* Sistema de enviar emails */
     }
     document.querySelector('.status').innerHTML = "Enviando...";
 }
+
+
+function proxEtapa(){
+    var content = document.getElementById("etapa2")
+    content.classList.add("none")
+}
+
+function conclusao(){
+    let checkboxs = document.getElementsByName("tarefa[]")
+    let checada = true
+    checkboxs.forEach(a => {
+        if(checada && !a.checked){
+            checada = false
+        }
+    })
+    
+    if(checada){
+        document.getElementById("btn_none").classList.add('aparecer')
+    }else{
+        document.getElementById("btn_none").classList.remove('aparecer')
+    }
+}
+
+function enviarConclusaoTarefa() {
+    let req = new XMLHttpRequest;
+    req.open("post", "/concluido", true)
+    req.send()
+}
+
+onload = () => {
+    let btn = document.getElementById("btn_none")
+
+    btn.onclick = enviarConclusaoTarefa()
+}

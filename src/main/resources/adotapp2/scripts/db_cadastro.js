@@ -15,8 +15,14 @@ var questionario = [
         "pergunta": "Você já participa ou completou as aulas de capacitação parental?"
     }
 ];
+function togglePopup(){
+    document.getElementById("popup-1").classList.toggle("active");
+  }
+  
 
 onload = () => {
+    // mostraUsuario();
+    // atualizaTabela();
     /*
     if(window.location.href == "home.html"){
         atualizaTabela();
@@ -28,41 +34,40 @@ onload = () => {
     let radioNao = document.getElementById("nao");
     let radioSim = document.getElementById("sim");
     */
-    let email = JSON.parse(localStorage.getItem("emailLogado"));
+    // let email = JSON.parse(localStorage.getItem("emailLogado"));
 
-    let respostas = [];
-    let i=0;
-    document.querySelector("#proximo").onclick = () => {
-        if(i == questionario.length){
-            if(radioSim.checked) respostas.push(true);
-            else if(radioNao.checked) respostas.push(false);
+    // let respostas = [];
+    // let i=0;
+    // document.querySelector("#proximo").onclick = () => {
+    //     if(i == questionario.length){
+    //         if(radioSim.checked) respostas.push(true);
+    //         else if(radioNao.checked) respostas.push(false);
 
-            let usuarios = JSON.parse(localStorage.getItem("usuarios"));
-            console.log(usuarios);
+    //         let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+    //         console.log(usuarios);
 
-            for(c=0 ; c < usuarios.length ; c++){
-                if(usuarios[c].email == email) usuarios[c].progresso = respostas;
-            }
+    //         for(c=0 ; c < usuarios.length ; c++){
+    //             if(usuarios[c].email == email) usuarios[c].progresso = respostas;
+    //         }
 
-            localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    //         localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-            document.getElementById("display").innerHTML = `Você completou o questionário!`;
-            setTimeout(function(){window.location="home.html";}, 3000);
-        }
-        if(i < questionario.length){
-            console.log(respostas);
-            titulo.innerHTML = questionario[i].pergunta;
-            if(radioSim.checked) respostas.push(true);
-            else if(radioNao.checked) respostas.push(false);
+    //         document.getElementById("display").innerHTML = `Você completou o questionário!`;
+    //         setTimeout(function(){window.location="home.html";}, 3000);
+    //     }
+    //     if(i < questionario.length){
+    //         console.log(respostas);
+    //         titulo.innerHTML = questionario[i].pergunta;
+    //         if(radioSim.checked) respostas.push(true);
+    //         else if(radioNao.checked) respostas.push(false);
 
-            i++;
+    //         i++;
 
-            radioNao.checked = false;
-            radioSim.checked = false;
-            document.querySelector(".respostas").style.display = "block";
-        }
-    }
-        
+    //         radioNao.checked = false;
+    //         radioSim.checked = false;
+    //         document.querySelector(".respostas").style.display = "block";
+    //     }
+    // }        
 }
 
 function atualizaTabela() {
@@ -96,3 +101,28 @@ function realizado(i) {
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 }
 
+const date = new Date();
+
+
+
+document.querySelector(".prev").addEventListener("click", () => {
+  date.setMonth(date.getMonth() - 1);
+  renderCalendar();
+});
+
+document.querySelector(".next").addEventListener("click", () => {
+  date.setMonth(date.getMonth() + 1);
+  renderCalendar();
+});
+
+renderCalendar();
+
+
+var etapa1 = [
+    {
+        "id": 0,
+        "descricao": "Você decidiu adotar. Então, procure a Vara de Infância e Juventude do seu município e saiba quais documentos deve começar a juntar. A idade mínima para se habilitar à adoção é 18 anos, independentemente do estado civil, desde que seja respeitada a diferença de 16 anos entre quem deseja adotar e a criança a ser acolhida.",
+        "titulo": "Tomar a decisao",
+        "titulo2": "Documentação"
+    }
+]

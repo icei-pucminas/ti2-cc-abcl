@@ -13,7 +13,10 @@
 
   <!-- Custom fonts for this template-->
   <link href="../recursos/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
 
   <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
@@ -21,17 +24,9 @@
 
   <!-- Custom styles for this template-->
   <link href="../estilos/sb-admin-2.min.css" rel="stylesheet">
-  
-  
-    <script src="../db.js"></script>
-    <script src="../scripts/db_cadastro.js"></script>
-  
-  <script>
-    window.onload = () => {
-      mostraUsuario();
-      atualizaTabela();
-    }
-  </script>
+  <link rel="stylesheet" href="../estilos/perfil.css">
+
+  <script src="../db.js"></script>
 
 </head>
 
@@ -41,7 +36,8 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-0000 sidebar sidebar-dark accordion" style=" background-color: rgba(0, 119, 182);" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-0000 sidebar sidebar-dark accordion" style=" background-color: rgba(0, 119, 182);"
+      id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <div class="sidebar-brand d-flex align-items-center justify-content-center">
@@ -53,7 +49,7 @@
       <!-- Divider -->
 
       <!-- Nav Item - Dashboard -->
-      <li style = "margin-top: 3rem;" class="nav-item">
+      <li style="margin-top: 3rem;" class="nav-item">
         <a class="nav-link" href="home.html">
           <i class="fas fa-fw fa-home"></i>
           <span>Home</span></a>
@@ -63,7 +59,7 @@
       <hr class="sidebar-divider">
 
       <li class="nav-item active">
-        <a class="nav-link collapsed" href="perfilUsuario.html" >
+        <a class="nav-link collapsed" href="perfilUsuario.html">
           <i class="fas fa-file-alt"></i>
           <span>Perfil</span>
         </a>
@@ -71,7 +67,7 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="passo-a-passo.html" >
+        <a class="nav-link collapsed" href="passo-a-passo.html">
           <i class="fas fa-fw fa-list"></i>
           <span>Passo a passo</span>
         </a>
@@ -79,21 +75,21 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="ajuda.html" >
+        <a class="nav-link collapsed" href="ajuda.html">
           <i class="fas fa-fw fa-lightbulb"></i>
           <span>Ajuda</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="chat.html">
-            <i class="fas fa-comments"></i>
-            <span>Chat Social</span>
+          <i class="fas fa-comments"></i>
+          <span>Chat Social</span>
         </a>
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="sobre.html" >
+        <a class="nav-link collapsed" href="sobre.html">
           <i class="fas fa-fw fa-info-circle"></i>
           <span>Sobre</span>
         </a>
@@ -104,11 +100,13 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#modalConfirmDelete" aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link" data-toggle="modal" data-target="#modalConfirmDelete" aria-expanded="true"
+          aria-controls="collapsePages">
           <i class="fas fa-fw fa-sign-out-alt"></i>
           <span>Sair</span>
         </a>
       </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
@@ -130,37 +128,42 @@
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
           <!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3" style="color: #e040fb;">
+          <button id="sidebarToggleTop" class=""
+            style="color: rgba(0, 119, 182);border-radius: 100%; border-color: aliceblue;position: relative;">
             <i class="fa fa-bars"></i>
           </button>
 
-        
+
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-              <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
+            <!-- Dropdown - Messages -->
+            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+              aria-labelledby="searchDropdown">
+              <form class="form-inline mr-auto w-100 navbar-search">
+                <div class="input-group">
+                  <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                    aria-label="Search" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                      <i class="fas fa-search fa-sm"></i>
+                    </button>
                   </div>
-                </form>
-              </div>
+                </div>
+              </form>
+            </div>
             </li>
 
             <!-- 
                 InformaÃ§Ãµes do usuÃ¡rio - quando clicar: vai para a pÃ¡gina do perfil
             -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="nomeUsuario"></span> <!-- Nome do usuario -->
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="nomeUsuario"></span>
+                <!-- Nome do usuario -->
               </a>
-              
+
             </li>
 
           </ul>
@@ -177,85 +180,328 @@
           </div>
 
           <div class="row">
-            <div class="col-4 aleatorio">
-              <img src="../Imagens/Imagens_Perfil/abelha.png" style="max-width: 30%;">
+            <div class="col-2">
+
             </div>
 
-            <div class="col-8">
-              <h1>PERFIL DO USUÁRIO - EM CONSTRUÇÃO</h1>
-              <p>NOME USUÁRIO:</p>
-              <p>email:</p>
+            <div class="col-8 profile"><img src="../Imagens/Imagens_Perfil/abelha.png" style="max-width: 100%;">
             </div>
+            <div class="col-2"></div>
           </div>
-          
+          <div class="row">
+            <div class="col-2">
+
+            </div>
+
+            <div class="col-8 profile" style="padding-top: 40px;">
+              <h1>Olá, <span>nome israel</span></h1>
+            </div>
+            <div class="col-2"></div>
+          </div>
+
+          <div class="row">
+            <div class="col-12"><div class="popup col-12" id="popup-1">
+              <div class="overlay"></div>
+              <div class="content">
+                <div class="close-btn" onclick="togglePopup()">&times;</div>
+                <h1 class="black">DOCUMENTAÇÃO</h1>
+                <div>
+                  <div class="row padding_top">
+                    <div class="col-1"><input type="checkbox" class="checkbox" id="tarefa1" name= 'tarefa[]' onclick="conclusao()" ></div>
+                    <div class="col-11"><label for="tarefa1" class="size2">certidão de casamento dos postulantes,
+                        se for o caso, expedida no período de 90 (noventa) dias anterior ao pedido de habilitação
+                        (original ou
+                        cópia autenticada);</label></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="row padding_top">
+                    <div class="col-1"><input type="checkbox" class="checkbox" id="tarefa2" name='tarefa[]' onclick="conclusao()"></div>
+                    <div class="col-11"><label for="tarefa2" class="size2">cópia autenticada da cédula de identidade e
+                        da inscrição no Cadastro de Pessoas
+                        Físicas - CPF (caso o número deste não conste da cédula de identidade),
+                        ou alternativamente, cópia autenticada da carteira nacional de habilitação;</label></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="row padding_top">
+                    <div class="col-1"><input type="checkbox" class="checkbox" id="tarefa3" name='tarefa[]' onclick="conclusao()"></div>
+                    <div class="col-11"><label for="tarefa3" class="size2">declaração dos postulantes,
+                        com firma reconhecida, atestando o período de união estável, se for o caso (original);</label>
+                    </div>
+                  </div>
+
+                </div>
+                <div>
+                  <div class="row padding_top">
+                    <div class="col-1"><input type="checkbox" class="checkbox" id="tarefa4" name='tarefa[]' onclick="conclusao()"></div>
+                    <div class="col-11"><label for="tarefa4" class="size2">comprovante de rendimento (original ou cópia
+                        autenticada);</label></div>
+                  </div>
+
+                </div>
+                <div>
+                  <div class="row padding_top">
+                    <div class="col-1"><input type="checkbox" class="checkbox" id="tarefa5" name='tarefa[]' onclick="conclusao()"></div>
+                    <div class="col-11"><label for="tarefa5" class="size2">comprovante de domicílio. Ex: conta de água,
+                        luz ou telefone (original ou cópia
+                        autenticada);</label></div>
+                  </div>
+
+                </div>
+                <div>
+                  <div class="row padding_top">
+                    <div class="col-1"><input type="checkbox" class="checkbox" id="tarefa6" name='tarefa[]' onclick="conclusao()"></div>
+                    <div class="col-11"><label for="tarefa6" class="size2">atestado sanidade física e mental
+                        (originais);</label></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="row padding_top">
+                    <div class="col-1"><input type="checkbox" class="checkbox" id="tarefa6" name='tarefa[]' onclick="conclusao()"></div>
+                    <div class="col-11"><label for="tarefa6" class="size2">certidão de antecedentes criminais-fornecida
+                        pela Delegacia de Polícia Civil de
+                        seu
+                        estado (original);
+                      </label></div>
+                  </div>
+
+                </div>
+                <div>
+                  <div class="row padding_top">
+                    <div class="col-1"><input type="checkbox" class="checkbox" id="tarefa7" name='tarefa[]' onclick="conclusao()"></div>
+                    <div class="col-11"><label for="tarefa7" class="size2">certidão do distribuidor civil (fornecida
+                        gratuitamente pelo site do TJMG ou nos
+                        Fóruns (original);
+                      </label></div>
+                  </div>
+
+                </div>
+                <div>
+                  <div class="row padding_top">
+                    <div class="col-1"><input type="checkbox" class="checkbox" id="tarefa8" name='tarefa[]' onclick="conclusao()"></div>
+                    <div class="col-11"><label class="size2" for="tarefa8">cópia simples do pedido de habilitação
+                        (petição inicial).
+                      </label></div>
+                  </div>
+                </div class="padding_top">
+                <button class="btn-primary" id = "btn_none" onclick="togglePopup()">Concluído!</button>
+                <p style="padding-top: 20px; padding-left: 5px; padding-right: 5px;" class="text_destaque size1">Nota: A
+                  autenticação das cópias poderá ser substituída pela apresentação dos originais juntamente com
+                  a
+                  cópia perante
+                  o servidor responsável pela conferência da documentação, que deverá certificar que as cópias conferem
+                  com os originais.</p>
+              </div>
+
+            </div>
+
+            
+            <div class="col-1">
+
+            </div>
+          </div></div>
+          </div>
+
           <div class="row">
             <div class="col-1"></div>
-              <div class="courses-container col-5">
-                <div class="course">
-                  <div class="course-preview">
-                    <h6>Course</h6>
-                    <h2>JavaScript Fundamentals</h2>
-                    <a href="#">View all chapters <i class="fas fa-chevron-right"></i></a>
+            <div class="courses-container col-10">
+              <div class="course">
+                <div class="course-preview">
+                  <h6>ETAPA 1</h6>
+                  <h2>Tomar a decisão</h2>
+                </div>
+                <div class="course-info">
+                  <div class="progress-container">
+                    <div class="progress"></div>
+                    <span class="progress-text">
+                      6/9 Concluídos
+                    </span>
                   </div>
-                  <div class="course-info">
-                    <div class="progress-container">
-                      <div class="progress"></div>
-                      <span class="progress-text">
-                        6/9 Challenges
-                      </span>
+                  <h6 class="black">Etapa 1</h6>
+                  <h2 class="black">Documentação</h2>
+                  <div class="row">
+                    <div class="col-10 ">
+                      <p class="black size1">Você decidiu adotar. Então, procure a Vara de Infância e Juventude do seu
+                        município e saiba quais documentos deve começar a juntar. A idade mínima para se habilitar à
+                        adoção é 18 anos, independentemente do estado civil, desde que seja respeitada a diferença de 16
+                        anos entre quem deseja adotar e a criança a ser acolhida.</p>
                     </div>
-                    <h6>Chapter 4</h6>
-                    <h2>Callbacks & Closures</h2>
-                    <button class="btn">Continue</button>
                   </div>
+                  <button class=" btn" id="btn_1" onclick="togglePopup()">Continuar</button>
                 </div>
               </div>
-            
-              <div class="courses-container col-5"">
-                <div class="course">
-                  <div class="course-preview">
-                    <h6>Course</h6>
-                    <h2>JavaScript Fundamentals</h2>
-                    <a href="#">View all chapters <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="col-1"></div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <h1 style="text-align:center; padding: 20px;">Próximas etapas</h1>
+            </div>
+          </div>
+          <div class="row etapa2">
+            <div class="col-1"></div>
+            <div class="courses-container col-10 ">
+              <div class="course prox">
+                <div class="course-preview prox">
+                  <h6 >ETAPA 2</h6>
+                  <h2>Processo</h2>
+                </div>
+                <div class="course-info">
+                  <h6 class="black">Etapa 2</h6>
+                  <h2 class="black">Dar entrada</h2>
+                  <div class="row ">
+                    <div class="col-10 "></div>
                   </div>
-                  <div class="course-info">
-                    <div class="progress-container">
-                      <div class="progress"></div>
-                      <span class="progress-text">
-                        6/9 Challenges
-                      </span>
-                    </div>
-                    <h6>Chapter 4</h6>
-                    <h2>Callbacks & Closures</h2>
-                    <button class="btn">Continue</button>
-                  </div>
+                  <button class=" btn" id="btn_1">Continuar</button>
                 </div>
               </div>
+              <div class="inner" style = "margin-bottom: 2rem;">
+              <h1>Etapa bloqueada!</h1>
+              <h1><i class="fas fa-lock"></i></h1>
+            </div>
+            </div>
+
             <div class="col-1"></div>
           </div>
 
+          <div class="row ">
+            <div class="col-1"></div>
+            <div class="courses-container col-10 ">
+              <div class="course prox">
+                <div class="course-preview prox">
+                  <h6 >ETAPA 3</h6>
+                  <h2>Preparação</h2>
+                </div>
+                <div class="course-info">
+                  <h6 class="black">Etapa 3</h6>
+                  <h2 class="black">Curso e Avaliação</h2>
+                  <div class="row ">
+                    <div class="col-10 ">
+                      <p class="black size1"></p>
+                    </div>
+                  </div>
+                  <button class=" btn" id="btn_1">Continuar</button>
+                </div>
+              </div>
+              <div class="inner" style = "margin-bottom: 2rem;">
+              <h1>Etapa bloqueada!</h1>
+              <h1><i class="fas fa-lock"></i></h1>
+            </div>
+            </div>
+
+            <div class="col-1"></div>
           </div>
 
+          <div class="row ">
+            <div class="col-1"></div>
+            <div class="courses-container col-10 ">
+              <div class="course prox">
+                <div class="course-preview prox">
+                  <h6 >ETAPA 4</h6>
+                  <h2>Certificação</h2>
+                </div>
+                <div class="course-info">
+                  <h6 class="black">Etapa 4</h6>
+                  <h2 class="black">Certificado de Habilitação</h2>
+                  <div class="row ">
+                    <div class="col-10 ">
+                      <p class="black size1"></p>
+                    </div>
+                  </div>
+                  <button class=" btn" id="btn_1">Continuar</button>
+                </div>
+              </div>
+              <div class="inner" style = "margin-bottom: 2rem;">
+              <h1>Etapa bloqueada!</h1>
+              <h1><i class="fas fa-lock"></i></h1>
+            </div>
+            </div>
+            <div class="col-1"></div>
+          </div>
 
-        </div>
-        <!-- /.container-fluid -->
+          <div class="row ">
+            <div class="col-1"></div>
+            <div class="courses-container col-10 ">
+              <div class="course prox">
+                <div class="course-preview prox">
+                  <h6 >ETAPA 5</h6>
+                  <h2>Procura</h2>
+                </div>
+                <div class="course-info">
+                  <h6 class="black">Etapa 5</h6>
+                  <h2 class="black">Encontrar a criança</h2>
+                  <div class="row ">
+                    <div class="col-10 ">
+                      <p class="black size1"></p>
+                    </div>
+                  </div>
+                  <button class=" btn" id="btn_1">Continuar</button>
+                </div>
+              </div>
+              <div class="inner" style = "margin-bottom: 2rem;">
+              <h1>Etapa bloqueada!</h1>
+              <h1><i class="fas fa-lock"></i></h1>
+            </div>
+            </div>
+            <div class="col-1"></div>
+          </div>
+          
+          <div class="row ">
+            <div class="col-1"></div>
+            <div class="courses-container col-10 ">
+              <div class="course prox">
+                <div class="course-preview prox">
+                  <h6 >ETAPA 6
+                  </h6>
+                  <h2>Final!</h2>
+                </div>
+                <div class="course-info">
+                  <h6 class="black">Etapa 6</h6>
+                  <h2 class="black">Realizar a Ação de adoção</h2>
+                  <div class="row ">
+                    <div class="col-10 ">
+                      <p class="black size1"></p>
+                    </div>
+                  </div>
+                  <button class=" btn" id="btn_1">Continuar</button>
+                </div>
+              </div>
+              <div class="inner" style = "margin-bottom: 2rem;">
+              <h1>Etapa bloqueada!</h1>
+              <h1><i class="fas fa-lock"></i></h1>
+            </div>
+            </div>
+            <div class="col-1"></div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+
+            </div>
+          </div>
+        <!-- MODAL PROCESSO 1 -->
 
       </div>
-  </div>
-      <!-- End of Main Content -->
 
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Adotapp 2020</span>
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
 
     </div>
-    <!-- End of Content Wrapper -->
+  </div>
+
+  <!-- End of Main Content -->
+
+  <!-- Footer -->
+  <footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+      <div class="copyright text-center my-auto">
+        <span>Copyright &copy; Adotapp 2020</span>
+      </div>
+    </div>
+  </footer>
+  <!-- End of Footer -->
+
+  </div>
+  <!-- End of Content Wrapper -->
 
   </div>
   <!-- End of Page Wrapper -->
@@ -268,20 +514,18 @@
 
 
   <!--Modal: instruÃ§Ãµes-->
-  <div class="modal fade left" id="tutStep1" tabindex="-1" role="dialog" aria-labelledby="tutStep1"
-    aria-hidden="true" data-backdrop="true">
+  <!-- <div class="modal fade left" id="tutStep1" tabindex="-1" role="dialog" aria-labelledby="tutStep1" aria-hidden="true"
+    data-backdrop="true">
     <div class="modal-dialog modal-side modal-top-left modal-notify" role="document">
-      <!--Content-->
+      
       <div class="modal-content">
-        <!--Header-->
+  
         <div class="modal-header purple-gradient">
           <p class="heading">Esse é o seu painel inicial, <br>
             <strong>feito especialmente para você.</strong>
           </p>
 
         </div>
-
-        <!--Body-->
         <div class="modal-body">
 
           <div class="row">
@@ -297,20 +541,19 @@
             </div>
           </div>
         </div>
-
-        <!--Footer-->
         <div class="modal-footer flex-center">
-          <a data-dismiss="modal" class="btn purple-gradient"> OK <i class="fas fa-check ml-1 light-green-text"></i> </a>
+          <a data-dismiss="modal" class="btn purple-gradient"> OK <i class="fas fa-check ml-1 light-green-text"></i>
+          </a>
         </div>
       </div>
-      <!--/.Content-->
     </div>
-  </div>
+  </div> -->
   <!--Modal: instruÃ§Ãµes-->
 
 
   <!--Modal: modalConfirmDelete-->
-  <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="modalSair" aria-hidden="true">
+  <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="modalSair"
+    aria-hidden="true">
     <div class="modal-dialog modal-sm modal-notify modal-000" role="document">
       <!--Content-->
       <div class="modal-content text-center" style="border-radius: 15px;">
@@ -328,8 +571,10 @@
 
         <!--Footer-->
         <div class="modal-footer flex-center">
-          <a href="index.html" class="btn btn-outline-000" style="color: rgba(0, 119, 182); font-weight: bolder;">Sair</a>
-          <a type="button" class="btn  btn-000 waves-effect" data-dismiss="modal" style="background-color: rgba(0, 119, 182); color: white;">Cancelar</a>
+          <a href="index.html" class="btn btn-outline-000"
+            style="color: rgba(0, 119, 182); font-weight: bolder;">Sair</a>
+          <a type="button" class="btn  btn-000 waves-effect" data-dismiss="modal"
+            style="background-color: rgba(0, 119, 182); color: white;">Cancelar</a>
         </div>
       </div>
       <!--/.Content-->
@@ -340,24 +585,28 @@
 
 
   <!-- Modal Aulas de Capacitação -->
-  <div class="modal fade right" id="modalAulasCapacitacao" tabindex="-1" role="dialog" aria-labelledby="modalAulasCapacitacao" aria-hidden="true">
+  <div class="modal fade right" id="modalAulasCapacitacao" tabindex="-1" role="dialog"
+    aria-labelledby="modalAulasCapacitacao" aria-hidden="true">
     <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
     <div class="modal-dialog modal-full-height modal-right" role="document">
 
 
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">Você confirma que já realizou as <strong>Aulas de Capacitação Parental</strong>?</h4>
+          <h4 class="modal-title w-100" id="myModalLabel">Você confirma que já realizou as <strong>Aulas de Capacitação
+              Parental</strong>?</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          VocÃª jÃ¡ completou o curso de capacitação - em que sÃ£o explicados os aspectos jurídicos da adoção, a gestaçãoo do filho adotivo, a espera e os medos que envolvem o processo?
+          VocÃª jÃ¡ completou o curso de capacitação - em que sÃ£o explicados os aspectos jurídicos da adoção, a
+          gestaçãoo do filho adotivo, a espera e os medos que envolvem o processo?
         </div>
         <div class="modal-footer justify-content-center">
           <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Ainda nÃ£o</button>
-          <button type="button" class="btn btn-outline-default" data-dismiss="modal" onclick="realizado(4)" style="width: 100px;">JÃ¡!</button>
+          <button type="button" class="btn btn-outline-default" data-dismiss="modal" onclick="realizado(4)"
+            style="width: 100px;">JÃ¡!</button>
         </div>
       </div>
     </div>
@@ -365,24 +614,28 @@
   <!-- Full Height Modal Right -->
 
   <!-- Modal Entrevista -->
-  <div class="modal fade right" id="modalEntrevista" tabindex="-1" role="dialog" aria-labelledby="modalEntrevista" aria-hidden="true">
+  <div class="modal fade right" id="modalEntrevista" tabindex="-1" role="dialog" aria-labelledby="modalEntrevista"
+    aria-hidden="true">
     <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
     <div class="modal-dialog modal-full-height modal-right" role="document">
 
 
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">VocÃª confirma que jÃ¡ realizou a <strong>Entrevista Preliminar</strong>?</h4>
+          <h4 class="modal-title w-100" id="myModalLabel">VocÃª confirma que jÃ¡ realizou a <strong>Entrevista
+              Preliminar</strong>?</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-        VocÃª jÃ¡ participou <strong>e</strong> foi aprovado na entrevista preliminar - dividida em avaliaÃ§Ãµes sociais e emocionais, ministradas por assistentes sociais e psicÃ³logos?
+          VocÃª jÃ¡ participou <strong>e</strong> foi aprovado na entrevista preliminar - dividida em avaliaÃ§Ãµes
+          sociais e emocionais, ministradas por assistentes sociais e psicÃ³logos?
         </div>
         <div class="modal-footer justify-content-center">
           <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Ainda nÃ£o</button>
-          <button type="button" class="btn btn-outline-default" data-dismiss="modal" onclick="realizado(3)" style="width: 100px;">JÃ¡!</button>
+          <button type="button" class="btn btn-outline-default" data-dismiss="modal" onclick="realizado(3)"
+            style="width: 100px;">JÃ¡!</button>
         </div>
       </div>
     </div>
@@ -390,24 +643,27 @@
   <!-- Full Height Modal Right -->
 
   <!-- Modal PetiÃ§Ã£o -->
-  <div class="modal fade right" id="modalPeticao" tabindex="-1" role="dialog" aria-labelledby="modalPeticao" aria-hidden="true">
+  <div class="modal fade right" id="modalPeticao" tabindex="-1" role="dialog" aria-labelledby="modalPeticao"
+    aria-hidden="true">
     <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
     <div class="modal-dialog modal-full-height modal-right" role="document">
 
 
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">VocÃª confirma que jÃ¡ realizou a sua <strong>PetiÃ§Ã£o</strong>?</h4>
+          <h4 class="modal-title w-100" id="myModalLabel">VocÃª confirma que jÃ¡ realizou a sua
+            <strong>PetiÃ§Ã£o</strong>?</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-        VocÃª jÃ¡ realizou uma petiÃ§Ã£o de inscriÃ§Ã£o para adoÃ§Ã£o (no cartÃ³rio da Vara de InfÃ¢ncia)?
+          VocÃª jÃ¡ realizou uma petiÃ§Ã£o de inscriÃ§Ã£o para adoÃ§Ã£o (no cartÃ³rio da Vara de InfÃ¢ncia)?
         </div>
         <div class="modal-footer justify-content-center">
           <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Ainda nÃ£o</button>
-          <button type="button" class="btn btn-outline-default" data-dismiss="modal" onclick="realizado(2)" style="width: 100px;">JÃ¡!</button>
+          <button type="button" class="btn btn-outline-default" data-dismiss="modal" onclick="realizado(2)"
+            style="width: 100px;">JÃ¡!</button>
         </div>
       </div>
     </div>
@@ -415,13 +671,15 @@
   <!-- Full Height Modal Right -->
 
   <!-- Modal DocumentaÃ§Ã£o -->
-  <div class="modal fade right" id="modalDocumentacao" tabindex="-1" role="dialog" aria-labelledby="modalDocumentacao" aria-hidden="true">
+  <div class="modal fade right" id="modalDocumentacao" tabindex="-1" role="dialog" aria-labelledby="modalDocumentacao"
+    aria-hidden="true">
     <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
     <div class="modal-dialog modal-full-height modal-right" role="document">
 
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">VocÃª confirma que obteve toda a <strong>DocumentaÃ§Ã£o NecesÃ¡ria</strong>?</h4>
+          <h4 class="modal-title w-100" id="myModalLabel">VocÃª confirma que obteve toda a <strong>DocumentaÃ§Ã£o
+              NecesÃ¡ria</strong>?</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -429,7 +687,8 @@
         <div class="modal-body">
           VocÃª jÃ¡ tem todos os seguintes documentos guardados?
           <ul>
-            <li>CÃ³pias autenticadas: da CertidÃ£o de nascimento ou casamento, ou declaraÃ§Ã£o relativa ao perÃ­odo de uniÃ£o estÃ¡vel</li>
+            <li>CÃ³pias autenticadas: da CertidÃ£o de nascimento ou casamento, ou declaraÃ§Ã£o relativa ao perÃ­odo de
+              uniÃ£o estÃ¡vel</li>
             <li>CÃ³pias da CÃ©dula de identidade e da InscriÃ§Ã£o no Cadastro de Pessoas FÃ­sicas (CPF)</li>
             <li>Comprovante de renda e de residÃªncia</li>
             <li>Atestados de sanidade fÃ­sica e mental</li>
@@ -443,13 +702,15 @@
         </div>
         <div class="modal-footer justify-content-center">
           <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Ainda nÃ£o</button>
-          <button type="button" class="btn btn-outline-default" data-dismiss="modal" onclick="realizado(1)" style="width: 100px;">JÃ¡!</button>
+          <button type="button" class="btn btn-outline-default" data-dismiss="modal" onclick="realizado(1)"
+            style="width: 100px;">JÃ¡!</button>
         </div>
       </div>
     </div>
   </div>
   <!-- Full Height Modal Right -->
 
+  <script src="../scripts/db_cadastro.js"></script>
 
 
   <!-- Bootstrap core JavaScript-->
@@ -476,17 +737,17 @@
   <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
 
   <script>
-    $('document').ready(function() {
+    $('document').ready(function () {
       $(function () {
         $('[data-toggle="tooltip"]').tooltip()
       });
 
       let jaViuModal = JSON.parse(sessionStorage.getItem("jaViuModal"))
       console.log("Modal:", jaViuModal);
-      
-      if(!jaViuModal){
+
+      if (!jaViuModal) {
         $('#tutStep1').modal('show');
-        $("#tutStep1").on('hide.bs.modal', function(){
+        $("#tutStep1").on('hide.bs.modal', function () {
           jaViuModal = true
           sessionStorage.setItem("jaViuModal", JSON.stringify(jaViuModal))
         });
@@ -495,15 +756,14 @@
   </script>
 
 
-<script type="text/javascript">
-  (function() {
-    // NecessÃ¡rio declarar a variÃ¡vel img 
-    var img = ["/Imagens/"];
-    var mudar = Math.floor(Math.random() * img.length);
-    document.getElementById("aleatorio").innerHTML = "<img src='" + img[mudar] + "'>";
-  })();
-</script>
-<link rel="stylesheet" href="/estilos/perfil.css">
+  <script type="text/javascript">
+    (function () {
+      // NecessÃ¡rio declarar a variÃ¡vel img 
+      var img = ["/Imagens/"];
+      var mudar = Math.floor(Math.random() * img.length);
+      document.getElementById("aleatorio").innerHTML = "<img src='" + img[mudar] + "'>";
+    })();
+  </script>
 
 </body>
 
