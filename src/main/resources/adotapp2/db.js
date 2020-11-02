@@ -173,7 +173,7 @@ function proxEtapa(){
 }
 
 function conclusao(){
-    let checkboxs = document.getElementsByName("tarefa[]")
+    const check = document.getElementById('check')
     let checada = true
     checkboxs.forEach(a => {
         if(checada && !a.checked){

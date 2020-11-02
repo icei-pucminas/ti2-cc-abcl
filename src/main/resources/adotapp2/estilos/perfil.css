@@ -379,3 +379,10 @@ border-radius: 15px;
 #btn_none.aparecer{
 	display: inline-block;
 }
+
+.btn_tarefa{
+	border: none;
+	background-color:white;
+	width:30px;
+  height: 30px
+}
