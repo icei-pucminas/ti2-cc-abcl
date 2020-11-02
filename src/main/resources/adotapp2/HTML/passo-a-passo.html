@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
   <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
 
+  <script src="../../scripts/api_noticias.js"></script>
   <!-- Custom styles for this template-->
   <link href="../estilos/sb-admin-2.min.css" rel="stylesheet">
 
@@ -173,46 +174,119 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
+        <div class="container-fluid" id="tela">
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+              <img src="../Imagens/campaign_launch.svg" style="max-width: 100%; align-self: center; ">
+            </div>
+            <div class="col-3"></div>
+          </div>
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-6">
+              <h1 class="mb-0 text-gray-800">Notí­cias</h1>
+            </div>
+            <div class="col-4"></div>
+          </div>
+              <div class="row box_noticias">
+                <div class="col-4">
+                  <img
+                    src="https://conteudo.imguol.com.br/c/entretenimento/26/2020/04/20/crianca-dando-a-mao-para-um-adulto-adocao-1587396528123_v2_450x450.jpg"
+                    style=" max-width: 100%; margin-top: 10px;" alt="">
+                </div>
+                <div class="col-8">
+                  <div class="card " style="max-width: 100%; margin-top: 10px;">
+                    <div class="card-body">
+                      <h2 class="card-title">Casal é condenado a indenizar adolescente por desistir de adoção</h2>
+                      <p>domingo 28 setembro 2020 04:00 Por Carlos Madeiro</p>
+                      <p class="card-text">Uma adolescente de 17 anos deve ser indenizada em R$ 30 mil por uma mulher
+                        que desistiu de a adotar após 30 dias de convivência, em Fortaleza. O caso ocorreu em 2010,
+                        quando a menina tinha sete anos. Levada pela então mãe adotiva ...</p>
+                      <a target="_blank"
+                        href="https://www.uol.com.br/universa/noticias/redacao/2020/09/28/casal-e-condenado-a-indenizar-adolescente-por-desistir-de-adocao.htm"
+                        class="btn btn-primary">Continuar lendo</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Passo a passo</h1>
+              <div class="row box_noticias">
+                <div class="col-8">
+                  <div class="card " style="max-width: 100%; margin-top: 10px;">
+                    <div class="card-body">
+                      <h2 class="card-title">Projeto aprovado permite o uso de 'nome afetivo' por crianças e
+                        adolescentes adotados</h2>
+                      <p>quinta 15 outubro 2020 00:48 Por Redação JNO JNO</p>
+                      <p class="card-text">A Câmara de Nova Odessa aprovou na sessão desta semana projeto do vereador e
+                        presidente, Vagner Barilon (PSDB), que autoriza o uso do “nome afetivo” nos cadastros das
+                        instituições escolares, de saúde ou de cultura e lazer, para crianças e adolescentes que estejam
+                        sob guarda da família adotiva, no período anterior ao término do processo da destituição do
+                        pátrio poder familiar....</p>
+                      <a href="https://www.jornaldenovaodessa.com.br/noticias/projeto-aprovado-permite-uso-de-nome-afetivo-por-criancas-e-adolescentes-adotados/"
+                        target=_blank class="btn btn-primary">Continuar lendo</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <img src="https://amazonasatual.com.br/wp-content/uploads/2020/09/familia.jpg"
+                    style=" max-width: 100%; margin-top: 10px;" alt="">
+                </div>
+              </div>
+
+          <div class="row box_noticias">
+            <div class="col-4">
+              <img
+                src="https://i2.wp.com/www.jornalopcao.com.br/wp-content/uploads/2020/10/Crian%C3%A7a-Abrigo-1.jpg?w=620&ssl=1"
+                style=" max-width: 100%; margin-top: 10px;" alt="">
+            </div>
+            <div class="col-8">
+              <div class="card " style="max-width: 100%; margin-top: 10px;">
+                <div class="card-body">
+                  <h2 class="card-title">Mais de 5 mil crianças aguardam por adoção no Brasil</h2>
+                  <p>domingo 11 outubro 2020 13:16 Por Karine Rodrigues Jornal Opção</p>
+                  <p class="card-text">Nesta semana se comemora o Dia da Criança e a expectativa de milhares de meninos
+                    e meninas em todo País é ter uma família. Dados do Sistema Nacional de Adoção e Acolhimento (SNA),
+                    do Conselho Nacional de Justiça (CNJ), indicam que mais de 30 mil crianças e adolescentes estão em
+                    situação de acolhimento em mais 4.533 unidades em todo o País. Deste total, 5.154 mil estão aptas a
+                    serem adotadas...</p>
+                  <a target="_blank"
+                    href="https://www.jornalopcao.com.br/ultimas-noticias/mais-de-5-mil-criancas-aguardam-por-adocao-no-brasil-288951/"
+                    class="btn btn-primary">Continuar lendo</a>
+                </div>
+              </div>
+
+            </div>
           </div>
 
-          <!-- Content Row -->
-          <div class="row">
-
-            <div class="col-lg-12 mb-4">
-              <!-- Approach -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-000" style="color: #e040fb;">Como começar o processo de adoção?
-                  </h6>
-                </div>
+          <div class="row box_noticias">
+            <div class="col-8">
+              <div class="card " style="max-width: 100%; margin-top: 10px;">
                 <div class="card-body">
-                  <ol style="text-align: justify;" id="listaPassos">
-                    <!-- Passos extraídos do json -->
-                  </ol>
+                  <h2 class="card-title">'Sou negro, adotei um menino branco e fui acusado de sequestro'</h2>
+                  <p>25 setembro 2020 -:- Por Megha Mohan BBC</p>
+                  <p class="card-text">HistÃ³rias de acolhimento e adoÃ§Ã£o inter-racial sÃ£o quase sempre contadas por
+                    pais brancos que se dedicam a cuidar de crianÃ§as nÃ£o-brancas.
+
+                    Mas o que acontece quando pais nÃ£o-brancos resolvem adotar crianÃ§as brancas?
+
+                    Um cotidiano de suspeita e interrogatÃ³rio, dizem eles.
+
+                    Peter, que nasceu na Uganda, jÃ¡ viveu isso na pele. Ele Ã© pai adotivo de crianÃ§as brancas nos
+                    EUA. Johnny*, de sete anos, estava agitado. Ele havia acordado de mau humor e isso sÃ³ aumentava com
+                    o passar do dia. Agora, em um restaurante em Charlotte, no Estado americano da Carolina do Norte,
+                    Peter podia ver Johnny discutindo com outra crianÃ§a na Ã¡rea de recreaÃ§Ã£o....</p>
+                  <a target="_blank" href="https://www.bbc.com/portuguese/geral-54288922"
+                    class="btn btn-primary">Continuar lendo</a>
                 </div>
               </div>
             </div>
-
-          </div>
-
-          <div class="row">
-
-            <div class="col-lg-12 mb-4">
-              <!-- Approach -->
-              <div class="card shadow mb-4">
-                <div class="card-body">
-                  <p> Informações atualizadas para o ano de 2020. Fonte: www.cnj.jus.br. </p>
-                </div>
-              </div>
+            <div class="col-4">
+              <img src="https://ichef.bbci.co.uk/news/800/cpsprodpb/18275/production/_114533989_mutabazifamily-37.jpg"
+                style=" max-width: 100%; margin-top: 10px;" alt="">
             </div>
-
           </div>
-          <!-- /.container-fluid -->
+
 
         </div>
         <!-- End of Main Content -->
