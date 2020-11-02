@@ -25,6 +25,7 @@
   <!-- Custom styles for this template-->
   <link href="../estilos/sb-admin-2.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../estilos/perfil.css">
+  <script src="../scripts/perfil.js"></script>
 
   <script src="../db.js"></script>
 
@@ -193,10 +194,11 @@
 
             </div>
 
-            <div class="col-8 profile" style="padding-top: 40px;">
-              <h1>Olá, <span>nome israel</span></h1>
+            <div id="inicio_nome"class="col-8 profile" style="padding-top: 100px;">
+              <h1>Olá, nome</h1>
             </div>
-            <div class="col-2"></div>
+
+         <div class="col-2"></div>
           </div>
 
           <div class="row">
@@ -758,6 +760,23 @@
       document.getElementById("aleatorio").innerHTML = "<img src='" + img[mudar] + "'>";
     })();
   </script>
+
+<script>
+	window.onload = () => {
+		let getAtributos = JSON.parse(localStorage.getItem('usuario_ativo'));
+		mudaHTML(getAtributos);
+	}
+	
+	function mudaHTML(atr){
+		document.getElementById("inicio_nome").innerHTML = 
+		`<div id="inicio_nome"class="col-8 profile" style="padding-top: 40px;">
+              <h1 style="font-size: 50px; align-text: center; left: 50%; margin-right: -50%;">
+				Olá, ${atr.nome.toUpperCase()} ${atr.sobrenome.toUpperCase()}</h1>
+           </div>`;
+	}
+	
+
+</script>
 
 </body>
 

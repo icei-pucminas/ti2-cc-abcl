@@ -35,10 +35,9 @@ public class App{
 
         get("/processos/usuario", (request, response) -> Service.getAllProcessos(request, response));   
         
-        get("/getUsuarios",  (request, response) -> user.getUsuario(request, response));
+        get("/recebeUsuario",  (request, response) -> user.getUsuario(request, response));
         
-        //
+        get("/loginUsuario",  (request, response) -> user.loginUsuario(request, response));
         
     }
 }
-

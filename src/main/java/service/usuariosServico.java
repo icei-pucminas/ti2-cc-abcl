@@ -13,6 +13,7 @@ public class usuariosServico {
 	}
 		
 	public Object addUsuarios (Request request, Response response){
+		response.header("Content-Type", "application/json");
 		dao.conectar();
 		
 		String nome = request.queryParams("nome");
@@ -21,8 +22,11 @@ public class usuariosServico {
 		String telefone = request.queryParams("telefone");
 		String senha = request.queryParams("senha");
 		
+		Usuario user = new Usuario(nome, sobrenome, senha, email, telefone);
+		
+		System.out.println(user.toString());
+		
 		if(DAOUsuarios.getUsuario(email) == null){
-			Usuario user = new Usuario(nome, sobrenome, senha, email, telefone);
 			dao.addUsuarios(user);
 			response.status(201);
 		}else{
@@ -32,24 +36,39 @@ public class usuariosServico {
 
 		dao.close();
 		
-		return nome;
+		return user.toJson();
 		
 	}
 	
 	public Object getUsuario (Request request, Response response){
+		response.header("Content-Type", "application/json");
 		dao.conectar();
-		DAOUsuarios daoU = new DAOUsuarios();
-		daoU.conectar();
 		
 		String email = request.queryParams("email");
 
-			Usuario user = daoU.getUsuario(email);
+			Usuario user = dao.getUsuario(email);
 			response.status(201);
 
 
 		dao.close();
 		
-		return user.toString();
+		return user.toJson();
+		
+	}
+	
+	public Object loginUsuario (Request request, Response response){
+		response.header("Content-Type", "application/json");
+		dao.conectar();
+		
+		String email = request.queryParams("email");
+		String senha = request.queryParams("senha");
+
+		Usuario user = dao.loginUsuario(email, senha);
+		response.status(201);
+
+		dao.close();
+		
+		return user.toJson();
 		
 	}
 	

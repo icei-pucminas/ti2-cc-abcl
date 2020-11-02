@@ -1,9 +1,6 @@
 onload = () => {
     let btn = document.getElementById("confirma");
-    btn.onclick = ( )=> {
-		senhasCheck();
-		local();
-	};
+    btn.onclick = senhasCheck;
 }
 
 function enviarDados(senha) {
@@ -13,11 +10,23 @@ function enviarDados(senha) {
     let telefone = document.getElementById("telefone").value;
 
     let req = new XMLHttpRequest;
-    req.open("post", "/adicionarUsuario", true)
+    req.open("post", "/adicionarUsuario", false);
+	req.onreadystatechange = () => local(email);	
     //identificar o formato do envio das informações
-    req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
-    req.send(`senha=${senha}&nome=${nome}&sobrenome=${sobrenome}&email=${email}&telefone=${telefone}`)
-	local()
+    req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    req.send(`senha=${senha}&nome=${nome}&sobrenome=${sobrenome}&email=${email}&telefone=${telefone}`);
+}
+
+function local(email){
+	let req2 = new XMLHttpRequest;
+    req2.open("get", "/recebeUsuario?email=" + email, false);
+	req2.onreadystatechange = () => {
+		if(req2.readyState == 4 && req2.status == 201){
+			let string = req2.responseText;
+			localStorage.setItem('usuario_ativo', string);
+		}
+	};	
+	req2.send();
 }
 
 function senhasCheck(i) {

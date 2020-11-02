@@ -62,7 +62,4 @@ public class Processo {
 				+ codigo_processo + ", nome=" + nome_processo + "]";
 	}
 
-	
-
-
 }

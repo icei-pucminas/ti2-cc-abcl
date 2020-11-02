@@ -1,7 +1,11 @@
 package model;
 
-public class Usuario {
-	private int id;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
+public class Usuario implements JsonFormatter {
+	
+	private int id = 0;
 	private String nome;
 	private String sobrenome;
 	private String senha;
@@ -65,7 +69,15 @@ public class Usuario {
 		return "Usuario [id=" + id + ", nome=" + nome + ", sobrenome=" + sobrenome + ", senha=" + senha + ", email="
 				+ email + ", telefone=" + telefone + "]";
 	}
-	
-
-	
+	@Override
+	public JsonObject toJson() {
+		JsonObject obj = new JsonObject();
+		obj.addProperty("id", id);
+		obj.addProperty("nome", nome);
+		obj.addProperty("email", email);
+		obj.addProperty("sobrenome", sobrenome);
+		obj.addProperty("senha", senha);
+		obj.addProperty("telefone", telefone);
+		return obj;
+	}
 }
