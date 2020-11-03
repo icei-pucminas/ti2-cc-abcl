@@ -11,7 +11,14 @@ public class Usuario implements JsonFormatter {
 	private String senha;
 	private String email;
 	private String telefone;
+	private int processo_ativo = 1;
 	
+	public int getProcesso_ativo() {
+		return processo_ativo;
+	}
+	public void setProcesso_ativo(int processo_ativo) {
+		this.processo_ativo = processo_ativo;
+	}
 	public Usuario(int id, String nome, String sobrenome, String senha, String email, String telefone) {
 		super();
 		this.id = id;
@@ -78,6 +85,7 @@ public class Usuario implements JsonFormatter {
 		obj.addProperty("sobrenome", sobrenome);
 		obj.addProperty("senha", senha);
 		obj.addProperty("telefone", telefone);
+		obj.addProperty("processo_ativo", processo_ativo);
 		return obj;
 	}
 }

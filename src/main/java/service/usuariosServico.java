@@ -41,6 +41,7 @@ public class usuariosServico {
 		return user.toJson();
 		
 	}
+
 	
 	public Object getUsuario (Request request, Response response){
 		response.header("Content-Type", "application/json");

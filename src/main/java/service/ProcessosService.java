@@ -43,20 +43,24 @@ public class ProcessosService{
 			return "não foi possivel localizar o usuario";
 	}
 
-	public String updateProcessos(Request request, Response response) {
+	public Object updateProcessos(Request request, Response response) {
+		System.out.println("cheguei aqui");
         dao.conectar();
         daoU.conectar();
             
-		int id = Integer.parseInt(request.queryParams("codigo"));
-	   
+		int id = Integer.parseInt(request.queryParams("id"));
+		
+		Usuario user = daoU.getUsuario(id);  
 	    Processo processo = dao.getProcesso(id);
 	    
 		dao.atualizarStatusProcesso(processo);
+		daoU.atualizarUsuario(user);
+		System.out.println(user.toString());
 
 		response.status(201); // 201 Created
 		dao.close();
 		daoU.close();
-		return "atualizado";
+		return user.toJson();
 	}
 
 	public Object getAllProcessos(Request request, Response response) {

@@ -136,6 +136,24 @@ public class DAOUsuarios {
 		return usuarios[0];
 	}
 	
+	
+	public boolean atualizarUsuario(Usuario user) {
+		System.out.println("aquiiiiiiiiii");
+		boolean status = false;
+		try {  
+			int pr = user.getProcesso_ativo() + 1;
+			user.setProcesso_ativo(pr);
+			Statement st = conexao.createStatement();
+			String sql = "UPDATE usuario SET processo_ativo = " + pr + " WHERE id = " + user.getId();
+			st.executeUpdate(sql);
+			st.close();
+			status = true;
+		} catch (SQLException u) {  
+			throw new RuntimeException(u);
+		}
+		return status;
+	}
+	
 	public static Usuario loginUsuario(String email, String senha) { // LUIZA VOCE TEM Q DEIXAR ESSE TO USANDO ELE NA DAO DE PROCESSOS
 		Usuario[] usuarios = new Usuario[1];
 		try {

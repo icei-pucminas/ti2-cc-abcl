@@ -770,7 +770,7 @@
 		document.getElementById("inicio_nome").innerHTML = 
 		`<div id="inicio_nome"class="col-8 profile" style="padding-top: 40px;">
               <h1 style="font-size: 50px; align-text: center; left: 50%; margin-right: -50%;">
-				Olá, ${atr.nome.toUpperCase()} ${atr.sobrenome.toUpperCase()}</h1>
+				Olá, ${atr.nome.charAt(0).toUpperCase() + atr.nome.slice(1)} ${atr.sobrenome.charAt(0).toUpperCase() + atr.sobrenome.slice(1)}</h1>
            </div>`;
 	}
 	

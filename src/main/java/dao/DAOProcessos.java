@@ -7,6 +7,7 @@ import model.Usuario;
 
 public class DAOProcessos {
 	private static Connection conexao;
+	private String nomes_processos[] = {"Decisão","Processo","Preparação","Certificação","Procura","Final"};
 	
 	public DAOProcessos() {
 		conexao = null;
@@ -61,7 +62,7 @@ public class DAOProcessos {
 			
 			st.executeUpdate("INSERT INTO processo (ajuda, completo, user_id, codigo_processo, nome_processo) "
 					       + "VALUES ("+ processo.isAjuda()+ ", '" + processo.isCompleto() + "', '" + processo.getUser_id() +
-					       "', '" + processo.getCodigo_processo() + "', '" + processo.getNome() + "');");
+					       "', '" + processo.getCodigo_processo() + "', '" + nomes_processos[processo.getCodigo_processo()-1] + "');");
 			st.close();
 			status = true;
 		} catch (SQLException u) {  
@@ -86,8 +87,9 @@ public class DAOProcessos {
 	public boolean atualizarStatusProcesso(Processo processo) {
 		boolean status = false;
 		try {  
+			int pr = processo.getCodigo_processo() + 1;
 			Statement st = conexao.createStatement();
-			String sql = "UPDATE processo SET completo = " + true + " WHERE user_id = " + processo.getUser_id() + "AND codigo_processo = " + processo.getCodigo_processo();
+			String sql = "UPDATE processo SET codigo_processo = " + pr + ", nome_processo = '" + nomes_processos[pr-1] + "' WHERE user_id = " + processo.getUser_id();
 			st.executeUpdate(sql);
 			st.close();
 			status = true;

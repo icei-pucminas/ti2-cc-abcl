@@ -29,7 +29,7 @@ public class App{
         
         post("/processos", (request, response) -> Service.addProcessos(request, response));
 
-        post("/processos/update/:codigo", (request, response) -> Service.updateProcessos(request, response));
+        post("/processos/update", (request, response) -> Service.updateProcessos(request, response));
         
         post("/adicionarUsuario", (request, response) -> user.addUsuarios(request, response));
 
