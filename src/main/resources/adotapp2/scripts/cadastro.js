@@ -22,9 +22,9 @@ function local(email){
     req2.open("get", "/recebeUsuario?email=" + email, false);
 	req2.onreadystatechange = () => {
 		if(req2.readyState == 4 && req2.status == 201){
-			let string = req2.responseText;
-			localStorage.setItem('usuario_ativo', string);
+			localStorage.setItem('usuario_ativo', req2.responseText);
 		}
+		location.href = "./home.html";
 	};	
 	req2.send();
 }
@@ -36,7 +36,6 @@ function senhasCheck(i) {
     if (senha == confirma) {
         i.preventDefault()
         enviarDados(senha);
-        location.href = "./home.html"
     } else {
         alert("SENHAS INCORRETAS!");
         i.preventDefault()

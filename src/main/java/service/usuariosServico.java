@@ -1,7 +1,9 @@
 package service;
 
 import spark.Request;
+import model.Processo;
 import spark.Response;
+import dao.DAOProcessos;
 import dao.DAOUsuarios;
 import model.Usuario;
 
@@ -46,14 +48,18 @@ public class usuariosServico {
 		
 		String email = request.queryParams("email");
 
-			Usuario user = dao.getUsuario(email);
-			response.status(201);
+		Usuario user = dao.getUsuario(email);
+		
+		DAOProcessos daoP = new DAOProcessos();
+		daoP.conectar();
+		Processo p = new Processo(false, false, user.getId(), 1, "inicio");
+		daoP.addProcesso(p);
+		response.status(201);
 
-
+		daoP.close();
 		dao.close();
 		
 		return user.toJson();
-		
 	}
 	
 	public Object loginUsuario (Request request, Response response){
