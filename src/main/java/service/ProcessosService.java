@@ -54,12 +54,9 @@ public class ProcessosService{
 	    Processo processo = dao.getProcesso(id);
 	    
 		dao.atualizarStatusProcesso(processo);
-		daoU.atualizarUsuario(user);
-		System.out.println(user.toString());
 
 		response.status(201); // 201 Created
 		dao.close();
-		daoU.close();
 		return user.toJson();
 	}
 

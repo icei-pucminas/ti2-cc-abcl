@@ -19,7 +19,7 @@ public class Usuario implements JsonFormatter {
 	public void setProcesso_ativo(int processo_ativo) {
 		this.processo_ativo = processo_ativo;
 	}
-	public Usuario(int id, String nome, String sobrenome, String senha, String email, String telefone) {
+	public Usuario(int id, String nome, String sobrenome, String senha, String email, String telefone, int processo_ativo) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -27,13 +27,15 @@ public class Usuario implements JsonFormatter {
 		this.senha = senha;
 		this.email = email;
 		this.telefone = telefone;
+		this.processo_ativo = processo_ativo;
 	}
-	public Usuario(String nome, String sobrenome, String senha, String email, String telefone) {
+	public Usuario(String nome, String sobrenome, String senha, String email, String telefone, int processo_ativo) {
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 		this.senha = senha;
 		this.email = email;
 		this.telefone = telefone;
+		this.processo_ativo = processo_ativo;
 	}
 	public int getId() {
 		return id;

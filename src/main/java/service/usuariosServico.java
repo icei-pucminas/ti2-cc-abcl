@@ -24,7 +24,7 @@ public class usuariosServico {
 		String telefone = request.queryParams("telefone");
 		String senha = request.queryParams("senha");
 		
-		Usuario user = new Usuario(nome, sobrenome, senha, email, telefone);
+		Usuario user = new Usuario(nome, sobrenome, senha, email, telefone, 1);
 		
 		System.out.println(user.toString());
 		
@@ -40,6 +40,21 @@ public class usuariosServico {
 		
 		return user.toJson();
 		
+	}
+	
+	public Object updateUsuario(Request request, Response response) {
+		System.out.println("cheguei aqui - user");
+        dao.conectar();
+            
+		int id = Integer.parseInt(request.queryParams("id"));
+		
+		Usuario user = dao.getUsuario(id);  
+	    
+		dao.atualizarStatusProcesso(user);
+
+		response.status(201); // 201 Created
+		dao.close();
+		return user.toJson();
 	}
 
 	

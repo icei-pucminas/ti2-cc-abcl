@@ -31,6 +31,8 @@ public class App{
 
         post("/processos/update", (request, response) -> Service.updateProcessos(request, response));
         
+        post("/usuarios/update", (request, response) -> user.updateUsuario(request, response));
+        
         post("/adicionarUsuario", (request, response) -> user.addUsuarios(request, response));
 
         get("/processos/usuario", (request, response) -> Service.getAllProcessos(request, response));   

@@ -65,6 +65,22 @@ public class DAOUsuarios {
 		
 	}
 	
+	public boolean atualizarStatusProcesso(Usuario user) {
+		boolean status = false;
+		try {  
+			int pr = user.getProcesso_ativo() + 1;
+			user.setProcesso_ativo(pr);
+			Statement st = conexao.createStatement();
+			String sql = "UPDATE usuario SET processo_ativo = " + pr  + " WHERE id = " + user.getId();
+			st.executeUpdate(sql);
+			st.close();
+			status = true;
+		} catch (SQLException u) {  
+			throw new RuntimeException(u);
+		}
+		return status;
+	}
+	
 	public static Usuario[] getUsuarios() {
 		Usuario[] user = null;
 		
@@ -77,7 +93,7 @@ public class DAOUsuarios {
 	             rs.beforeFirst();
 
 	             for(int i = 0; rs.next(); i++) {
-	                user[i] = new Usuario(rs.getString("nome"),rs.getString("sobrenome"),  rs.getString("telefone"), rs.getString("email"), rs.getString("senha"));
+	                user[i] = new Usuario(rs.getString("nome"),rs.getString("sobrenome"),  rs.getString("telefone"), rs.getString("email"), rs.getString("senha"), rs.getInt("processo_ativo"));
 	             }
 	          }
 	          st.close();
@@ -102,7 +118,7 @@ public class DAOUsuarios {
 
 	             for(int i = 0; rs.next(); i++) {
 	                usuarios[i] = new Usuario(rs.getInt("id"), rs.getString("nome"), 
-	                		                  rs.getString("sobrenome"), rs.getString("senha"),rs.getString("email"), rs.getString("telefone"));
+	                		                  rs.getString("sobrenome"), rs.getString("senha"),rs.getString("email"), rs.getString("telefone"), rs.getInt("processo_ativo"));
 	             }
 	          }
 	          st.close();
@@ -125,7 +141,7 @@ public class DAOUsuarios {
 
 	             for(int i = 0; rs.next(); i++) {
 	                usuarios[i] = new Usuario(rs.getInt("id"), rs.getString("nome"), 
-	                		                  rs.getString("sobrenome"), rs.getString("senha"),rs.getString("email"), rs.getString("telefone"));
+	                		                  rs.getString("sobrenome"), rs.getString("senha"),rs.getString("email"), rs.getString("telefone"), rs.getInt("processo_ativo"));
 	             }
 	          }
 	          st.close();
@@ -166,7 +182,7 @@ public class DAOUsuarios {
 
 	             for(int i = 0; rs.next(); i++) {
 	                usuarios[i] = new Usuario(rs.getInt("id"), rs.getString("nome"), 
-	                		                  rs.getString("sobrenome"), rs.getString("senha"),rs.getString("email"), rs.getString("telefone"));
+	                		                  rs.getString("sobrenome"), rs.getString("senha"),rs.getString("email"), rs.getString("telefone"), rs.getInt("processo_ativo"));
 	             }
 	          }
 	          st.close();
