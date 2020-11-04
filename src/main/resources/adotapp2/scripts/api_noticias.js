@@ -38,7 +38,7 @@ function exibir(){
     };
 
     // Preencher a DIV com o texto HTML
-    divTela.innerHTML = texto;
+    tela.innerHTML = texto;
 }
 
 function executaPesquisa () {
