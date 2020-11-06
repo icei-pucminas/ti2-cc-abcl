@@ -2,6 +2,10 @@
   display: inline; 
 }
 
+.videos{
+  padding: 0.8cm;
+}
+
 @media (max-width: 1024px){
   .icones{
     display: none;
