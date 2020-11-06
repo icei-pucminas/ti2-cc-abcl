@@ -43,10 +43,10 @@ Devido à má implementação, ao excessivo tempo de espera, à legislação pre
 Frente ao problema salientado, procurou-se utilizar os recursos tecnológicos a disposição para criar um ambiente online que ajude os futuros pais e mães a orientarem-se durante essa jornada burocrática. Ademais, empenhar-se-á na tarefa de oferecer recursos além dos oferecidos pelo programa governamental, permitindo aos usuários o usufruto de artifícios que permitam maior liberdade aos que buscam sucesso na adoção, inserindo-os diretamente no processo, e, permitindo maior transparência no procedimento.
 
         1.3.1 Objetivos específicos
-<!-- Pendente.
+<!-- Pendente. -->
 
 Apresente também alguns (pelo menos 2) **objetivos específicos** depende
-ndo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho. -->
+ndo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
 
     1.4 Justificativas
 Considerando que o Brasil tem atualmente 4,9 mil crianças e adolescentes no sistema de  adoção, de acordo com pesquisa realizada pela Agência Brasil, mas que cada processo iniciado pode demorar anos para ser efetivado, propôs-se a busca por soluções que possam facilitá-los por meio dos conhecimentos da equipe acerca da área de desenvolvimento de software, sistemas inteligentes e banco de dados.
@@ -77,6 +77,8 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 
 A tabela a seguir apresenta os requisitos não funcionais do projeto e suas prioridades indicadas.
 
+| No.           | Descrição                                         | Prioridade |
+| ------------- |:-------------------------------------------------:| ----------:|
 | RNF-01    | O site está acessível na Internet por meio da hospedagem na plataforma Heroku.  | Alta |
 |RNF-02     | O site é compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge)  | Alta |
 | RNF-03    | O site é responsivo, se adequando há diferentes tamanhos de telas.  | Média |
@@ -86,6 +88,8 @@ A tabela a seguir apresenta os requisitos não funcionais do projeto e suas prio
 
 As questões que limitam o projeto em questão são apresentadas na tabela a seguir
 
+| No.           | Descrição                                         |
+| ------------- |:-------------------------------------------------:|
 | RE-01     | O site não atua diretamente na burocracia do processo de adoção |
 | RE-02     | O site não tem controle dos prazos |
 | RE-03     | Mesmo servindo de apoio, o aplicativo não substitui a presença de um advogado. |
@@ -113,7 +117,7 @@ IDE: Microsoft Visual Studio Code.
 
 <!-- Insira aqui a explicação da imagem abaixo sobre a relação entre as tecnologias e o funcionamento -->
 
-![Relação entre as tecnologias](tecnologias.png "Relação entre as tecnologias")
+![Relação entre as tecnologias](imagens/tecnologias.png "Relação entre as tecnologias")
 
     2.5. Serviços inteligentes
 <!-- Pendente. -->
@@ -135,11 +139,11 @@ Para o funcionamento da aplicação, foi necessário uma estrutura que comportas
 
 O diagrama abaixo ilustra a estrutura base para o funcionamento do nosso sistema. Nele podemos observar as entidades Usuario, Processo e Tarefa que estão ligadas entre si de forma que, um usuário passa por vários processos e cada processo tem várias tarefas.
 
-![Diagrama de Entidade Relacionamento](diagramaER.jpeg "Diagrama de Entidade Relacionamento")
+![Diagrama de Entidade Relacionamento](imagens/diagramaER.jpeg "Diagrama de Entidade Relacionamento")
 
 **4. Sistema desenvolvido**
-<!-- Pendente.
-Faça aqui uma breve descrição do software e coloque as principais telas com uma explicação de como usar cada uma. -->
+<!-- Pendente.-->
+Faça aqui uma breve descrição do software e coloque as principais telas com uma explicação de como usar cada uma. 
   
 **5. Avaliação**
 <!-- Refazer. -->
