@@ -6,6 +6,22 @@
   padding: 0.8cm;
 }
 
+.container-fluid{
+  position: relative;
+  text-align: center;
+  color: black;
+}
+.text{
+  background-color: black;
+  position: absolute;
+}
+
+
+
+.text h1{
+  
+}
+
 @media (max-width: 1024px){
   .icones{
     display: none;

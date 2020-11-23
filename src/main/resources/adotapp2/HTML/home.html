@@ -24,6 +24,7 @@
   <!-- Custom styles for this template-->
   <link href="../estilos/sb-admin-2.min.css" rel="stylesheet">
   <link href="../estilos/home.css" rel="stylesheet">
+  
 
   <script src="../db.js"></script>
   <script src="../scripts/db_cadastro.js"></script>
@@ -178,42 +179,77 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-          <div class="row d-flex align-items-center">
-            <div class="col-lg-6 col-sm-12">
-              <img src="../Imagens/undraw_newspaper_k72w.svg"
-                style="max-width: 100%; align-self: center; position: relative;">
+          <div class="row">
+            <div class="col-12">
+                <h1>A.DOTA</h1>
+                <p>"Só se vê bem com o coração, o essencial é invisível aos olhos."<br> Antoine de Saint-Exupéry</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <img class= "imagemInicial" src="../Imagens/young-family-with-little-daughter-moving-into-new-house.jpg"
+                style="width: 50%; opacity: 75%;">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6" style="padding-top: 5%;">
+              <h1>Vídeos</h1>
               <div class="row">
                 <div class="col-12">
-                  <h1 class="h3 mb-0 text-gray-800 titulo" style="margin-top: 6rem;">Atualidades</h1>
-                  <p class="icones" style="text-align:left; justify-content: left;">Nessa secção você encontrá notícias,
-                    vídeos intressantes e novidades sobre o sistema de adoção do Brasil.</p>
+                  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Fk_4Cd9NFLw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                      </div>
+                      <div class="carousel-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/KzQrhwtYVAI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                      </div>
+                      <div class="carousel-item">
+                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/LPw4XZzmpxE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Próximo</span>
+                    </a>
+                  </div> 
+                </div>
+              </div>
+            </div>
+            <div class="col-6" style="padding-top: 5%;">
+              <div class="row">
+                <div class="col-6">
+                  <img src="../Imagens/undraw_post2_19cj (1).svg" style="max-width: 100%;">
+                  <a style="font-weight: bolder; font-size: 20px;" href="passo-a-passo.html">Notícias</a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row d-flex align-items-center">
+
+
+            <div class="col-2">
+              <img src="../Imagens/VÍDEOS (1).png" style="max-width: 100%;">
+              <div class="row">
+                <div class="col-12 d-flex justify-content-center" style="margin-top: 10px;">
+                  <a style="font-weight: bolder; font-size: 20px;" href="home_Paginas/videos.html">Vídeos</a>
                 </div>
               </div>
             </div>
 
-            <div class="col-2" >
-              <img src="../Imagens/tela-do-monitor.svg" style="max-width: 100%;">
-              <div class="row">
-                <div class="col-12 d-flex justify-content-center" style="margin-top: 10px;">
-                    <button style="width: 200px; border-style:solid; border-color: rgba(0, 119, 182); border-radius: 5rem; "><a style = "font-weight: bolder;" href="home_Paginas/videos.html">Vídeos</a></button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-2" >
-              <img src="../Imagens/undraw_post2_19cj (1).svg" style="max-width: 100%;">
-              <div class="row">
-                <div class="col-12 d-flex justify-content-center" style="margin-top: 10px;">
-                    <button style="width: 200px; border-style:solid; border-color: rgba(0, 119, 182); border-radius: 5rem; "><a style = "font-weight: bolder;" href="home_Paginas/noticias.html">Notícias</a></button>
-                </div>
-              </div>
+            <div class="col-2">
+              
             </div>
 
             <div class="col-2">
               <img src="../Imagens/marteloJustica.png" style="max-width: 100%;">
               <div class="row">
                 <div class="col-12 d-flex justify-content-center">
-                    <button style="width: 200px; border-style:solid; border-color: rgba(0, 119, 182); border-radius: 5rem; "><a style = "font-weight: bolder;" href="home_Paginas/leis.html">Leis</a></button>
+                  <a style="font-weight: bolder; font-size: 20px;" href="home_Paginas/leis.html">Leis</a>
                 </div>
               </div>
             </div>
@@ -231,7 +267,7 @@
       </footer>
     </div>
   </div>
-  
+
   <!-- End of Content Wrapper -->
 
   </div>
