@@ -17,15 +17,23 @@ function enviarDados(senha) {
     req.send(`senha=${senha}&nome=${nome}&sobrenome=${sobrenome}&email=${email}&telefone=${telefone}`);
 }
 
+function info(){
+    let dados = JSON.parse(this.responseText)
+    let filtrado = {
+        "nome": dados.nome,
+        "sobrenome": dados.sobrenome,
+        "id": dados.id,
+        "processo_ativo": dados.processo_ativo,
+        "email": dados.email
+    }
+    localStorage.setItem('usuario_ativo', JSON.stringify(filtrado));
+	location.href = "./home.html";
+}
+
 function local(email){
 	let req2 = new XMLHttpRequest;
     req2.open("get", "/recebeUsuario?email=" + email, false);
-	req2.onreadystatechange = () => {
-		if(req2.readyState == 4 && req2.status == 201){
-			localStorage.setItem('usuario_ativo', req2.responseText);
-		}
-		location.href = "./home.html";
-	};	
+	req2.onload = info;	
 	req2.send();
 }
 
