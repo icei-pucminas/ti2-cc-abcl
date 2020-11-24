@@ -54,7 +54,18 @@ Considerando que o Brasil tem atualmente 4,9 mil crianças e adolescentes no sis
 
 **2. Projeto da Solução**
 
-    2.1. Requisitos funcionais
+    2.1. Personas
+    
+As personas levantadas durante o processo de entendimento do problema são apresentadas na Figuras que se seguem.
+![Persona 1](imagens/persona01.jpg "Carolina Pareira")
+![Persona 2](imagens/persona02.jpg "João Alberto")
+
+    2.2. História de usuário
+
+| Eu como persona... | ...quero/desejo... | ...para |
+| ------------------ |:------------------:| -------:|
+
+    2.3. Requisitos funcionais
 	
 A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade de cada um.
 
@@ -73,7 +84,7 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 | RF-11         | O site oferece acesso a vídeos e notícias sobre a adoção no Brasil.   | Baixa |    
 | RF-12         | O site informa algumas leis importantes sobre o tema e direciona aos órgãos especializados.   | Baixa |    
 
-    2.2. Requisitos não funcionais
+    2.4. Requisitos não funcionais
 
 A tabela a seguir apresenta os requisitos não funcionais do projeto e suas prioridades indicadas.
 
@@ -84,7 +95,7 @@ A tabela a seguir apresenta os requisitos não funcionais do projeto e suas prio
 | RNF-03    | O site é responsivo, se adequando há diferentes tamanhos de telas.  | Média |
 | RNF-04    | O site é instalável nos principais sistemas operacionais mobile (Android e IOS).  | Alta |
 
-    2.3. Restrições
+    2.5. Restrições
 
 As questões que limitam o projeto em questão são apresentadas na tabela a seguir
 
@@ -95,7 +106,7 @@ As questões que limitam o projeto em questão são apresentadas na tabela a seg
 | RE-03     | Mesmo servindo de apoio, o aplicativo não substitui a presença de um advogado. |
 
 
-    2.4. Tecnologias
+    2.6. Tecnologias
 
 Linguagens de desenvolvimento web front-end: HTML, CSS e JavaScript;
 
@@ -119,31 +130,30 @@ IDE: Microsoft Visual Studio Code.
 
 ![Relação entre as tecnologias](imagens/tecnologias.png "Relação entre as tecnologias")
 
-    2.5. Serviços inteligentes
-<!-- Pendente. -->
-Nosso objetivo é desenvolver um chatbot para facilitar e melhorar a experiência dos usuários com o sistema A.DOTA. Este teria a função de responder dúvidas básicas e fornecer mais uma forma de suporte aos futuros pais e mães.
-
-Para isto serão aplicados conhecimentos da matéria de Sistemas Inteligentes.
-
-<!-- Descreva o mecanismo de inteligência que será utilizado no seu sistema. Utilize a modelagem baseada em agente
-para definir as entradas e saídas do seu módulo de serviço inteligente. Apresente quem irá fornecer o serviço
-e em que módulo será utilizado. -->
+    2.7. Sistema desenvolvido
+<!-- Pendente.-->
+Faça aqui uma breve descrição do software e coloque as principais telas com uma explicação de como usar cada uma.
 	
 **3. Modelagem de dados**
-<!-- Pendente. -->
+<!-- Mudar. -->
 Para o funcionamento da aplicação, foi necessário uma estrutura que comportasse os dados dos usuários, os respectivos processos pelos quais cada usuários passa e as tarefas que compões cada processo. Com esta finalidade doi criada a base de dados que é conectada diretamente com o site, tornando a interação do usuário com o sistema funcional e personalizada.
 
 <!-- Apresente o modelo de dados. Defina o dicionário de dados com os respectivos formatos e significados. -->
 
     3.1. Diagrama de Entidade-Relacionamento
-
+<!-- Mudar. -->
 O diagrama abaixo ilustra a estrutura base para o funcionamento do nosso sistema. Nele podemos observar as entidades Usuario, Processo e Tarefa que estão ligadas entre si de forma que, um usuário passa por vários processos e cada processo tem várias tarefas.
 
 ![Diagrama de Entidade Relacionamento](imagens/diagramaER.jpeg "Diagrama de Entidade Relacionamento")
 
-**4. Sistema desenvolvido**
-<!-- Pendente.-->
-Faça aqui uma breve descrição do software e coloque as principais telas com uma explicação de como usar cada uma. 
+**4. Serviços inteligentes**
+Neste projeto foi desenvolvido um ChatBot - software capaz de receber mensagens escritas ou por voz, interpretar seu conteúdo e oferecer respostas adequadas - apelidado de A.Lice. Ela tem como objetivo responder dúvidas de participantes do processo adotivo cadastrados no sistema da A.dota com a mesma fluidez de um agente humano do Conselho Nacional de Justiça, encarregado pelo Cadastro Nacional de Adoção. Desta forma, a aplicação poderá assistir diversas famílias em uma quantidade mínima de tempo, assegurando uma resposta com alto nível de acurácia, melhorando a experiência ofertada pela aplicação como um todo.
+
+A ferramenta utilizada é um Robô Conversacional, desenvolvido a partir do Fluxo de Diálogo especificado pela equipe A.dota. Este sistema analisa perguntas do usuário sobre uma etapa específica do processo de adoção e responde de acordo com a base de dados. Para responder corretamente perguntas dos usuários sobre os processos, a A.Lice conta com entradas de dados sobre adoção retirados de sites e consultas jurídicas, tais como o site do Tribunal Federal de Justiça. Dessa forma, é possível oferecer respostas plausíveis e bem fundamentadas.
+
+<!-- Descreva o mecanismo de inteligência que será utilizado no seu sistema. Utilize a modelagem baseada em agente
+para definir as entradas e saídas do seu módulo de serviço inteligente. Apresente quem irá fornecer o serviço
+e em que módulo será utilizado. --> 
   
 **5. Avaliação**
 <!-- Refazer. -->

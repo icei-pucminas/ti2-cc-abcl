@@ -347,12 +347,77 @@
             <div class="overlay"></div>
             <div class="content">
               <div class="close-btn" onclick="togglePopup2()">&times;</div>
-              <h1 class="black">DOCUMENTAÇÃO</h1>
-              <div class="col-10"><p style="color: black;">Será preciso fazer uma petição - preparada por um defensor público ou advogado particular - 
-                para dar início ao processo de inscrição para adoção (no cartório da Vara de Infância). Só depois de aprovado, seu nome será habilitado a constar dos cadastros local e nacional de pretendentes à adoção.</p></div>
-                <div id="example1"></div>
-              
-                <button class=" btn" id="btn_processos" onclick="atualizarStatus()" value="1">Completo</button>
+              <h1 class="black">PROCESSO</h1>
+              <div class="col-10">
+                <p style="color: black;">A Petição e a documentação deverão ser levados inicialmente à Vara Cível da
+                  Infância e da Juventude de sua comarca, para as providências de registro e de autuação.
+                </p>
+              </div>
+              <div id="example1"></div>
+
+              <button class=" btn" id="btn_processos" onclick="atualizarStatus()" value="1">Completo</button>
+            </div>
+          </div>
+
+          <div class="popup col-12" id="popup-3">
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="close-btn" onclick="togglePopup3()">&times;</div>
+              <h1 class="black">PREPARAÇÃO</h1>
+              <div class="col-10">
+                <p style="color: black;">Curso, entrevistas e visitas realizados e resultado confirmado com o Ministério
+                  Público e o juiz da Vara de Infância.
+                </p>
+              </div>
+              <div id="example1"></div>
+
+              <button class=" btn" id="btn_processos" onclick="atualizarStatus()" value="1">Completo</button>
+            </div>
+          </div>
+
+          <div class="popup col-12" id="popup-4">
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="close-btn" onclick="togglePopup4()">&times;</div>
+              <h1 class="black">CERTIFICAÇÃO</h1>
+              <div class="col-10">
+                <p style="color: black;">Habilitação concedida e nome inserido nos cadastros para adoção.
+                </p>
+              </div>
+              <div id="example1"></div>
+
+              <button class=" btn" id="btn_processos" onclick="atualizarStatus()" value="1">Completo</button>
+            </div>
+          </div>
+
+          <div class="popup col-12" id="popup-5">
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="close-btn" onclick="togglePopup5()">&times;</div>
+              <h1 class="black">PROCURA</h1>
+              <div class="col-10">
+                <p style="color: black;">Meu filho ou filha foi encontrado e escolhido, de acordo com as normas e
+                  restrições da Vara da Infância, e já estamos familiarizados.
+                </p>
+              </div>
+              <div id="example1"></div>
+
+              <button class=" btn" id="btn_processos" onclick="atualizarStatus()" value="1">Completo</button>
+            </div>
+          </div>
+
+          <div class="popup col-12" id="popup-6">
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="close-btn" onclick="togglePopup6()">&times;</div>
+              <h1 class="black">FINAL!</h1>
+              <div class="col-10">
+                <p style="color: black;">Todos os processos foram finalizados e meu filho ou filha já está sob minha guarda.
+                </p>
+              </div>
+              <div id="example1"></div>
+
+              <button class=" btn" id="btn_processos" onclick="atualizarStatus()" value="1">Completo</button>
             </div>
           </div>
 
@@ -392,14 +457,140 @@
                 </div>
                 <div class="course-info">
                   <h6 class="black">Etapa 2</h6>
-                  <h2 class="black">Documentação</h2>
+                  <h2 class="black">Processo</h2>
                   <div class="row">
                     <div class="col-10 ">
-                      <p class="black size1">Os documentos apresentados serão autuados pelo cartório e serão remetidos ao Ministério Público para análise
-                         e prosseguimento do processo. O promotor de justiça poderá requerer documentações complementares.</p>
+                      <p class="black size1">Os documentos apresentados serão autuados pelo cartório e serão remetidos
+                        ao Ministério Público para análise
+                        e prosseguimento do processo. O promotor de justiça poderá requerer documentações
+                        complementares. Será preciso fazer uma petição - preparada por um defensor público ou advogado
+                        particular -
+                        para dar início ao processo de inscrição para adoção (no cartório da Vara de Infância). Só
+                        depois de aprovado, seu nome será habilitado a constar dos cadastros local e nacional de
+                        pretendentes à adoção.</p>
                     </div>
                   </div>
                   <button class=" btn" id="btn_2" onclick="togglePopup2()">Continuar</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-1"></div>
+          </div>
+
+          <div class="row etapa3">
+            <div class="col-1"></div>
+            <div class="courses-container col-10">
+              <div class="course">
+                <div class="course-preview">
+                  <h6>ETAPA 3</h6>
+                  <h2>Dar a entrada</h2>
+                </div>
+                <div class="course-info">
+                  <h6 class="black">Etapa 3</h6>
+                  <h2 class="black">Preparação</h2>
+                  <div class="row">
+                    <div class="col-10 ">
+                      <p class="black size1">O curso de preparação psicossocial e jurídica para adoção é obrigatório e
+                        será oferecido pela Vara da Infância da comarca. Após comprovada a participação no curso, o
+                        candidato é submetido à avaliação psicossocial com entrevistas e visita domiciliar feitas pela
+                        equipe técnica interprofissional. Algumas comarcas avaliam a situação socioeconômica e
+                        psicoemocional dos futuros pais adotivos apenas com as entrevistas e visitas. O resultado dessa
+                        avaliação será encaminhado ao Ministério Público e ao juiz da Vara de Infância.</p>
+                    </div>
+                  </div>
+                  <button class=" btn" id="btn_3" onclick="togglePopup3()">Continuar</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-1"></div>
+          </div>
+
+          <div class="row etapa4">
+            <div class="col-1"></div>
+            <div class="courses-container col-10">
+              <div class="course">
+                <div class="course-preview">
+                  <h6>ETAPA 4</h6>
+                  <h2>Certificado de Habilitação</h2>
+                </div>
+                <div class="course-info">
+                  <h6 class="black">Etapa 4</h6>
+                  <h2 class="black">Certificação</h2>
+                  <div class="row">
+                    <div class="col-10 ">
+                      <p class="black size1">A partir do laudo da equipe técnica da Vara e do parecer emitido pelo
+                        Ministério Público, o juiz dará sua sentença. Com seu pedido acolhido, seu nome será inserido
+                        nos cadastros, válidos por dois anos em território nacional. Você está automaticamente na fila
+                        de adoção do seu estado e agora aguardará até aparecer uma criança com o perfil compatível com o
+                        perfil fixado pelo pretendente durante a entrevista técnica, observada a cronologia da
+                        habilitação. Caso seu nome não seja aprovado, busque saber os motivos. Estilo de vida
+                        incompatível com criação de uma criança ou razões equivocadas (para aplacar a solidão; para
+                        superar a perda de um ente querido; superar crise conjugal etc.) podem inviabilizar uma adoção.
+                        Você pode se adequar e começar o processo novamente.</p>
+                    </div>
+                  </div>
+                  <button class=" btn" id="btn_4" onclick="togglePopup4()">Continuar</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-1"></div>
+          </div>
+
+          <div class="row etapa5">
+            <div class="col-1"></div>
+            <div class="courses-container col-10">
+              <div class="course">
+                <div class="course-preview">
+                  <h6>ETAPA 5</h6>
+                  <h2>Encontrar a criança</h2>
+                </div>
+                <div class="course-info">
+                  <h6 class="black">Etapa 5</h6>
+                  <h2 class="black">Procura</h2>
+                  <div class="row">
+                    <div class="col-10 ">
+                      <p class="black size1">A Vara de Infância vai avisá-lo que existe uma criança com o perfil
+                        compatível ao indicado por você. O histórico de vida da criança é apresentado ao adotante; se
+                        houver interesse, ambos são apresentados. A criança também será entrevistada após o encontro e
+                        dirá se quer ou não continuar com o processo. Durante esse estágio de convivência monitorado
+                        pela Justiça e pela equipe técnica, é permitido visitar o abrigo onde ela mora; dar pequenos
+                        passeios para que vocês se aproximem e se conheçam melhor. Esqueça a ideia de visitar um abrigo
+                        e escolher a partir daquelas crianças o seu filho. Essa prática já não é mais utilizada para
+                        evitar que as crianças se sintam como objetos em exposição, sem contar que a maioria delas não
+                        está disponível para adoção. </p>
+                    </div>
+                  </div>
+                  <button class=" btn" id="btn_5" onclick="togglePopup5()">Continuar</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-1"></div>
+          </div>
+
+          <div class="row etapa6">
+            <div class="col-1"></div>
+            <div class="courses-container col-10">
+              <div class="course">
+                <div class="course-preview">
+                  <h6>ETAPA 6</h6>
+                  <h2>Realizar a Ação de Adoção</h2>
+                </div>
+                <div class="course-info">
+                  <h6 class="black">Etapa 6</h6>
+                  <h2 class="black">Final!</h2>
+                  <div class="row">
+                    <div class="col-10 ">
+                      <p class="black size1">Se o relacionamento correr bem, a criança é liberada e o pretendente
+                        ajuizará a ação de adoção. Ao entrar com o processo, o pretendente receberá a guarda provisória,
+                        que terá validade até a conclusão do processo. Nesse momento, a criança passa a morar com a
+                        família. A equipe técnica continua fazendo visitas periódicas e apresentará uma avaliação
+                        conclusiva. O juiz profere a sentença de adoção e determina a lavratura do novo registro de
+                        nascimento, já com o sobrenome da nova família. Existe a possibilidade também de trocar o
+                        primeiro nome da criança. Nesse momento, a criança passa a ter todos os direitos de um filho
+                        biológico. </p>
+                    </div>
+                  </div>
+                  <button class=" btn" id="btn_6" onclick="togglePopup6()">Continuar</button>
                 </div>
               </div>
             </div>
@@ -827,9 +1018,9 @@
            </div>`;
     }
 
-    function proxEtapa(){
+    function proxEtapa() {
       let atual = JSON.parse(localStorage.getItem('usuario_ativo')).processo_ativo
-      if(atual == 2){
+      if (atual == 2) {
         $(".etapa1").toggle();
         $(".etapa2").toggle();
       }
