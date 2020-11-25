@@ -527,7 +527,7 @@
             <div class="col-3 " id="e3"><img src="../Imagens/etapa3.png" class="tam100 esconder conclui" srcset="">
             </div>
             <div class="col-3 " id="e4"><img src="../Imagens/etapa4.png" class="tam100 esconder conclui" srcset="">
-            </div>
+            </div>	
 
           </div>
 
@@ -1175,8 +1175,24 @@
       let img = document.getElementsByClassName('conclui')
       let ini = document.getElementById('nada')
 
-      console.log(img[0])
-      if (atual == 2) {
+      if(atual == 1){
+        et.classList.add('aparecer')
+        ini.classList.add('esconder')
+        p2.classList.add('aparecer')
+        p3.classList.add('aparecer')
+        p4.classList.add('aparecer')
+        p5.classList.add('aparecer')
+        p6.classList.add('aparecer')
+      }else if (atual == 2) {
+        
+        et.classList.remove('aparecer')
+        p2.classList.remove('aparecer')
+        p3.classList.remove('aparecer')
+        p4.classList.remove('aparecer')
+        p5.classList.remove('aparecer')
+        p6.classList.remove('aparecer')
+
+
         et2.classList.remove('esconder')
         et1.classList.add('esconder')
         p2.classList.add('esconder')
