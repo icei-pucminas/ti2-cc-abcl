@@ -16,7 +16,8 @@
   <link
     href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
     rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
   <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
@@ -24,17 +25,10 @@
   <!-- Custom styles for this template-->
   <link href="../estilos/sb-admin-2.min.css" rel="stylesheet">
   <link href="../estilos/home.css" rel="stylesheet">
-  
+
 
   <script src="../db.js"></script>
   <script src="../scripts/db_cadastro.js"></script>
-
-  <script>
-    window.onload = () => {
-      mostraUsuario();
-      atualizaTabela();
-    }
-  </script>
 
 </head>
 
@@ -77,7 +71,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="passo-a-passo.html">
           <i class="fas fa-fw fa-list"></i>
-          <span>Passo a passo</span>
+          <span>Notícias</span>
         </a>
       </li>
 
@@ -128,144 +122,246 @@
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
-      <!-- Main Content -->
-      <div id="content">
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10" style="text-align: center;">
+          <img src="../Imagens/logos/1.png" style="max-width: 100%;" alt="">
+          <br><br>
+          <h1 class="black" id="nome_PainelInicial">Seja bem vindo, <b><i>A.Dotante Nome</i> </b></h1>
+          <br>
+          <!-- <img style = "max-width: 100%; height: 100%;justify-content: center; align-items: center; text-align: center;" src="https://www.ammor.org.br/wp-content/uploads/2016/06/oie31.jpg" alt="Crianças"> -->
+        </div>
+        <div class="col-1"></div>
+      </div>
 
-        <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-          <!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3" style="color: #e040fb;">
-            <i class="fa fa-bars"></i>
-          </button>
-
-
-          <!-- Topbar Navbar -->
-          <ul class="navbar-nav ml-auto">
-
-            <!-- Dropdown - Messages -->
-            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-              aria-labelledby="searchDropdown">
-              <form class="form-inline mr-auto w-100 navbar-search">
-                <div class="input-group">
-                  <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                    aria-label="Search" aria-describedby="basic-addon2">
-                  <div class="input-group-append">
-                    <button class="btn btn-primary" type="button">
-                      <i class="fas fa-search fa-sm"></i>
-                    </button>
-                  </div>
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-5 ">
+          <h2 class="fundo meio" style="color:white; letter-spacing: 5px">Vídeos</h2>
+          <div class="row">
+            <div class="col-12 meio">
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <iframe style="border-radius: 15px;" width="560" height="315"
+                      src="https://www.youtube-nocookie.com/embed/tsGVHkpqIgI" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe></div>
                 </div>
-              </form>
-            </div>
-            </li>
-
-            <!-- 
-                Informações do usuário - quando clicar: vai para a página do perfil
-            -->
-            <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="nomeUsuario"></span>
-                <!-- Nome do usuario -->
+                <div class="carousel-item">
+                  <iframe style="border-radius: 15px;" width="560" height="315"
+                    src="https://www.youtube-nocookie.com/embed/5u7Gfrsx5o4" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Terceiro Slide"
+                    alt="Terceiro Slide">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
               </a>
 
-            </li>
-
-          </ul>
-
-        </nav>
-        <!-- End of Topbar -->
-
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12">
-                <h1>A.DOTA</h1>
-                <p>"Só se vê bem com o coração, o essencial é invisível aos olhos."<br> Antoine de Saint-Exupéry</p>
+              <a class="black btn" href="../HTML/home_Paginas/videos.html"> <b>Para ver todos os vídeos selecionados
+                  basta clicar aqui</b></a>
             </div>
           </div>
-          <div class="row">
+        </div>
+        <div class="col-5">
+          <img src="../Imagens/family_.svg" style="width: 100%;" alt="">
+        </div>
+        
+      </div><br><br>
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+          <h1 class="branco meio fundo">Depoimentos</h1> 
+          <p class="tam14 black meio">Todos os depoimentos foram retirados do site <a href="http://queroumafamilia.mprj.mp.br/depoimentos" class="btn" target="_blank" rel="noopener noreferrer"><i>Quero uma Família</i></a></p>
+          <br><div class="row">
             <div class="col-12">
-              <img class= "imagemInicial" src="../Imagens/young-family-with-little-daughter-moving-into-new-house.jpg"
-                style="width: 50%; opacity: 75%;">
+              <div class="row">
+                <div class="col-1"></div>
+                <div class="col-4">
+                  <img style="width: 100%; height: 100%;" src="../Imagens/Depoimentos/erica_marinho.jpg" alt="">
+                </div>
+                <div class="col-6">
+                  <h1 class="start black"><i>Erica Marinho</i></h1>
+                  <hr style="border: 2px solid black;">
+                  <h5 class="black">08.04.2016</h5>
+                  <p class="black tam14" style="text-align: justify;">" Em 2005 nasceu Kauã, de uma gestação programada,
+                    desejada. Em 2009 nasceu Jéssica,
+                    aos 5 anos e 8 meses, de uma gestação programada, desejada.
+                    Embora possa ter filhos biologicamente, sempre tive o desejo de adotar. Meu marido e eu decidimos em
+                    2008 dar entrada no processo de habilitação para adoção de uma menina...nossa filha! Nesta época
+                    Kauã tinha 2 anos e 10 meses. Enquanto aguardava finalizar o processo de habilitação, participava de
+                    grupos de apoio à adoção virtuais. Foi um período de rica troca de experiências, onde pude me
+                    aprofundar mais sobre o tema adoção. Conheci a minha filha através de BUSCA ATIVA, onde pessoas
+                    queridas, conhecidas como "cegonhas", trabalham voluntariamente na divulgação de crianças que não
+                    conseguem pretendentes na sua região.Minha filha havia passado por recente devolução e desejava ter
+                    uma família. Viajamos 17 horas para buscar nossa filha (somos do RJ e nossa filha estava no norte de
+                    MG). Kauã tinha 3 anos e 9 meses e também foi conosco. Jéssica tinha 5 anos e 8 meses e já havia
+                    sofrido o abandono por duas vezes: pela família biológica e pela família que tentara a primeira
+                    adoção,cujo período foi inferior a 2 meses. Em abril de 2014 o processo de adoção finalizou e
+                    recebemos a nova certidão de nossa filha. Sempre que possível, participamos de reportagens,
+                    programas, palestras, enfim, tudo que seja pró-adoção. Hoje Jéssica está feliz, se sente segura e
+                    amada. Nossa família está completa!"</p>
+                </div>
+              </div>
             </div>
           </div>
-
+          <br><br>
           <div class="row">
-            <div class="col-6" style="padding-top: 5%;">
-              <h1>Vídeos</h1>
+            <div class="col-12">
               <div class="row">
                 <div class="col-12">
-                  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Fk_4Cd9NFLw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                      </div>
-                      <div class="carousel-item">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/KzQrhwtYVAI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                      </div>
-                      <div class="carousel-item">
-                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/LPw4XZzmpxE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                      </div>
+                  <h1 class="start black"><i>Anita Ferreira Marinho e Adilson José Pereira </i></h1>
+                  <hr style="border: 2px solid black;">
+                  <h5 class="black">29.04.2016</h5>
+                  <p class="black tam14" style="text-align: justify;">""Em 12/05/2015, fomos habilitados à adoção, eu,
+                    Anita Ferreira Marinho e Adilson José Pereira. Alguns poucos dias após, no mesmo mês, recebemos uma
+                    indicação para visitarmos Leticia (não sei se é caracterizado busca ativa), uma moreninha linda, que
+                    aos 10 anos ainda falava um pouco "tatibitati". Meio indiazinha, faladeira e apaixonante, saímos do
+                    abrigo com uma vontade certa de voltar. Havia sido devolvida de uma adoção frustrada pelos padrinhos
+                    que durou cinco meses e havia partido seu coração pela segunda vez. Iniciou-se ai, durante o resto
+                    de maio, junho e até 13 de julho um "namoro" sem igual. Logo na segunda visita Leticia disse:
+
+                    - Eu acho que sei por que vocês estão vindo aqui.
+                    - É mesmo, então nos diga! Eu e Adilson falamos.
+                    - Porque vocês querem me adotar. Então, nos entre olhamos e respondemos quase que juntos:
+
+                    - É você quem vai dizer se nos quer adotar. A escolha é sua. Você responde quando quiser.
+
+                    Não perdeu tempo e, com a carinha mais gaiata e linda do mundo, meio que mordendo a mão:
+
+                    - Eu quero! E abraçou a nós dois, já na maior intimidade.
+
+                    Logo no terceiro dia, como fui à visita direto da faculdade (um sábado), cheguei primeiro que o
+                    Adilson, (pela manhã, tínhamos combinado que passaríamos a nos referir um ao outro, não mais como "o
+                    tio" e "a tia", mas como "o papai" e "a mamãe"), então liguei para ele e a pedi que perguntasse se
+                    já estava chegando. Foi quando sem ter comentado nada com ela, perguntou:
+
+                    - Posso chamar ele de pai?
+                    - Claro! Eu disse, enquanto chamava o celular.
+                    - Pai, onde você está?
+
+                    O coração se encheu de alegria.
+
+                    Passou a ir aos finais de semana para casa e a devolvíamos na segunda-feira direto na escola. No
+                    início, muito tímida e receosa, aos poucos fomos mostrando o quanto tudo pode ser leve e que estava
+                    em casa. Que não precisava de alguns protocolos (apesar de sua história, muito educada e cuidadosa).
+                    Em, 13 de julho recebemos sua guarda provisória e, nossa vida de dupla imbatível passou a ser de
+                    trio vitorioso. A cada dia, confiava mais em nós e, principalmente, percebia o quanto era amada.
+                    Nossa filha, agora Leticia Sofia, nossa Lelê, ainda não sabia ler, conhecia pouco as letras e os
+                    números aos 10 anos. Doía muito em nossos corações, pois esta falta estava atrapalhando até na
+                    dicção. Buscamos toda ajuda que podíamos. Amigos especialistas em educação, em desenvolvimento e
+                    brinquedos pedagógicos para auxiliar. Sofremos para encontrar uma escola que abraçasse sua condição
+                    atual e chegamos a ouvir que procurássemos uma outra escola que estivesse a altura do pouco
+                    conhecimento dela. Já matriculada em uma escola pública do município apenas para finalizar o 3ª ano
+                    em que se encontrava, buscamos uma escola que abraçasse nossa família e, em outubro de 2015, tendo a
+                    encontrado, nos indicou um estudo direcionado para que pudéssemos desenvolvê-la em paralelo à quase
+                    que pro-forma frequência à escola em que estava matriculada. Seu crescimento pessoal tem sido
+                    intenso. Sua docilidade é um encanto. Aos domingos, vamos a evangelização que adora. Quanto à nossa
+                    relação, no início, por algumas vezes, em uma fase em que testou muito nossos limites e entendemos
+                    que era uma forma de saber se a queríamos de verdade, perguntei por umas duas vezes se tinha medo de
+                    ser devolvida ao abrigo. Respondendo que sim, uma vez até se emocionou ao responder. Então
+                    afirmávamos sempre: Você é nossa filha e a queremos muito!
+
+                    As vezes até brincávamos: Dançou, é nossa filha e ninguém tasca!
+
+                    Em meados de novembro, tivemos uma situação em que ela avistou sua mãe biológica e, logo que passou
+                    o momento, busquei conversar sobre seus sentimentos e ratifiquei que esse assunto pode ser
+                    conversado e falado sempre que quiser. Ela, muito bem posicionada demonstrou o quanto está
+                    consciente de tudo o que ocorreu e ratifiquei sobre o que é seguro sem neuras. Por fim, novamente
+                    perguntei se ainda tinha medo de ser devolvida ao abrigo e ela deu de ombros e disse que não mais,
+                    como que realmente aquilo não tinha mais importância. Quando meu marido chegou em casa contei para
+                    ele e ficou muito feliz com sua segurança. Ela, já naquela época já se sentia em casa e o período de
+                    testes havia passado. Hoje, nossa princesa, agora com 11 anos, está totalmente integrada à família.
+                    "</p> <br>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                  <h1 class="start black"><i>Toni, David, Alyson, Jéssica e Filipe</i></h1>
+                  <hr style="border: 2px solid black;">
+                  <h5 class="black">04.05.2016</h5>
+                  <div class="row">
+                    <div class="col-12">
+                  <img style="width: 100%; height: 100%;" src="../Imagens/Depoimentos/Dep007_02.jpg" alt="">
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Anterior</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Próximo</span>
-                    </a>
-                  </div> 
-                </div>
-              </div>
-            </div>
-            <div class="col-6" style="padding-top: 5%;">
-              <div class="row">
-                <div class="col-6">
-                  <img src="../Imagens/undraw_post2_19cj (1).svg" style="max-width: 100%;">
-                  <a style="font-weight: bolder; font-size: 20px;" href="passo-a-passo.html">Notícias</a>
+                  </div>
+                  <p class="black tam14" style="text-align: justify;">"Somos um casal gay, Toni Reis e David Harrad. Na
+                    hora de atualizar este relato (junho de 2015), Toni tem 51 anos e David 57. Vivemos juntos há 25
+                    anos. Por volta do ano 2000, começamos a discutir a possibilidade de adotarmos filhos. Idealmente,
+                    queríamos uma menina e um menino de aproximadamente cinco ou seis anos de idade. Em 2005, demos
+                    entrada na Vara da Infância e Juventude da nossa cidade a fim de obter a habilitação para adoção
+                    conjunta, enquanto casal, assim como um casal heterossexual faria. Para evitar toda a burocracia que
+                    isso viria a causar, pela lei cada um de nós poderia ter adotado como solteiro, sem levantar a
+                    questão de sermos um casal. Mas para nós havia dois fatores importantes em jogo: a igualdade de
+                    direitos garantida pela Constituição Federal; e o bem-estar das crianças. Se adotássemos
+                    separadamente como solteiros e um de nós viesse a falecer, o outro não teria automaticamente o
+                    direito da guarda do filho adotado pelo falecido, prejudicando assim a segurança do filho criado
+                    conjuntamente pelos dois pais.
 
+                    Foi então que começou uma luta que durou dez anos. Nosso caso foi o primeiro em nossa cidade e ao
+                    juiz faltava precedentes para embasar a sua sentença. Quase três anos depois decidiu que pudéssemos
+                    adotar conjuntamente, mas restringiu a idade e o sexo das crianças. Teriam que ser maiores de dez
+                    anos e somente do sexo feminino. Achamos que a decisão do juiz foi discriminatória e recorremos. Na
+                    segunda instância ganhamos por unanimidade o direito de adotar conjuntamente sem qualquer restrição.
+                    No entanto, um promotor do Ministério Público do Estado do Paraná recorreu e levou o caso ao Supremo
+                    Tribunal Federal (STF) e ao Superior Tribunal de Justiça (STJ), alegando que casais do mesmo sexo
+                    não formam uma entidade familiar e, portanto, não poderiam adotar conjuntamente. O STF rejeitou o
+                    recurso porque não dizia respeito à matéria em julgamento, qual seja a restrição quanto à idade e ao
+                    sexo das crianças. O STJ só preferiu sua decisão em 2014, fazendo com que continuássemos sem poder
+                    adotar na nossa comarca. Uma demora judicial um tanto cruel, tanto para nós quanto para as crianças
+                    à espera de adoção. Mesmo assim, o citado promotor do Ministério Público do Estado do Paraná
+                    recorreu novamente da decisão do STJ e a decisão da ministra Carmem Lúcia do STF, a nosso favor, foi
+                    dada em março de 2015, dez anos após o início do processo de adoção. (a instituição do MP do Paraná
+                    em si afirmou em nota que reconhece a possibilidade de adoção por casal homoafetivo:
+                    http://www.gazetadopovo.com.br/vida-e-cidadania/casal-homossexual-obtem-aval-da-justica-para-adotar-crianca-27wkrxialekn6e3jga82odg7i).
+                    "</p>
+                    <a href="http://queroumafamilia.mprj.mp.br/detalhe-do-depoimento-7" target="_blank" class="btn">Continuar lendo...</a>
                 </div>
               </div>
             </div>
+
           </div>
-          <div class="row d-flex align-items-center">
-
-
-            <div class="col-2">
-              <img src="../Imagens/VÍDEOS (1).png" style="max-width: 100%;">
-              <div class="row">
-                <div class="col-12 d-flex justify-content-center" style="margin-top: 10px;">
-                  <a style="font-weight: bolder; font-size: 20px;" href="home_Paginas/videos.html">Vídeos</a>
-                </div>
-              </div>
+          <!-- <div class="row"><div class="col-12">
+            <h1>Ferr</h1>
+            <div class="row">
+              <div class="col-3"></div>
             </div>
+          </div></div> -->
 
-            <div class="col-2">
-              
-            </div>
 
-            <div class="col-2">
-              <img src="../Imagens/marteloJustica.png" style="max-width: 100%;">
-              <div class="row">
-                <div class="col-12 d-flex justify-content-center">
-                  <a style="font-weight: bolder; font-size: 20px;" href="home_Paginas/leis.html">Leis</a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-      <!-- /.container-fluid -->
-
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; A.dota 2020</span>
-          </div>
-        </div>
-      </footer>
     </div>
+  </div>
+  <!-- /.container-fluid -->
+
+  <footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+      <div class="copyright text-center my-auto">
+        <span>Copyright &copy; A.dota 2020</span>
+      </div>
+    </div>
+  </footer>
+  </div>
   </div>
 
   <!-- End of Content Wrapper -->
@@ -279,7 +375,7 @@
       <!--Content-->
       <div class="modal-content text-center" style="border-radius: 15px;">
         <!--Header-->
-        <div class="modal-header d-flex justify-content-center" style="background-color: rgba(0, 119, 182);;">
+        <div class="modal-header d-flex justify-content-center" style="background-color: rgba(0, 119, 182);">
           <p class="heading" style="color: white; font-size: 1.5rem;">Quer sair de sua conta?</p>
         </div>
 
@@ -302,7 +398,15 @@
     </div>
   </div>
 
-
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+    crossorigin="anonymous"></script>
   <!-- Bootstrap core JavaScript-->
   <script src="../recursos/jquery/jquery.min.js"></script>
   <script src="../recursos/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -316,6 +420,20 @@
 
   <script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
   <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
+
+  <script>
+    window.onload = () => {
+      mostraUsuario();
+      atualizaTabela();
+
+      let atr = JSON.parse(localStorage.getItem('usuario_ativo'))
+      document.getElementById("nome_PainelInicial").innerHTML =
+        `Seja bem vindo, <b><i>A.Dotante ${atr.nome.charAt(0).toUpperCase() + atr.nome.slice(1)} ${atr.sobrenome.charAt(0).toUpperCase() + atr.sobrenome.slice(1)}</i> </b>`;
+    }
+  </script>
+
+
+
 
 </body>
 
