@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
     <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
     <link rel="stylesheet" href="../estilos/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../scripts/script.js"></script>
     <script src="../scripts/bancodedados/usuarios_Cadastrados.js"></script>
 </head>
@@ -36,7 +37,7 @@
 
                 <div class="card card-signin my-5">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Criar conta</h5>
+                        <h5 class="card-title text-center">Entrar</h5>
                         <form class="form-signin" onsubmit="adicionaUsuario()" id="formCadastro">
                             
                             <div class="form-label-group">
@@ -50,12 +51,14 @@
                                     required>
                                 <label for="senha">Senha</label>
                             </div>
+                            <h5 id = "senhaIncorreta"  style="text-align: center; justify-content: center; display: none;">Senha ou e-mail incorretos!</h5>
 
                             <input class="btn btn-lg btn-green accent-5 btn-block text-uppercase"
                                 style="background-color: #023e8a; color: white;" type="button" id ="entrar-btn" value ="Entrar"></button>
 
                             <hr class="my-4">
                         </form>
+                        
         </div>
     </div>
 
