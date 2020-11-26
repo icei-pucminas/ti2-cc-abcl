@@ -1,0 +1,29 @@
+.black{
+    color: black;
+}
+
+.branco{
+    color: whitesmoke;
+}
+
+.tam300{
+    height: 700px;
+}
+
+.tam301{
+    height: 600px;
+}
+.meio{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.embaixo{
+	position: relative;
+}
+
+.azulEscuroFundo{
+    background-color:  rgba(0, 119, 182);
+}

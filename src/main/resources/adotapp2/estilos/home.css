@@ -44,6 +44,8 @@
 .apostofro{
   font-size: 30px;
 }
+
+
 @media (max-width: 1024px){
   .icones{
     display: none;
@@ -52,3 +54,4 @@
     margin-top: 0px;
   }
 }
+

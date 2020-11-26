@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-  <title>Adotapp - Painel inicial</title>
+  <title>A.dota</title>
   <link rel="icon" href="../Imagens/logos/1.png">
 
   <!-- Custom fonts for this template-->
@@ -44,7 +44,7 @@
       <!-- Sidebar - Brand -->
       <div class="sidebar-brand d-flex align-items-center justify-content-center">
         <div class="sidebar-brand-icon">
-          <i><img src="../Imagens/logos/3.png" style="width: 9rem; margin-top: 4rem;" alt="Logo Adotapp"></i>
+          <i><img src="../Imagens/logos/3.png" style="width: 9rem; margin-top: 4rem;"  alt="Logo Adotapp"></i>
         </div>
       </div>
 
@@ -72,6 +72,20 @@
         <a class="nav-link collapsed" href="passo-a-passo.html">
           <i class="fas fa-fw fa-list"></i>
           <span>Notícias</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="leis.html">
+          <i class="fas fa-balance-scale-right"></i>
+          <span>Leis</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="videos.html">
+          <i class="fas fa-play-circle"></i>
+          <span>Vídeos</span>
         </a>
       </li>
 
@@ -423,13 +437,13 @@
 
   <script>
     window.onload = () => {
-      // mostraUsuario();
-      atualizaTabela();
-
       let atr = JSON.parse(localStorage.getItem('usuario_ativo'))
       document.getElementById("nome_PainelInicial").innerHTML =
         `Seja bem vindo, <b><i>A.Dotante ${atr.nome.charAt(0).toUpperCase() + atr.nome.slice(1)} ${atr.sobrenome.charAt(0).toUpperCase() + atr.sobrenome.slice(1)}</i> </b>`;
-    }
+    
+      // mostraUsuario();
+      atualizaTabela();
+      }
   </script>
 
 
