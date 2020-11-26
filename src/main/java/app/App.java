@@ -15,7 +15,9 @@ public class App{
 	
     public static void main(String[] args) {
     	
-    	port(6789); 
+    	if(System.getenv("PORT") != null){
+            port(Integer.parseInt(System.getenv("PORT")));
+        }
     	
     	staticFiles.location("/");
     	
