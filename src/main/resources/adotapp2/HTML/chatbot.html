@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <title>Adotapp - Painel inicial</title>
+  <link rel="icon" href="../Imagens/logos/1.png">
+
+  <!-- Custom fonts for this template-->
+  <link href="../recursos/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+  <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
+
+  <!-- Custom styles for this template-->
+  <link href="../estilos/sb-admin-2.min.css" rel="stylesheet">
+  
+  <script src="../db.js"></script>
+  <script>
+    window.onpageshow = () => {
+      mostraUsuario();
+    }
+  </script>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-0000 sidebar sidebar-dark accordion"
+            style=" background-color: rgba(0, 119, 182);" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <div class="sidebar-brand d-flex align-items-center justify-content-center">
+                <div class="sidebar-brand-icon">
+                    <i><img src="../Imagens/logos/3.png" style="width: 9rem; margin-top: 4rem;" alt="Logo Adotapp"></i>
+                </div>
+            </div>
+
+            <!-- Divider -->
+
+            <!-- Nav Item - Dashboard -->
+            <li style="margin-top: 3rem;" class="nav-item">
+                <a class="nav-link" href="home.html">
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>Home</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="perfilUsuario.html">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Perfil</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="passo-a-passo.html">
+                    <i class="fas fa-fw fa-list"></i>
+                    <span>Passo a passo</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="ajuda.html">
+                    <i class="fas fa-fw fa-lightbulb"></i>
+                    <span>Ajuda</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="chat.html">
+                    <i class="fas fa-comments"></i>
+                    <span>Chat Social</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="sobre.html">
+                    <i class="fas fa-fw fa-info-circle"></i>
+                    <span>Sobre</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#modalConfirmDelete" aria-expanded="true"
+                    aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-sign-out-alt"></i>
+                    <span>Sair</span>
+                </a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3" style="color: #e040fb;">
+            <i class="fa fa-bars"></i>
+          </button>
+
+        
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+
+            <!-- 
+                Informações do usuário - quando clicar: vai para a página do perfil
+            -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="perfilUsuario.html" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="nomeUsuario"></span><i class="fas fa-user"></i>
+              </a>
+              
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+            <div class="iframe-container ">
+                <iframe src='https://webchat.botframework.com/embed/adotaqnabot?s=H6IFEhQh10E.fSR6vmLlrJUA-WLAlc-4Tj1nLHr2DwAj7mnDtxRu4Kc' style='width: 60%; height: 500px; margin: 50px; padding: 20px; background-color: rgb(203, 225, 245);'></iframe>
+                <img src="../Imagens/logos/1.png" style='height: 60%; padding-bottom: 12px;'>
+            </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; A.dota 2020</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+
+  <!--Modal: modalConfirmDelete-->
+  <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="modalSair"
+  aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-notify modal-000" role="document">
+    <!--Content-->
+    <div class="modal-content text-center" style="border-radius: 15px;">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center" style="background-color: rgba(0, 119, 182);;">
+        <p class="heading" style="color: white; font-size: 1.5rem;">Quer sair de sua conta?</p>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body" style="color: rgba(0, 119, 182);">
+
+        <i class="fas fa-times fa-4x animated rotateIn"></i>
+
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer flex-center">
+        <a href="index.html" class="btn btn-outline-000"
+          style="color: rgba(0, 119, 182); font-weight: bolder;">Sair</a>
+        <a type="button" class="btn  btn-000 waves-effect" data-dismiss="modal"
+          style="background-color: rgba(0, 119, 182); color: white;">Cancelar</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+  <!--Modal: modalConfirmDelete-->
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="../recursos/jquery/jquery.min.js"></script>
+  <script src="../recursos/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="../recursos/jquery-easing/jquery.easing.js"></script>
+  <script src="../recursos/jquery-easing/jquery.easing.compatibility.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="../scripts/sb-admin-2.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="../recursos/chart.js/Chart.js"></script>
+  <script src="../recursos/chart.js/Chart.bundle.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="../scripts/demo/chart-area-demo.js"></script>
+  <script src="../scripts/demo/chart-pie-demo.js"></script>
+  <script src="../scripts/demo/chart-bar-demo.js"></script>
+
+  <script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
+  <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
+
+</body>
+
+</html>

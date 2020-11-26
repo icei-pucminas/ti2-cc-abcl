@@ -126,9 +126,12 @@ Estão listadas abaixo as tecnologias, ferramentas e ambientes utilizados para o
 * Frameworks: Bootstrap, MDB e Spark;
 * Integração BD com o site: Eclipse, Maven; 
 * Banco de dados: PostgreSQL;
+* IDE web: Microsoft Visual Studio Code;
 * Service Worker para permitir ao smartphone reconhecer o site como app;
-* Microsoft Azure como servidor em nuvem para o banco de dados;
-* IDE: Microsoft Visual Studio Code.
+* Microsoft Azure como servidor em nuvem para o banco de dados e fornecendo a API para o ChatBot;
+* QnA Maker para reunir e formular perguntas e respostas do ChatBot.
+
+Como citado acima, para o desenvolvimento base de nossa aplicação web foram utilizadas linguagens de front-end e back-end através do Microsoft Visual Studio Code, montando uma aplicação com diversas páginas e funcionalidades. A partir daí, foi possível integrar as informações dos usuários com o banco de dados da A.dota no PostgreSQL através da Eclipse e Maven. Além disso, foram utilizadas as plataformas QnA Maker e Microsoft Azure como base para a criação do ChatBot.
 
 A imagem a seguir demonstra a relação estabelecida entre as principais tecnologias e ambientes utilizados para a elaboração, desenvolvimento e finalização do projeto A.dota:
 
@@ -141,19 +144,17 @@ Neste projeto utilizou-se a metodologia Scrum, que consiste em dividir sendo cad
 Outro pilar do Scrum, o Product Backlog foi aplicado no gerenciamento das tarefas, o qual consiste na criação de uma lista de funcionalidades necessárias para o projeto, tornando-se mais simples a análise de quais partes são mais importantes e que merecem maior enfoque. 
 
 Como a equipe da A.dota é composta de três integrantes, a função de desenvolvedor foi desempenhada por todos os membros, porém, atuando em partes diferentes. A equipe está organizada da seguinte maneira:
-* Scrum Master: Luiza Ribeiro
-Mantém a equipe em uma sintonia e fiscaliza o andamento do produto e do segmento do Scrum.
-* Product Owner: nna Puga
-Chefe de criação do software. Coordena o desenvolvimento sugere melhorias a serem feitas no produto, além de identificar os problemas da aplicação.
-* Equipe de Desenvolvimento: Anna Puga, Bárbara Carmo, Luiza Parente
-Trabalham no desenvolvimento do produto em todas as partes, principalmente onde cada um tem mais facilidade.
-* Equipe de Design: Bárbara Carmo
-Trabalha no design das páginas e do aplicativo do produto, tendo em base suas funcionalidades e como estas devem ficar no distribuídos no seu produto, sendo extremamente necessárias do início ao fim, tanto como base para o desenvolvimento como a parte final do mesmo.
+* _Scrum Master: Luiza Ribeiro_ -> Mantém a equipe em uma sintonia e fiscaliza o andamento do produto e do segmento do Scrum.
+* _Product Owner: Anna Puga_ -> Chefe de criação do software. Coordena o desenvolvimento sugere melhorias a serem feitas no produto, além de identificar os problemas da aplicação.
+* _Equipe de Desenvolvimento: Anna Puga, Bárbara Carmo, Luiza Parente_ -> Trabalham no desenvolvimento do produto em todas as partes, principalmente onde cada um tem mais facilidade.
+* _Equipe de Design: Bárbara Carmo_ -> Trabalha no design das páginas e do aplicativo do produto, tendo em base suas funcionalidades e como estas devem ficar no distribuídos no seu produto, sendo extremamente necessárias do início ao fim, tanto como base para o desenvolvimento como a parte final do mesmo.
 
 
 **3. Sistema desenvolvido**
-<!-- Pendente.-->
-Faça aqui uma breve descrição do software e coloque as principais telas com uma explicação de como usar cada uma.
+
+A A.dota é uma plataforma para controle do processo adotivo, como já especificado anteriormente. Nela estão reunidos conhecimentos de desenvolvimento web, sistemas inteligentes e banco de dados de forma interligada. Sua estrutura básica é um site, hospedado pelo Heroku, no qual os usuários cadastrados tem suas informações gerenciadas através de um banco de dados e para melhorar a experiênia dos adotantes, foi implementado um ChatBot, de nome A.Lice, que responde as principais dúvidas sobre o processo adotivo.
+
+É possível encontrar na A.dota, notícias, vídeos, depoimentos, leis, detalhamento dos passos dentro do processo de adoção, a possibilidade de enviar um e-mail para nossa equipe, um chat social e os serviços da A.Lice, ChatBot responsável por sanar as principais dúvidas dos adotantes.
 	
     3.1 Wireframes e fluxo
 <!-- Pendente -->
@@ -191,13 +192,14 @@ A A.Lice foi desenvolvida a partir do Fluxo de Diálogo especificado pela equipe
 
 Para demonstrar o fluxo de diálogo entre o ChatBot implementado e o usuário, foi utilizada a ferramenta BotMock. Através dela foi possível simular uma conversa entre a A.Lice e um adotante. A imagem a seguir representa o fluxo proposto, entretanto, como a visualização pode ser comprometida devido às restrições da imagem, um pdf do mesmo se encontra nesta mesma pasta (https://github.com/icei-pucminas/ti2-cc-abcl/tree/master/documentacao)
 
-![Fluxo de diálogo](imagens/fluxoDialogo.jpg "Fluxo de diálogo")
+![Fluxo de diálogo](imagens/fluxoDialogo.png "Fluxo de diálogo")
 
     5.3 Implementação
-    
+
 O primeiro passo foi reunir conteúdo para formar a base de dados com a qual o ChatBot iria trabalhar. Para isso foram selecionados, links de sites do governo, - tais como o site do Tribunal Federal de Justiça e do Conselho Nacional de Justiça  - cartilhas com as principais dúvidas, fóruns sobre o tema e outras fontes confiáveis que nos possibilitaram ter informações suficientes para que, através da aplicação QnA Maker, fossem formuladas as perguntas e respostas utilizadas no ChatBot.
 
 A partir deste ponto foi possível criar, através da aplicação Microsoft Azure, o ChatBot que apelidamos de A.Lice. Para proporcionar uma melhor experiência, as perguntas foram sendo testadas e a partir dos resultados, a base foi sendo atualizada e/ou modificada. Assim que resultados satisfatórios foram obtidos, a API da Microsoft Azure responsável pelo ChatBot foi inserida no projeto A.dota.
+
 
 
 **6. Avaliação**
