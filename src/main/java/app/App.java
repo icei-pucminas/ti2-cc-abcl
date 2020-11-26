@@ -21,7 +21,7 @@ public class App{
     	
     	staticFiles.location("/");
     	
-    	get("/adotapp2/HTML", (request, response) -> {
+    	get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             return new VelocityTemplateEngine().render(
                 new ModelAndView(model, "adotapp2/HTML/index.html")
