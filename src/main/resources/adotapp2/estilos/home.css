@@ -16,12 +16,34 @@
   position: absolute;
 }
 
-
-
-.text h1{
-  
+.black{
+  color: black;
+}
+.branco{
+  color: whitesmoke;
+}
+.meio{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
+#perfil{
+  background-color: aquamarine;
+  display: flexbox;
+  width: 200px;
+  text-align: center;
+}
+.fundo{
+  background-color: rgba(0, 119, 182);
+}
+
+.tam14{
+  font-size: 18px;
+}
+.apostofro{
+  font-size: 30px;
+}
 @media (max-width: 1024px){
   .icones{
     display: none;

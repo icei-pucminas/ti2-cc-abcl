@@ -1,7 +1,9 @@
 onload = () => {
+	conclusao()
 	let btn = document.getElementById("btn_processos");
 	btn.onclick = atualizarStatus;
 }
+
 
 function atualizarStatus() {
 	let user = JSON.parse(localStorage.getItem('usuario_ativo'))
@@ -11,7 +13,9 @@ function atualizarStatus() {
 	//identificar o formato do envio das informações
 	req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	req.send(`id=${user.id}`);
+
 }
+
 
 function atualizarUsuario(user) {
 	let req2 = new XMLHttpRequest;
@@ -29,17 +33,22 @@ function info_() {
 		"nome": dados.nome,
 		"sobrenome": dados.sobrenome,
 		"id": dados.id,
+		"email": dados.email,
 		"processo_ativo": dados.processo_ativo
 	}
 	localStorage.setItem('usuario_ativo', JSON.stringify(filtrado));
-	location.href = "./home.html";
+	// location.href = "./home.html";
 }
+
+var cont = 0;
 
 function local(email) {
 	let req3 = new XMLHttpRequest;
 	req3.open("get", "/recebeUsuario?email=" + email, false);
 	req3.onload = info_
-	alert("Atualização Completa!");
+	// alert("Atualização Completa!");
 	location.href = "./perfilUsuario.html";
 	req3.send();
+
 }
+

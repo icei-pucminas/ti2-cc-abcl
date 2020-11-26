@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-  <title>Adotapp - Painel inicial</title>
+  <title>A.dota - Painel inicial</title>
   <link rel="icon" href="../Imagens/logos/1.png">
 
   <!-- Custom fonts for this template-->
@@ -26,6 +26,8 @@
   <link href="../estilos/sb-admin-2.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../estilos/perfil.css">
   <script src="../scripts/perfil.js"></script>
+
+  <script src="./party.min.js"></script>
 
   <script src="../db.js"></script>
 
@@ -200,228 +202,29 @@
 
             <div class="col-2"></div>
           </div>
-
           <div class="row">
-            <div class="popup col-12" id="popup-1">
-              <div class="overlay"></div>
-              <div class="content">
-                <div class="close-btn" onclick="togglePopup()">&times;</div>
-                <h1 class="black">DOCUMENTAÇÃO</h1>
-                <div>
-                  <div class="row padding_top">
-                    <div class="col-2">
-                      <div class="round">
-                        <input type="checkbox" id="checkbox0" />
-                        <label for="checkbox0"></label>
-                      </div>
-                    </div>
-                    <div class="col-10"><label for="tarefa1" class="size2">certidão de casamento dos postulantes,
-                        se for o caso, expedida no período de 90 (noventa) dias anterior ao pedido de habilitação
-                        (original ou
-                        cópia autenticada);</label></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="row padding_top">
-                    <div class="col-2">
-                      <div class="round">
-                        <input type="checkbox" id="checkbox1" />
-                        <label for="checkbox1"></label>
-                      </div>
-                    </div>
-                    <div class="col-10"><label for="tarefa2" class="size2">cópia autenticada da cédula de identidade e
-                        da inscrição no Cadastro de Pessoas
-                        Físicas - CPF (caso o número deste não conste da cédula de identidade),
-                        ou alternativamente, cópia autenticada da carteira nacional de habilitação;</label></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="row padding_top">
-                    <div class="col-2">
-                      <div class="round">
-                        <input type="checkbox" id="checkbox2" />
-                        <label for="checkbox2"></label>
-                      </div>
-                    </div>
-                    <div class="col-10"><label for="tarefa3" class="size2">declaração dos postulantes,
-                        com firma reconhecida, atestando o período de união estável, se for o caso (original);</label>
-                    </div>
-                  </div>
+            <div class="col-1"></div>
+            <div class="col-10">
+              <h1 class="black inicio">Etapa Atual</h1>
+            </div>
+          </div>
+          <div id="completo" class="esconder">
+            <div class="row">
+              <div class="col-4"></div>
+              <div class="col-4 meio">
+                <h1 class="azulEscuro meio">Você completou todas as etapas!</h1>
+              </div>
+              <div class="col-4"></div>
+            </div>
 
-                </div>
-                <div>
-                  <div class="row padding_top">
-                    <div class="col-2">
-                      <div class="round">
-                        <input type="checkbox" id="checkbox3" />
-                        <label for="checkbox3"></label>
-                      </div>
-                    </div>
-                    <div class="col-10"><label for="tarefa4" class="size2">comprovante de rendimento (original ou cópia
-                        autenticada);</label></div>
-                  </div>
-
-                </div>
-                <div>
-                  <div class="row padding_top">
-                    <div class="col-2">
-                      <div class="round">
-                        <input type="checkbox" id="checkbox4" />
-                        <label for="checkbox4"></label>
-                      </div>
-                    </div>
-                    <div class="col-10"><label for="tarefa5" class="size2">comprovante de domicílio. Ex: conta de água,
-                        luz ou telefone (original ou cópia
-                        autenticada);</label></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="row padding_top">
-                    <div class="col-2">
-                      <div class="round">
-                        <input type="checkbox" id="checkbox5" />
-                        <label for="checkbox5"></label>
-                      </div>
-                    </div>
-                    <div class="col-10"><label for="tarefa6" class="size2">atestado sanidade física e mental
-                        (originais);</label></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="row padding_top">
-                    <div class="col-2">
-                      <div class="round">
-                        <input type="checkbox" id="checkbox6" />
-                        <label for="checkbox6"></label>
-                      </div>
-                    </div>
-                    <div class="col-10"><label for="tarefa6" class="size2">certidão de antecedentes criminais-fornecida
-                        pela Delegacia de Polícia Civil de
-                        seu
-                        estado (original);
-                      </label></div>
-                  </div>
-
-                </div>
-                <div>
-                  <div class="row padding_top">
-                    <div class="col-2">
-                      <div class="round">
-                        <input type="checkbox" id="checkbox7" />
-                        <label for="checkbox7"></label>
-                      </div>
-                    </div>
-                    <div class="col-10"><label for="tarefa7" class="size2">certidão do distribuidor civil (fornecida
-                        gratuitamente pelo site do TJMG ou nos
-                        Fóruns (original);
-                      </label></div>
-                  </div>
-
-                </div>
-                <div>
-                  <div class="row padding_top">
-                    <div class="col-2">
-                      <div class="round">
-                        <input type="checkbox" id="checkbox8" />
-                        <label for="checkbox8"></label>
-                      </div>
-                    </div>
-                    <div class="col-10"><label class="size2" for="tarefa8">cópia simples do pedido de habilitação
-                        (petição inicial).
-                      </label></div>
-                  </div>
-                </div class="padding_top">
-                <button class="btn-primary" id="btn_none" onclick="togglePopup()">Concluído!</button>
-                <p style="padding-top: 20px; padding-left: 5px; padding-right: 5px;" class="text_destaque size1">Nota: A
-                  autenticação das cópias poderá ser substituída pela apresentação dos originais juntamente com
-                  a
-                  cópia perante
-                  o servidor responsável pela conferência da documentação, que deverá certificar que as cópias conferem
-                  com os originais.</p>
-                <button class=" btn" id="btn_processos" onclick="atualizarStatus()" value="1">Completo</button>
+            <div class="row">
+              <div class="col-4"></div>
+              <div class="col-4 meio">
+                <img src="../Imagens/happy_face.svg" style="max-width: 100%;" alt="">
               </div>
             </div>
           </div>
-
-          <div class="popup col-12" id="popup-2">
-            <div class="overlay"></div>
-            <div class="content">
-              <div class="close-btn" onclick="togglePopup2()">&times;</div>
-              <h1 class="black">PROCESSO</h1>
-              <div class="col-10">
-                <p style="color: black;">A Petição e a documentação deverão ser levados inicialmente à Vara Cível da
-                  Infância e da Juventude de sua comarca, para as providências de registro e de autuação.
-                </p>
-              </div>
-              <div id="example1"></div>
-
-              <button class=" btn" id="btn_processos" onclick="atualizarStatus()" value="1">Completo</button>
-            </div>
-          </div>
-
-          <div class="popup col-12" id="popup-3">
-            <div class="overlay"></div>
-            <div class="content">
-              <div class="close-btn" onclick="togglePopup3()">&times;</div>
-              <h1 class="black">PREPARAÇÃO</h1>
-              <div class="col-10">
-                <p style="color: black;">Curso, entrevistas e visitas realizados e resultado confirmado com o Ministério
-                  Público e o juiz da Vara de Infância.
-                </p>
-              </div>
-              <div id="example1"></div>
-
-              <button class=" btn" id="btn_processos" onclick="atualizarStatus()" value="1">Completo</button>
-            </div>
-          </div>
-
-          <div class="popup col-12" id="popup-4">
-            <div class="overlay"></div>
-            <div class="content">
-              <div class="close-btn" onclick="togglePopup4()">&times;</div>
-              <h1 class="black">CERTIFICAÇÃO</h1>
-              <div class="col-10">
-                <p style="color: black;">Habilitação concedida e nome inserido nos cadastros para adoção.
-                </p>
-              </div>
-              <div id="example1"></div>
-
-              <button class=" btn" id="btn_processos" onclick="atualizarStatus()" value="1">Completo</button>
-            </div>
-          </div>
-
-          <div class="popup col-12" id="popup-5">
-            <div class="overlay"></div>
-            <div class="content">
-              <div class="close-btn" onclick="togglePopup5()">&times;</div>
-              <h1 class="black">PROCURA</h1>
-              <div class="col-10">
-                <p style="color: black;">Meu filho ou filha foi encontrado e escolhido, de acordo com as normas e
-                  restrições da Vara da Infância, e já estamos familiarizados.
-                </p>
-              </div>
-              <div id="example1"></div>
-
-              <button class=" btn" id="btn_processos" onclick="atualizarStatus()" value="1">Completo</button>
-            </div>
-          </div>
-
-          <div class="popup col-12" id="popup-6">
-            <div class="overlay"></div>
-            <div class="content">
-              <div class="close-btn" onclick="togglePopup6()">&times;</div>
-              <h1 class="black">FINAL!</h1>
-              <div class="col-10">
-                <p style="color: black;">Todos os processos foram finalizados e meu filho ou filha já está sob minha guarda.
-                </p>
-              </div>
-              <div id="example1"></div>
-
-              <button class=" btn" id="btn_processos" onclick="atualizarStatus()" value="1">Completo</button>
-            </div>
-          </div>
-
-          <div class="row etapa1">
+          <div class="row etapa1" id="E1">
             <div class="col-1"></div>
             <div class="courses-container col-10">
               <div class="course">
@@ -440,14 +243,16 @@
                         anos entre quem deseja adotar e a criança a ser acolhida.</p>
                     </div>
                   </div>
-                  <button class=" btn" id="btn_1" onclick="togglePopup()">Continuar</button>
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal"
+                    data-target="#etapa1">Continuar</button>
                 </div>
               </div>
             </div>
             <div class="col-1"></div>
           </div>
 
-          <div class="row etapa2">
+          <div class="row etapa2 esconder" id="E2">
             <div class="col-1"></div>
             <div class="courses-container col-10">
               <div class="course">
@@ -460,52 +265,51 @@
                   <h2 class="black">Processo</h2>
                   <div class="row">
                     <div class="col-10 ">
-                      <p class="black size1">Os documentos apresentados serão autuados pelo cartório e serão remetidos
-                        ao Ministério Público para análise
-                        e prosseguimento do processo. O promotor de justiça poderá requerer documentações
-                        complementares. Será preciso fazer uma petição - preparada por um defensor público ou advogado
-                        particular -
-                        para dar início ao processo de inscrição para adoção (no cartório da Vara de Infância). Só
-                        depois de aprovado, seu nome será habilitado a constar dos cadastros local e nacional de
-                        pretendentes à adoção.</p>
+                      <p class="black size1">Será preciso fazer uma petição - preparada por um defensor público ou
+                        advogado particular - para dar início ao processo de inscrição para adoção (no cartório da Vara
+                        de Infância). </p>
+
                     </div>
                   </div>
-                  <button class=" btn" id="btn_2" onclick="togglePopup2()">Continuar</button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal"
+                    data-target="#etapa2">Continuar</button>
                 </div>
               </div>
             </div>
             <div class="col-1"></div>
           </div>
 
-          <div class="row etapa3">
+          <div class="row etapa3 esconder" id="E3">
             <div class="col-1"></div>
             <div class="courses-container col-10">
               <div class="course">
                 <div class="course-preview">
                   <h6>ETAPA 3</h6>
-                  <h2>Dar a entrada</h2>
+                  <h2>Preparação</h2>
                 </div>
                 <div class="course-info">
                   <h6 class="black">Etapa 3</h6>
                   <h2 class="black">Preparação</h2>
                   <div class="row">
                     <div class="col-10 ">
-                      <p class="black size1">O curso de preparação psicossocial e jurídica para adoção é obrigatório e
-                        será oferecido pela Vara da Infância da comarca. Após comprovada a participação no curso, o
-                        candidato é submetido à avaliação psicossocial com entrevistas e visita domiciliar feitas pela
-                        equipe técnica interprofissional. Algumas comarcas avaliam a situação socioeconômica e
-                        psicoemocional dos futuros pais adotivos apenas com as entrevistas e visitas. O resultado dessa
-                        avaliação será encaminhado ao Ministério Público e ao juiz da Vara de Infância.</p>
+                      <p class="black size1">É uma das fases mais importantes e esperadas pelos postulantes à adoção,
+                        que serão avaliados por uma equipe técnica multidisciplinar do Poder Judiciário. Nessa fase,
+                        objetiva-se conhecer as motivações e expectativas dos candidatos à adoção; analisar a realidade
+                        sociofamiliar; avaliar, por meio de uma criteriosa análise, se o postulante à adoção pode vir a
+                        receber criança/adolescente na condição de filho; identificar qual lugar ela
+                        ocupará na dinâmica familiar, bem como orientar os postulantes sobre o processo adotivo.
+                      </p>
                     </div>
                   </div>
-                  <button class=" btn" id="btn_3" onclick="togglePopup3()">Continuar</button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal"
+                    data-target="#etapa3">Continuar</button>
                 </div>
               </div>
             </div>
             <div class="col-1"></div>
           </div>
 
-          <div class="row etapa4">
+          <div class="row etapa4 esconder" id="E4">
             <div class="col-1"></div>
             <div class="courses-container col-10">
               <div class="course">
@@ -518,25 +322,23 @@
                   <h2 class="black">Certificação</h2>
                   <div class="row">
                     <div class="col-10 ">
-                      <p class="black size1">A partir do laudo da equipe técnica da Vara e do parecer emitido pelo
-                        Ministério Público, o juiz dará sua sentença. Com seu pedido acolhido, seu nome será inserido
-                        nos cadastros, válidos por dois anos em território nacional. Você está automaticamente na fila
-                        de adoção do seu estado e agora aguardará até aparecer uma criança com o perfil compatível com o
-                        perfil fixado pelo pretendente durante a entrevista técnica, observada a cronologia da
-                        habilitação. Caso seu nome não seja aprovado, busque saber os motivos. Estilo de vida
-                        incompatível com criação de uma criança ou razões equivocadas (para aplacar a solidão; para
-                        superar a perda de um ente querido; superar crise conjugal etc.) podem inviabilizar uma adoção.
-                        Você pode se adequar e começar o processo novamente.</p>
+                      <p class="black size1">
+                        A partir do laudo da equipe técnica da Vara e do parecer
+                        emitido pelo Ministério Público, o juiz dará sua
+                        sentença. Com seu pedido acolhido, seu nome
+                        será inserido nos cadastros, válidos por dois anos
+                        em território nacional.</p>
                     </div>
                   </div>
-                  <button class=" btn" id="btn_4" onclick="togglePopup4()">Continuar</button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal"
+                    data-target="#etapa4">Continuar</button>
                 </div>
               </div>
             </div>
             <div class="col-1"></div>
           </div>
 
-          <div class="row etapa5">
+          <div class="row etapa5 esconder" id="E5">
             <div class="col-1"></div>
             <div class="courses-container col-10">
               <div class="course">
@@ -549,48 +351,43 @@
                   <h2 class="black">Procura</h2>
                   <div class="row">
                     <div class="col-10 ">
-                      <p class="black size1">A Vara de Infância vai avisá-lo que existe uma criança com o perfil
-                        compatível ao indicado por você. O histórico de vida da criança é apresentado ao adotante; se
-                        houver interesse, ambos são apresentados. A criança também será entrevistada após o encontro e
-                        dirá se quer ou não continuar com o processo. Durante esse estágio de convivência monitorado
-                        pela Justiça e pela equipe técnica, é permitido visitar o abrigo onde ela mora; dar pequenos
-                        passeios para que vocês se aproximem e se conheçam melhor. Esqueça a ideia de visitar um abrigo
-                        e escolher a partir daquelas crianças o seu filho. Essa prática já não é mais utilizada para
-                        evitar que as crianças se sintam como objetos em exposição, sem contar que a maioria delas não
-                        está disponível para adoção. </p>
+                      <p class="black size1">
+                        A partir do laudo da equipe técnica da Vara e do parecer
+                        emitido pelo Ministério Público, o juiz dará sua
+                        sentença. Com seu pedido acolhido, seu nome
+                        será inserido nos cadastros, válidos por dois anos
+                        em território nacional.</p>
                     </div>
                   </div>
-                  <button class=" btn" id="btn_5" onclick="togglePopup5()">Continuar</button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal"
+                    data-target="#etapa5">Continuar</button>
                 </div>
               </div>
             </div>
             <div class="col-1"></div>
           </div>
 
-          <div class="row etapa6">
+          <div class="row etapa6 esconder" id="E6">
             <div class="col-1"></div>
             <div class="courses-container col-10">
               <div class="course">
                 <div class="course-preview">
                   <h6>ETAPA 6</h6>
-                  <h2>Realizar a Ação de Adoção</h2>
+                  <h2>Etapa Final</h2>
                 </div>
                 <div class="course-info">
                   <h6 class="black">Etapa 6</h6>
-                  <h2 class="black">Final!</h2>
+                  <h2 class="black">Fim</h2>
                   <div class="row">
                     <div class="col-10 ">
-                      <p class="black size1">Se o relacionamento correr bem, a criança é liberada e o pretendente
-                        ajuizará a ação de adoção. Ao entrar com o processo, o pretendente receberá a guarda provisória,
-                        que terá validade até a conclusão do processo. Nesse momento, a criança passa a morar com a
-                        família. A equipe técnica continua fazendo visitas periódicas e apresentará uma avaliação
-                        conclusiva. O juiz profere a sentença de adoção e determina a lavratura do novo registro de
-                        nascimento, já com o sobrenome da nova família. Existe a possibilidade também de trocar o
-                        primeiro nome da criança. Nesse momento, a criança passa a ter todos os direitos de um filho
-                        biológico. </p>
+                      <p class="black size1">Caso a aproximação tenha sido bem-sucedida, o postulante iniciará o estágio
+                        de convivência. Nesse momento, a criança ou o adolescente
+                        passa a morar com a família, sendo acompanhados e orientados pela equipe técnica do Poder
+                        Judiciário. Esse período tem prazo máximo de 90 dias, prorrogável por igual período.</p>
                     </div>
                   </div>
-                  <button class=" btn" id="btn_6" onclick="togglePopup6()">Continuar</button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal"
+                    data-target="#etapa6">Continuar</button>
                 </div>
               </div>
             </div>
@@ -598,164 +395,674 @@
           </div>
 
 
-
-
+          <!-- PROXIMAS ETAPAS -->
           <div class="row">
-            <div class="col-12">
-              <h1 style="text-align:center; padding: 20px;">Próximas etapas</h1>
+            <div class="col-1"></div>
+            <div class="col-10">
+              <h1 class="black inicio">Próximas etapas</h1>
+              <p class="black incio">Para conseguir acessar cada uma das etapas seguintes é necessário concluir a etapa
+                ativa atual</p>
             </div>
-          </div>
-          <div class="row etapa2">
-            <div class="col-1"></div>
-            <div class="courses-container col-10 ">
-              <div class="course prox">
-                <div class="course-preview prox">
-                  <h6>ETAPA 2</h6>
-                  <h2>Processo</h2>
-                </div>
-                <div class="course-info">
-                  <h6 class="black">Etapa 2</h6>
-                  <h2 class="black">Dar entrada</h2>
-                  <div class="row ">
-                    <div class="col-10 "></div>
-                  </div>
-                  <button class=" btn" id="btn_1">Continuar</button>
-                </div>
-              </div>
-              <div class="inner" style="margin-bottom: 2rem;">
-                <h1>Etapa bloqueada!</h1>
-                <h1><i class="fas fa-lock"></i></h1>
-              </div>
-            </div>
-
-            <div class="col-1"></div>
-          </div>
-
-          <div class="row ">
-            <div class="col-1"></div>
-            <div class="courses-container col-10 ">
-              <div class="course prox">
-                <div class="course-preview prox">
-                  <h6>ETAPA 3</h6>
-                  <h2>Preparação</h2>
-                </div>
-                <div class="course-info">
-                  <h6 class="black">Etapa 3</h6>
-                  <h2 class="black">Curso e Avaliação</h2>
-                  <div class="row ">
-                    <div class="col-10 ">
-                      <p class="black size1"></p>
-                    </div>
-                  </div>
-                  <button class=" btn" id="btn_1">Continuar</button>
-                </div>
-              </div>
-              <div class="inner" style="margin-bottom: 2rem;">
-                <h1>Etapa bloqueada!</h1>
-                <h1><i class="fas fa-lock"></i></h1>
-              </div>
-            </div>
-
-            <div class="col-1"></div>
-          </div>
-
-          <div class="row ">
-            <div class="col-1"></div>
-            <div class="courses-container col-10 ">
-              <div class="course prox">
-                <div class="course-preview prox">
-                  <h6>ETAPA 4</h6>
-                  <h2>Certificação</h2>
-                </div>
-                <div class="course-info">
-                  <h6 class="black">Etapa 4</h6>
-                  <h2 class="black">Certificado de Habilitação</h2>
-                  <div class="row ">
-                    <div class="col-10 ">
-                      <p class="black size1"></p>
-                    </div>
-                  </div>
-                  <button class=" btn" id="btn_1">Continuar</button>
-                </div>
-              </div>
-              <div class="inner" style="margin-bottom: 2rem;">
-                <h1>Etapa bloqueada!</h1>
-                <h1><i class="fas fa-lock"></i></h1>
-              </div>
-            </div>
-            <div class="col-1"></div>
-          </div>
-
-          <div class="row ">
-            <div class="col-1"></div>
-            <div class="courses-container col-10 ">
-              <div class="course prox">
-                <div class="course-preview prox">
-                  <h6>ETAPA 5</h6>
-                  <h2>Procura</h2>
-                </div>
-                <div class="course-info">
-                  <h6 class="black">Etapa 5</h6>
-                  <h2 class="black">Encontrar a criança</h2>
-                  <div class="row ">
-                    <div class="col-10 ">
-                      <p class="black size1"></p>
-                    </div>
-                  </div>
-                  <button class=" btn" id="btn_1">Continuar</button>
-                </div>
-              </div>
-              <div class="inner" style="margin-bottom: 2rem;">
-                <h1>Etapa bloqueada!</h1>
-                <h1><i class="fas fa-lock"></i></h1>
-              </div>
-            </div>
-            <div class="col-1"></div>
-          </div>
-
-          <div class="row ">
-            <div class="col-1"></div>
-            <div class="courses-container col-10 ">
-              <div class="course prox">
-                <div class="course-preview prox">
-                  <h6>ETAPA 6
-                  </h6>
-                  <h2>Final!</h2>
-                </div>
-                <div class="course-info">
-                  <h6 class="black">Etapa 6</h6>
-                  <h2 class="black">Realizar a Ação de adoção</h2>
-                  <div class="row ">
-                    <div class="col-10 ">
-                      <p class="black size1"></p>
-                    </div>
-                  </div>
-                  <button class=" btn" id="btn_1">Continuar</button>
-                </div>
-              </div>
-              <div class="inner" style="margin-bottom: 2rem;">
-                <h1>Etapa bloqueada!</h1>
-                <h1><i class="fas fa-lock"></i></h1>
-              </div>
-            </div>
-            <div class="col-1"></div>
           </div>
 
           <div class="row">
-            <div class="col-12">
+            <div class="col-1"></div>
+            <div class="col-5 embaixo" id="prox2">
+              <div class="card text-center cardProx">
+                <div class="card-header azulEscuroFundo">
+                  <h5>ETAPA 2</h5>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title black">Processo</h5>
+                  <p class="card-text">Os documentos apresentados serão autuados pelo cartório e serão remetidos
+                    ao Ministério Público para análise
+                    e prosseguimento do processo. O promotor de justiça poderá...</p>
+                </div>
+              </div>
+              <div class="cardProx_overlay">
+                <h3 style="font-weight: bolder;">Etapa Bloqueada</h3>
+                <i class="fas fa-lock fa-3x "></i>
+              </div>
+            </div>
 
+            <div class="col-5 embaixo" id="prox3">
+              <div class="card text-center cardProx">
+                <div class="card-header azulEscuroFundo">
+                  <h5>ETAPA 3</h5>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title black">Preparação</h5>
+                  <p class="card-text">É uma das fases mais importantes e esperadas pelos postulantes à adoção,
+                    que serão avaliados por uma equipe técnica multidisciplinar do Poder Judiciário. Nessa fase...</p>
+                </div>
+              </div>
+              <div class="cardProx_overlay">
+                <h3 style="font-weight: bolder;">Etapa Bloqueada</h3>
+                <i class="fas fa-lock fa-3x "></i>
+              </div>
             </div>
           </div>
-          <!-- MODAL PROCESSO 1 -->
+          <br>
 
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-5" id="prox4">
+              <div class="card text-center">
+                <div class="card-header azulEscuroFundo">
+                  <h5>ETAPA 4</h5>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title black">Certificação</h5>
+                  <p class="card-text">A partir do laudo da equipe técnica da Vara e do parecer
+                    emitido pelo Ministério Público, o juiz dará sua
+                    sentença...</p>
+                </div>
+              </div>
+              <div class="cardProx_overlay">
+                <h3 style="font-weight: bolder;">Etapa Bloqueada</h3>
+                <i class="fas fa-lock fa-3x "></i>
+              </div>
+            </div>
+
+
+            <div class="col-5" id="prox5">
+              <div class="card text-center">
+                <div class="card-header azulEscuroFundo">
+                  <h5>ETAPA 5</h5>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title black">Procura</h5>
+                  <p class="card-text"> A partir do laudo da equipe técnica da Vara e do parecer
+                    emitido pelo Ministério Público, o juiz dará sua
+                    sentença...</p>
+                </div>
+              </div>
+              <div class="cardProx_overlay">
+                <h3 style="font-weight: bolder;">Etapa Bloqueada</h3>
+                <i class="fas fa-lock fa-3x "></i>
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-5" id="prox6">
+              <div class="card text-center">
+                <div class="card-header azulEscuroFundo">
+                  <h5>ETAPA 6</h5>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title black">Fim</h5>
+                  <p class="card-text">Esse momento é um dos mais esperados e um dos mais emocionantes também. É quando
+                    a Vara da Infância liga para informar que existe uma criança com o perfil desejado e pergunta se
+                    você tem interesse em conhecê-la pessoalmente...</p>
+                </div>
+              </div>
+              <div class="cardProx_overlay">
+                <h3 style="font-weight: bolder;">Etapa Bloqueada</h3>
+                <i class="fas fa-lock fa-3x "></i>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+              <h1 class="black inicio">Etapas Concluídas</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <h1 class="meio " id="nada" style="color: rgba(0, 119, 182);">Infelizmente nenhuma etapa foi concluída
+                ainda!</h1>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-3 " id="e1"><img src="../Imagens/etapa1.png" class="tam100 esconder conclui" srcset="">
+            </div>
+            <div class="col-3 " id="e2"><img src="../Imagens/etapa2.png" class="tam100 esconder conclui" srcset="">
+            </div>
+            <div class="col-3 " id="e3"><img src="../Imagens/etapa3.png" class="tam100 esconder conclui" srcset="">
+            </div>
+            <div class="col-3 " id="e4"><img src="../Imagens/etapa4.png" class="tam100 esconder conclui" srcset="">
+            </div>	
+
+          </div>
+
+          <div class="row">
+            <div class="col-3 " id="e5"><img src="../Imagens/etapa5.png" class="tam100 esconder conclui" srcset="">
+            </div>
+            <div class="col-3 " id="e6"><img src="../Imagens/etapa6.png" class="tam100 esconder conclui" srcset="">
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-6"></div>
+          </div>
+
+
+          <div class="row">
+            <div class="modal fade col-12" id="etapa1" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Etapa 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <i class="far fa-times-circle"></i>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <h1 class="black" style="text-align: center;">Documentação</h1>
+                    <div>
+                      <div class="row padding_top">
+                        <div class="col-2">
+                          <div class="round">
+                            <input type="checkbox" id="checkbox0" />
+                            <label for="checkbox0"></label>
+                          </div>
+                        </div>
+                        <div class="col-10"><label for="tarefa1" class="size2">certidão de casamento dos postulantes,
+                            se for o caso, expedida no período de 90 (noventa) dias anterior ao pedido de habilitação
+                            (original ou
+                            cópia autenticada);</label></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="row padding_top">
+                        <div class="col-2">
+                          <div class="round">
+                            <input type="checkbox" id="checkbox1" />
+                            <label for="checkbox1"></label>
+                          </div>
+                        </div>
+                        <div class="col-10"><label for="tarefa2" class="size2">cópia autenticada da cédula de identidade
+                            e
+                            da inscrição no Cadastro de Pessoas
+                            Físicas - CPF (caso o número deste não conste da cédula de identidade),
+                            ou alternativamente, cópia autenticada da carteira nacional de habilitação;</label></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="row padding_top">
+                        <div class="col-2">
+                          <div class="round">
+                            <input type="checkbox" id="checkbox2" />
+                            <label for="checkbox2"></label>
+                          </div>
+                        </div>
+                        <div class="col-10"><label for="tarefa3" class="size2">declaração dos postulantes,
+                            com firma reconhecida, atestando o período de união estável, se for o caso
+                            (original);</label>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div>
+                      <div class="row padding_top">
+                        <div class="col-2">
+                          <div class="round">
+                            <input type="checkbox" id="checkbox3" />
+                            <label for="checkbox3"></label>
+                          </div>
+                        </div>
+                        <div class="col-10"><label for="tarefa4" class="size2">comprovante de rendimento (original ou
+                            cópia
+                            autenticada);</label></div>
+                      </div>
+
+                    </div>
+                    <div>
+                      <div class="row padding_top">
+                        <div class="col-2">
+                          <div class="round">
+                            <input type="checkbox" id="checkbox4" />
+                            <label for="checkbox4"></label>
+                          </div>
+                        </div>
+                        <div class="col-10"><label for="tarefa5" class="size2">comprovante de domicílio. Ex: conta de
+                            água,
+                            luz ou telefone (original ou cópia
+                            autenticada);</label></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="row padding_top">
+                        <div class="col-2">
+                          <div class="round">
+                            <input type="checkbox" id="checkbox5" />
+                            <label for="checkbox5"></label>
+                          </div>
+                        </div>
+                        <div class="col-10"><label for="tarefa6" class="size2">atestado sanidade física e mental
+                            (originais);</label></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="row padding_top">
+                        <div class="col-2">
+                          <div class="round">
+                            <input type="checkbox" id="checkbox6" />
+                            <label for="checkbox6"></label>
+                          </div>
+                        </div>
+                        <div class="col-10"><label for="tarefa6" class="size2">certidão de antecedentes
+                            criminais-fornecida
+                            pela Delegacia de Polícia Civil de
+                            seu
+                            estado (original);
+                          </label></div>
+                      </div>
+
+                    </div>
+                    <div>
+                      <div class="row padding_top">
+                        <div class="col-2">
+                          <div class="round">
+                            <input type="checkbox" id="checkbox7" />
+                            <label for="checkbox7"></label>
+                          </div>
+                        </div>
+                        <div class="col-10"><label for="tarefa7" class="size2">certidão do distribuidor civil (fornecida
+                            gratuitamente pelo site do TJMG ou nos
+                            Fóruns (original);
+                          </label></div>
+                      </div>
+
+                    </div>
+                    <div>
+                      <div class="row padding_top">
+                        <div class="col-2">
+                          <div class="round">
+                            <input type="checkbox" id="checkbox8" />
+                            <label for="checkbox8"></label>
+                          </div>
+                        </div>
+                        <div class="col-10"><label class="size2" for="tarefa8">cópia simples do pedido de habilitação
+                            (petição inicial).
+                          </label></div>
+                      </div>
+                    </div class="padding_top">
+                    <button class="btn-primary" id="btn_none" onclick="togglePopup()">Concluído!</button>
+                    <p style="padding-top: 20px; padding-left: 5px; padding-right: 5px;" class="text_destaque size1">
+                      Nota: A
+                      autenticação das cópias poderá ser substituída pela apresentação dos originais juntamente com
+                      a
+                      cópia perante
+                      o servidor responsável pela conferência da documentação, que deverá certificar que as cópias
+                      conferem
+                      com os originais.</p>
+                    <br><br>
+                    <button class=" btn" id="btn_processos" onclick="atualizarStatus()" value="1">Completo</button>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="etapa2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Etapa2</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="far fa-times-circle"></i>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h1 class="black" style="text-align: center;">PROCESSO</h1>
+                  <div class="col-12">
+                    <p style="color: black;">
+                      Os documentos apresentados serão autuados pelo cartório e serão remetidos
+                      ao Ministério Público para análise
+                      e prosseguimento do processo. O promotor de justiça poderá requerer documentações
+                      complementares. Será preciso fazer uma petição - preparada por um defensor público ou advogado
+                      particular -
+                      para dar início ao processo de inscrição para adoção (no cartório da Vara de Infância). Só
+                      depois de aprovado, seu nome será habilitado a constar dos cadastros local e nacional de
+                      pretendentes à adoção.
+                      A Petição e a documentação deverão ser levados inicialmente à Vara Cível da
+                      Infância e da Juventude de sua comarca, para as providências de registro e de autuação.
+                    </p>
+
+                    <div class="card">
+                      <div class="card-header">
+                        Modelo de Documentação
+                      </div>
+                      <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                          <iframe src="../fontes/10.30.713-3 (1).pdf#toolbar=0" width="100%" height="500px">
+                          </iframe>
+                          <footer class="blockquote-footer black">Exemplo de Documento <cite
+                              title="mg.gov.br">mg.gov.br</cite>
+                          </footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="card">
+                      <div class="card-header">
+                        Canais de Prestação
+                      </div>
+                      <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                          <h1 class="titulo">ESTADO</h1>
+                          <h2 class="l">LOCAL</h2>
+                          <p class="endereco">ENDEREÇO</p>
+                          <p class="telefone">(XX)XXXX-XXXX</p>
+                        </blockquote>
+                      </div>
+                      <hr>
+                      <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                          <h1 class="titulo">ESTADO</h1>
+                          <h2 class="l">LOCAL</h2>
+                          <p class="endereco">ENDEREÇO</p>
+                          <p class="telefone">(XX)XXXX-XXXX</p>
+                        </blockquote>
+                      </div>
+                      <hr>
+                      <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                          <h1 class="titulo">ESTADO</h1>
+                          <h2 class="l">LOCAL</h2>
+                          <p class="endereco">ENDEREÇO</p>
+                          <p class="telefone">(XX)XXXX-XXXX</p>
+                        </blockquote>
+                      </div>
+                      <hr>
+                      <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                          <h1 class="titulo">ESTADO</h1>
+                          <h2 class="l">LOCAL</h2>
+                          <p class="endereco">ENDEREÇO</p>
+                          <p class="telefone">(XX)XXXX-XXXX</p>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                  <br><br>
+                </div>
+                <div class="modal-footer">
+                  <button class=" btn" id="btn_processos" onclick="atualizarStatus()" value="1">Completo</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="etapa4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Etapa 4</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="far fa-times-circle"></i>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h1 class="black">Certificação</h1>
+                  <div class="col-12">
+                    <p style="color: black;">Você está automaticamente na fila
+                      de adoção do seu estado e agora aguardará até aparecer uma criança com o perfil compatível com o
+                      perfil fixado pelo pretendente durante a entrevista técnica, observada a cronologia da
+                      habilitação. Caso seu nome não seja aprovado, busque saber os motivos. Estilo de vida
+                      incompatível com criação de uma criança ou razões equivocadas (para aplacar a solidão; para
+                      superar a perda de um ente querido; superar crise conjugal etc.) podem inviabilizar uma adoção.
+                      Você pode se adequar e começar o processo novamente.
+                    </p>
+                  </div>
+                  <div id="example1"></div>
+                  <br><br>
+                  <button class=" btn" id="btn_processos" onclick="atualizarStatus()" value="1">Completo</button>
+                </div>
+              </div>
+              <div class="modal-footer">
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="etapa5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Etapa 5</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="far fa-times-circle"></i>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h1 class="black">Criança</h1>
+                  <div class="col-12">
+                    <p style="color: black;">A Vara de Infância vai avisá-lo que existe uma criança com o perfil
+                      compatível ao indicado por você. O histórico de vida da criança é apresentado ao adotante; se
+                      houver interesse, ambos são apresentados. A criança também será entrevistada após o encontro e
+                      dirá se quer ou não continuar com o processo. Durante esse estágio de convivência monitorado pela
+                      Justiça e pela equipe técnica, é permitido visitar o abrigo onde ela mora; dar pequenos passeios
+                      para que vocês se aproximem e se conheçam melhor. Esqueça a ideia de visitar um abrigo e escolher
+                      a partir daquelas crianças o seu filho. Essa prática já não é mais utilizada para evitar que as
+                      crianças se sintam como objetos em exposição, sem contar que a maioria delas não está disponível
+                      para adoção.
+                    </p>
+                    <h3 class="black">Alguns orfanatos e instituições interessantes</h3>
+                    <div class="row">
+                      <div class="card shadow-drop-2-tl col-5" style="width: 18rem;">
+                        <img src="../Imagens/instituicoes/casa_irmao_sol.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title black">Irmão Sol</h5>
+                          <p class="card-text black">"A Associação Irmão Sol é uma entidade beneficente e sem fins
+                            lucrativos, vocacionada a acolher crianças e adolescentes dos sexos masculino e feminino em
+                            situação de abandono ou risco pessoal e social."</p>
+                          <a href="https://www.irmaosol.org.br/" target="_blank">Visitar Site</a>
+                        </div>
+                      </div>
+                      <div class="col-1"></div>
+                      <div class="card shadow-drop-2-tl col-5" style="width: 100%;">
+                        <img src="http://www.casalucas.org/wp-content/uploads/2017/01/casa-lucas-site-1.png"
+                          class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title black">Casa Lucas</h5>
+                          <p class="card-text black">"A Casa Lucas acolhe crianças de 0 a 6 anos que foram vítimas de
+                            negligência ou quaisquer formas de violência. A equipe conta com um grupo de psicólogos,
+                            educadores e voluntários que ajudam na educação e cuidado com essas crianças."</p>
+                          <a href="http://www.casalucas.org/" target="_blank">Visitar Site</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 10px;"></div>
+                    <div class="row">
+                      <div class="card shadow-drop-2-tl col-5" style="width: 18rem;">
+                        <img
+                          src="https://i2.wp.com/www.ammor.org.br/wp-content/uploads/2017/01/250.png?fit=250%2C152&ssl=1"
+                          class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title black">Projeto Ammor</h5>
+                          <p class="card-text black">"O primeiro destes Projetos é a Clínica AMMOR (Ação
+                            Multiprofissional com Meninos em Risco) que tem como objetivo geral – “Educar para a vida,
+                            considerando a unicidade e capacidade inata do ser humano de vir a ser, buscar e instigar a
+                            autonomia de decisão e autoestima, promover a formação do jovem autônomo, solidário e
+                            competente”."</p>
+                          <a href="https://www.ammor.org.br/sobre-nos/" target="_blank">Visitar Site</a>
+                        </div>
+                      </div>
+                      <div class="col-1"></div>
+                      <div class="card shadow-drop-2-tl col-5" style="width: 100%;">
+                        <img
+                          src="https://scontent.fplu4-1.fna.fbcdn.net/v/t1.0-9/89784678_2867595909965305_2646002391832330240_n.jpg?_nc_cat=100&ccb=2&_nc_sid=09cbfe&_nc_ohc=QbovbfEwJcQAX-LoyYe&_nc_ht=scontent.fplu4-1.fna&oh=cb2b51ca1bff2534411f4a22c17a68a2&oe=5FE48460"
+                          class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title black">Pontes de Amor</h5>
+                          <p class="card-text black">"Criada em 2012, a Pontes de Amor é uma Organização Filantrópica
+                            sem fins lucrativos, filiada à Associação Nacional dos Grupos de Apoio à Adoção (ANGAAD),
+                            que atua em Uberlândia e no Triângulo Mineiro em sintonia com a Vara da Infância e da
+                            Juventude, Órgãos e Conselhos de Direito da Criança e do Adolescente. "</p>
+                          <a href="https://www.pontesdeamor.org.br/" target="_blank">Visitar Site</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row" style="margin-bottom: 40px;"></div>
+                  </div>
+
+                  <div id="example1"></div>
+                  <br>
+                  <button class=" btn" id="btn_processos" onclick="atualizarStatus()" value="1">Completo</button>
+                </div>
+              </div>
+              <div class="modal-footer">
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="etapa3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Etapa 3</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="far fa-times-circle"></i>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h1 class="black" style="text-align: center;">Preparação</h1>
+                  <div class="col-12">
+                    <p style="color: black;">O curso de preparação psicossocial e jurídica para adoção é obrigatório e
+                      será oferecido pela Vara da Infância da comarca. Após comprovada a participação no curso, o
+                      candidato é submetido à avaliação psicossocial com entrevistas e visita domiciliar feitas pela
+                      equipe técnica interprofissional. Algumas comarcas avaliam a situação socioeconômica e
+                      psicoemocional dos futuros pais adotivos apenas com as entrevistas e visitas. O resultado dessa
+                      avaliação será encaminhado ao Ministério Público e ao juiz da Vara de Infância.
+                    </p>
+                  </div>
+                  <div class="accordion" id="accordionExample">
+                    <div class="card">
+                      <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                          <button class=" btn-link btn-block text-left btnTab" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Justificativa
+                          </button>
+                        </h2>
+                      </div>
+
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                          <p class="black">A Lei n° 12.010/09, vigente em nosso país desde novembro/2009, preconiza que
+                            a
+                            inscrição de pessoas interessadas na adoção de crianças/adolescentes deverá obrigatoriamente
+                            ser precedida de um período de preparação psicossocial e jurídica, implementado através da
+                            equipe técnica da Justiça da Infância e Juventude, preferencialmente com apoio dos técnicos
+                            responsáveis pela execução da política municipal de garantia do direito à convivência
+                            familiar. A referida lei enfatiza que quando for possível e recomendável, essa preparação
+                            deverá incluir contatos entre postulantes à adoção e crianças/adolescentes para inserção em
+                            família substituta, sob a forma de adoção.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                          <button class="btn-link btnTab btn-block text-left collapsed" type="button"
+                            data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">
+                            Principais objetivos
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                          <ul>
+                            <li class="black">Repassar aos participantes informações sobre o instituto da adoção e suas
+                              implicações para a criança, para a família biológica e para a família adotante;</li>
+                            <li class="black">Levar aos participantes informações sobre as origens gerais das crianças
+                              disponíveis para adoção, seu contexto familiar e motivos que levaram à
+                              institucionalização;
+                            </li>
+                            <li class="black">Levar ao conhecimento dos participantes a realidade dos serviços de
+                              acolhimento, seu funcionamento, limitações, implicações do acolhimento na história de vida
+                              e
+                              no comportamento da criança, bem como a metodologia de trabalho utilizada a fim de
+                              minimizar
+                              os prejuízos que tal medida pode ocasionar na sociabilidade das crianças/adolescentes
+                              institucionalizadas;</li>
+                            <li class="black">Informar sobre os direitos previdenciários dos adotantes da criança
+                              adotada;
+                            </li>
+                            <li class="black">Orientar sobre os direitos e deveres dos adotantes;</li>
+                            <li class="black">Oportunizar, de forma concreta, aos adotantes, o amadurecimento de seu
+                              projeto de adoção, situando suas expectativas de forma mais realista;</li>
+                            <li class="black">Prestar esclarecimentos sobre os procedimentos jurídicos envolvidos no
+                              processo de adoção, desde a apresentação do pedido de inscrição até os trâmites finais da
+                              adoção.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br><br>
+                </div>
+                <div class="modal-footer">
+                  <button class=" btn" id="btn_processos" onclick="atualizarStatus()" value="1">Completo</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="etapa6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Etapa 6</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="far fa-times-circle"></i>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h1 class="black" style="text-align: center;">Realizar a ação de Adoção</h1>
+                  <div class="col-12">
+                    <p class="black">
+                      Se o relacionamento
+                      correr bem, a criança é liberada e o pretendente
+                      ajuizará a ação de adoção. Ao entrar com o
+                      processo, o pretendente receberá a guarda
+                      provisória, que terá validade até a conclusão
+                      do processo. Nesse momento, a criança passa a
+                      morar com a família. A equipe técnica continua
+                      fazendo visitas periódicas e apresentará uma
+                      avaliação conclusiva.</p>
+                    <p class="black"> O juiz profere a sentença
+                      de adoção e determina a lavratura do novo
+                      registro de nascimento, já com o sobrenome
+                      da nova família. Existe a possibilidade também
+                      de trocar o primeiro nome da criança. Nesse
+                      momento, a criança passa a ter todos os direitos
+                      de um filho biológico.</p>
+                  </div>
+                  <br><br>
+                </div>
+                <!-- onclick="atualizarStatus()" -->
+                <div class="modal-footer">
+                  <button class=" btn ultimo" id="btn_processos" onclick="atualizarStatus()" onclick="party.screen()"
+                    value="1">Completo</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
+        <br><br><br><br>
 
       </div>
     </div>
   </div>
 
-  <!-- End of Main Content -->
+  <!-- End of Main Content --
 
   <!-- Footer -->
   <footer class="sticky-footer bg-white">
@@ -778,47 +1085,6 @@
     <i class="fas fa-angle-up"></i>
   </a>
 
-
-
-  <!--Modal: instruÃ§Ãµes-->
-  <!-- <div class="modal fade left" id="tutStep1" tabindex="-1" role="dialog" aria-labelledby="tutStep1" aria-hidden="true"
-    data-backdrop="true">
-    <div class="modal-dialog modal-side modal-top-left modal-notify" role="document">
-      
-      <div class="modal-content">
-  
-        <div class="modal-header purple-gradient">
-          <p class="heading">Esse é o seu painel inicial, <br>
-            <strong>feito especialmente para você.</strong>
-          </p>
-
-        </div>
-        <div class="modal-body">
-
-          <div class="row">
-            <div class="col-3">
-              <p></p>
-              <p class="text-center">
-                <i class="fas fa-child fa-4x pink-text"></i>
-              </p>
-            </div>
-
-            <div class="col-9">
-              <p>Aqui você teré acesso a diversas funcionalidades para te ajudar com o processo de adoção.</p>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer flex-center">
-          <a data-dismiss="modal" class="btn purple-gradient"> OK <i class="fas fa-check ml-1 light-green-text"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div> -->
-  <!--Modal: instruÃ§Ãµes-->
-
-
-  <!--Modal: modalConfirmDelete-->
   <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="modalSair"
     aria-hidden="true">
     <div class="modal-dialog modal-sm modal-notify modal-000" role="document">
@@ -845,134 +1111,6 @@
         </div>
       </div>
       <!--/.Content-->
-    </div>
-  </div>
-  <!--Modal: modalConfirmDelete-->
-
-
-
-  <!-- Modal Aulas de Capacitação -->
-  <div class="modal fade right" id="modalAulasCapacitacao" tabindex="-1" role="dialog"
-    aria-labelledby="modalAulasCapacitacao" aria-hidden="true">
-    <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
-    <div class="modal-dialog modal-full-height modal-right" role="document">
-
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">Você confirma que já realizou as <strong>Aulas de Capacitação
-              Parental</strong>?</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          VocÃª jÃ¡ completou o curso de capacitação - em que sÃ£o explicados os aspectos jurídicos da adoção, a
-          gestaçãoo do filho adotivo, a espera e os medos que envolvem o processo?
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Ainda nÃ£o</button>
-          <button type="button" class="btn btn-outline-default" data-dismiss="modal" onclick="realizado(4)"
-            style="width: 100px;">JÃ¡!</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Full Height Modal Right -->
-
-  <!-- Modal Entrevista -->
-  <div class="modal fade right" id="modalEntrevista" tabindex="-1" role="dialog" aria-labelledby="modalEntrevista"
-    aria-hidden="true">
-    <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
-    <div class="modal-dialog modal-full-height modal-right" role="document">
-
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">VocÃª confirma que jÃ¡ realizou a <strong>Entrevista
-              Preliminar</strong>?</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          VocÃª jÃ¡ participou <strong>e</strong> foi aprovado na entrevista preliminar - dividida em avaliaÃ§Ãµes
-          sociais e emocionais, ministradas por assistentes sociais e psicÃ³logos?
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Ainda nÃ£o</button>
-          <button type="button" class="btn btn-outline-default" data-dismiss="modal" onclick="realizado(3)"
-            style="width: 100px;">JÃ¡!</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Full Height Modal Right -->
-
-  <!-- Modal PetiÃ§Ã£o -->
-  <div class="modal fade right" id="modalPeticao" tabindex="-1" role="dialog" aria-labelledby="modalPeticao"
-    aria-hidden="true">
-    <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
-    <div class="modal-dialog modal-full-height modal-right" role="document">
-
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">VocÃª confirma que jÃ¡ realizou a sua
-            <strong>PetiÃ§Ã£o</strong>?</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          VocÃª jÃ¡ realizou uma petiÃ§Ã£o de inscriÃ§Ã£o para adoÃ§Ã£o (no cartÃ³rio da Vara de InfÃ¢ncia)?
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Ainda nÃ£o</button>
-          <button type="button" class="btn btn-outline-default" data-dismiss="modal" onclick="realizado(2)"
-            style="width: 100px;">JÃ¡!</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Full Height Modal Right -->
-
-  <!-- Modal DocumentaÃ§Ã£o -->
-  <div class="modal fade right" id="modalDocumentacao" tabindex="-1" role="dialog" aria-labelledby="modalDocumentacao"
-    aria-hidden="true">
-    <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
-    <div class="modal-dialog modal-full-height modal-right" role="document">
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">VocÃª confirma que obteve toda a <strong>DocumentaÃ§Ã£o
-              NecesÃ¡ria</strong>?</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          VocÃª jÃ¡ tem todos os seguintes documentos guardados?
-          <ul>
-            <li>CÃ³pias autenticadas: da CertidÃ£o de nascimento ou casamento, ou declaraÃ§Ã£o relativa ao perÃ­odo de
-              uniÃ£o estÃ¡vel</li>
-            <li>CÃ³pias da CÃ©dula de identidade e da InscriÃ§Ã£o no Cadastro de Pessoas FÃ­sicas (CPF)</li>
-            <li>Comprovante de renda e de residÃªncia</li>
-            <li>Atestados de sanidade fÃ­sica e mental</li>
-            <li>CertidÃ£o negativa de distribuiÃ§Ã£o cÃ­vel</li>
-            <li>CertidÃ£o de antecedentes criminal</li>
-          </ul>
-
-          <br><br>
-
-          VocÃª pode saber mais sobre isso <a href="documentacao.html">aqui</a>.
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Ainda nÃ£o</button>
-          <button type="button" class="btn btn-outline-default" data-dismiss="modal" onclick="realizado(1)"
-            style="width: 100px;">JÃ¡!</button>
-        </div>
-      </div>
     </div>
   </div>
   <!-- Full Height Modal Right -->
@@ -1005,28 +1143,189 @@
 
   <script>
     window.onload = () => {
+      vara()
       let getAtributos = JSON.parse(localStorage.getItem('usuario_ativo'));
       mudaHTML(getAtributos);
+      proxEtapa()
 
     }
 
     function mudaHTML(atr) {
       document.getElementById("inicio_nome").innerHTML =
         `<div id="inicio_nome"class="col-8 profile" style="padding-top: 40px;">
-              <h1 style="font-size: 50px; align-text: center; left: 50%; margin-right: -50%;">
+              <h1 style="font-size: 50px; align-text: center; left: 50%; margin-right: -50%;" class = "text-focus-in">
 				Olá, ${atr.nome.charAt(0).toUpperCase() + atr.nome.slice(1)} ${atr.sobrenome.charAt(0).toUpperCase() + atr.sobrenome.slice(1)}</h1>
            </div>`;
     }
 
     function proxEtapa() {
       let atual = JSON.parse(localStorage.getItem('usuario_ativo')).processo_ativo
-      if (atual == 2) {
-        $(".etapa1").toggle();
-        $(".etapa2").toggle();
+      let et1 = document.getElementById('E1')
+      let et2 = document.getElementById('E2')
+      let et3 = document.getElementById('E3')
+      let et4 = document.getElementById('E4')
+      let et5 = document.getElementById('E5')
+      let et6 = document.getElementById('E6')
+      /*----------------------------------------*/
+      let p2 = document.getElementById('prox2')
+      let p3 = document.getElementById('prox3')
+      let p4 = document.getElementById('prox4')
+      let p5 = document.getElementById('prox5')
+      let p6 = document.getElementById('prox6')
+
+      let img = document.getElementsByClassName('conclui')
+      let ini = document.getElementById('nada')
+
+      if(atual == 1){
+        et.classList.add('aparecer')
+        ini.classList.add('esconder')
+        p2.classList.add('aparecer')
+        p3.classList.add('aparecer')
+        p4.classList.add('aparecer')
+        p5.classList.add('aparecer')
+        p6.classList.add('aparecer')
+      }else if (atual == 2) {
+        
+        et.classList.remove('aparecer')
+        p2.classList.remove('aparecer')
+        p3.classList.remove('aparecer')
+        p4.classList.remove('aparecer')
+        p5.classList.remove('aparecer')
+        p6.classList.remove('aparecer')
+
+
+        et2.classList.remove('esconder')
+        et1.classList.add('esconder')
+        p2.classList.add('esconder')
+        ini.classList.add('esconder')
+        for (i = 0; i < atual - 1; i++) {
+          img[i].classList.remove('esconder')
+        }
+
+      } else if (atual == 3) {
+        ini.classList.add('esconder')
+        et3.classList.remove('esconder')
+        et1.classList.add('esconder')
+        et2.classList.add('esconder')
+        p2.classList.add('esconder')
+        p3.classList.add('esconder')
+        for (i = 0; i < atual - 1; i++) {
+          img[i].classList.remove('esconder')
+        }
+
+      } else if (atual == 4) {
+        ini.classList.add('esconder')
+        et4.classList.remove('esconder')
+        et1.classList.add('esconder')
+        et2.classList.add('esconder')
+        et3.classList.add('esconder')
+        p2.classList.add('esconder')
+        p3.classList.add('esconder')
+        p4.classList.add('esconder')
+        for (i = 0; i < atual - 1; i++) {
+          img[i].classList.remove('esconder')
+        }
+
+      } else if (atual == 5) {
+        ini.classList.add('esconder')
+        et5.classList.remove('esconder')
+        et1.classList.add('esconder')
+        et2.classList.add('esconder')
+        et3.classList.add('esconder')
+        et4.classList.add('esconder')
+        p2.classList.add('esconder')
+        p3.classList.add('esconder')
+        p4.classList.add('esconder')
+        p5.classList.add('esconder')
+        for (i = 0; i < atual - 1; i++) {
+          img[i].classList.remove('esconder')
+        }
+
+      } else if (atual == 6) {
+        ini.classList.add('esconder')
+        et6.classList.remove('esconder')
+        et1.classList.add('esconder')
+        et2.classList.add('esconder')
+        et3.classList.add('esconder')
+        et4.classList.add('esconder')
+        et5.classList.add('esconder')
+        p2.classList.add('esconder')
+        p3.classList.add('esconder')
+        p4.classList.add('esconder')
+        p5.classList.add('esconder')
+        p6.classList.add('esconder')
+        for (i = 0; i < atual - 1; i++) {
+          img[i].classList.remove('esconder')
+        }
+      } else {
+        ini.classList.add('esconder')
+        et6.classList.add('esconder')
+        et1.classList.add('esconder')
+        et2.classList.add('esconder')
+        et3.classList.add('esconder')
+        et4.classList.add('esconder')
+        et5.classList.add('esconder')
+        p2.classList.add('esconder')
+        p3.classList.add('esconder')
+        p4.classList.add('esconder')
+        p5.classList.add('esconder')
+        p6.classList.add('esconder')
+        document.getElementById('completo').classList.remove('esconder')
+        for (i = 0; i < atual; i++) {
+          img[i].classList.remove('esconder')
+        }
       }
+
+
     }
 
 
+    var local_ = [
+      {
+        "id": 1,
+        "estado": "Minas Gerais",
+        "local": "Belo Horizonte",
+        "endereco": "Vara Cível da Infância e da Juventude  fica localizada na avenida Olegário Maciel, 600. Centro",
+        "telefone": "(31) 3207-8100"
+      },
+      {
+        "id": 2,
+        "estado": "Rio de Janeiro",
+        "local": "Rio de Janeiro",
+        "endereco": "Praça Onze de Junho, 403, Castelo - CEP: 20210-010",
+        "telefone": "(21) 31334015"
+      },
+      {
+        "id": 3,
+        "estado": "São Paulo",
+        "local": "São Paulo",
+        "endereco": "Rua Piratininga, 105 - Brás, São Paulo - SP, 03042-001",
+        "telefone": "(11) 3208-7118"
+      },
+      {
+        "id": 4,
+        "estado": "Espiríto Santo",
+        "local": "Vila Velha",
+        "endereco": "Rua Dom Jorge de Menezes, 485 - Centro de Vila Velha, Vila Velha - ES, 29100-250",
+        "telefone": "(27) 3239-1730"
+      }
+    ];
+
+    function vara() {
+      let t = document.getElementsByClassName('titulo')
+      let p = document.getElementsByClassName('l')
+      let e = document.getElementsByClassName('endereco')
+      let tel = document.getElementsByClassName('telefone')
+      console.log(t[0])
+      for (i = 0; i < local_.length; i++) {
+        console.log("ola")
+        t[i].innerHTML = local_[i].estado;
+        p[i].innerHTML = local_[i].local;
+        e[i].innerHTML = local_[i].endereco;
+        tel[i].innerHTML = local_[i].telefone;
+
+      }
+    }
   </script>
 
 </body>

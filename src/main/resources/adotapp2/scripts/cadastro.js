@@ -25,7 +25,7 @@ function info(){
         "id": dados.id,
         "processo_ativo": dados.processo_ativo,
         "email": dados.email
-    }
+    };
     localStorage.setItem('usuario_ativo', JSON.stringify(filtrado));
 	location.href = "./home.html";
 }
