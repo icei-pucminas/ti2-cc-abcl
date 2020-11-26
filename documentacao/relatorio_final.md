@@ -43,27 +43,35 @@ Devido à má implementação, ao excessivo tempo de espera, à legislação pre
 Frente ao problema salientado, procurou-se utilizar os recursos tecnológicos a disposição para criar um ambiente online que ajude os futuros pais e mães a orientarem-se durante essa jornada burocrática. Ademais, empenhar-se-á na tarefa de oferecer recursos além dos oferecidos pelo programa governamental, permitindo aos usuários o usufruto de artifícios que permitam maior liberdade aos que buscam sucesso na adoção, inserindo-os diretamente no processo, e, permitindo maior transparência no procedimento.
 
         1.3.1 Objetivos específicos
-<!-- Pendente. -->
-
-Apresente também alguns (pelo menos 2) **objetivos específicos** depende
-ndo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+Dentre os objetivos específicos da equipe A.dota podemos citar a intenção de expandir os conhecimentos e o acesso à informações sobre o assunto para os adotantes e a concepção de um ambiente que possibilite organizar, controlar e acompanhar o andamento do processo. Para isso o ambiente A.dota conta com diversos materiais de apoio como vídeos, depoimentos, acesso a leis, sites governamentais, especificação dos processos passo a passo e controle interativo e personalizado das estapas concluídas, em andamentos e futuras.
 
     1.4 Justificativas
 Considerando que o Brasil tem atualmente 4,9 mil crianças e adolescentes no sistema de  adoção, de acordo com pesquisa realizada pela Agência Brasil, mas que cada processo iniciado pode demorar anos para ser efetivado, propôs-se a busca por soluções que possam facilitá-los por meio dos conhecimentos da equipe acerca da área de desenvolvimento de software, sistemas inteligentes e banco de dados.
 
 
+
 **2. Projeto da Solução**
 
-    2.1. Personas
-    
-As personas levantadas durante o processo de entendimento do problema são apresentadas na Figuras que se seguem.
+Durante o processo de desenvolvimento, todos os membros das equipes tiveram contato direto com pais que já haviam adotado e/ou casais que estavam interessados no assunto. Dessa maneira, a partir da análise das inúmeras dificuldades enfrentadas por esses pais, foi possível visualizar a realidade dura e cruel do atual procedimento de adoção. A partir desta análise, juntamente com nossos conhecimentos programacionais, foi possível desenvolver um planejamento para o que viria a ser nossa solução para este problema.
+
+    2.1. Personas 
+
+As personas levantadas durante o processo de entendimento do problema são apresentadas na figuras a seguir:
 ![Persona 1](imagens/persona01.jpg "Carolina Pareira")
 ![Persona 2](imagens/persona02.jpg "João Alberto")
 
     2.2. História de usuário
 
+A partir da compreensão do dia a dia das personas identificadas para o projeto, foram verificadas as seguintes histórias de usuários:
+
 | Eu como persona... | ...quero/desejo... | ...para |
 | ------------------ |:------------------:| -------:|
+| João Alberto | ter mais informações sobre adoção | ter certeza da minha decisão |
+| João Alberto | saber quais são os passos a serem seguidos | conseguir me organizar melhor |
+| João Alberto | não precisar sempre entrar em contato com o advogado | poupar tempo e esforço |
+| Carolina Pareira | conseguir acompanhar meu processo com mais clareza | me organizar melhor |
+| Carolina Pareira | conhecer a documentação necessária e onde conseguí-la | agilizar meu processo |
+| Carolina Pareira | ter acesso a conteúdos diversos sobre o assunto | me interar sobre o tema |
 
     2.3. Requisitos funcionais
 	
@@ -106,35 +114,54 @@ As questões que limitam o projeto em questão são apresentadas na tabela a seg
 | RE-03     | Mesmo servindo de apoio, o aplicativo não substitui a presença de um advogado. |
 
 
-    2.6. Tecnologias
+    2.6. Tecnologias e ambiente de trabalho
 
-Linguagens de desenvolvimento web front-end: HTML, CSS e JavaScript;
+Com relação à gestão do código fonte, o grupo de desenvolvimento, após fazer suas alterações no projeto, faz a commit na branch master do repositório do GitHub. Após a confirmação de sucesso e isenção de falhas nessa commit, é feito o push para o Heroku, pelo qual será exibido o site ao usuário final.
 
-Linguagens de desenvolvimento back-end: Java;
+Estão listadas abaixo as tecnologias, ferramentas e ambientes utilizados para o desenvolvimento do projeto A.dota especificadas por finalidade e utilização:
 
-Repositório: GitHub; 
+* Linguagens de desenvolvimento web front-end: HTML, CSS e JavaScript;
+* Linguagens de desenvolvimento back-end: Java;
+* Repositório: GitHub; 
+* Frameworks: Bootstrap, MDB e Spark;
+* Integração BD com o site: Eclipse, Maven; 
+* Banco de dados: PostgreSQL;
+* Service Worker para permitir ao smartphone reconhecer o site como app;
+* Microsoft Azure como servidor em nuvem para o banco de dados;
+* IDE: Microsoft Visual Studio Code.
 
-Frameworks: Bootstrap, MDB e Spark;
-
-Integração BD com o site: Eclipse, Maven; 
-
-Banco de dados: PostgreSQL;
-
-Service Worker para permitir ao smartphone reconhecer o site como app;
-
-Microsoft Azure como servidor em nuvem para o banco de dados;
-
-IDE: Microsoft Visual Studio Code.
-
-<!-- Insira aqui a explicação da imagem abaixo sobre a relação entre as tecnologias e o funcionamento -->
+A imagem a seguir demonstra a relação estabelecida entre as principais tecnologias e ambientes utilizados para a elaboração, desenvolvimento e finalização do projeto A.dota:
 
 ![Relação entre as tecnologias](imagens/tecnologias.png "Relação entre as tecnologias")
 
-    2.7. Sistema desenvolvido
+    2.7 Metodologia de trabalho
+
+Neste projeto utilizou-se a metodologia Scrum, que consiste em dividir sendo cada um responsável por uma parte predefinida do projeto, delimitando, assim, o que cada parte do grupo faz, simplificando os testes e desenvolvimento mais aperfeiçoado das funcionalidades. Além disso, para o desenvolvimento do sistema, partiu-se do ciclo sprint, que consiste em analisar o que precisa ser feito, implementá-las no produto, revisar e testar.
+
+Outro pilar do Scrum, o Product Backlog foi aplicado no gerenciamento das tarefas, o qual consiste na criação de uma lista de funcionalidades necessárias para o projeto, tornando-se mais simples a análise de quais partes são mais importantes e que merecem maior enfoque. 
+
+Como a equipe da A.dota é composta de três integrantes, a função de desenvolvedor foi desempenhada por todos os membros, porém, atuando em partes diferentes. A equipe está organizada da seguinte maneira:
+* Scrum Master: Luiza Ribeiro
+Mantém a equipe em uma sintonia e fiscaliza o andamento do produto e do segmento do Scrum.
+* Product Owner: nna Puga
+Chefe de criação do software. Coordena o desenvolvimento sugere melhorias a serem feitas no produto, além de identificar os problemas da aplicação.
+* Equipe de Desenvolvimento: Anna Puga, Bárbara Carmo, Luiza Parente
+Trabalham no desenvolvimento do produto em todas as partes, principalmente onde cada um tem mais facilidade.
+* Equipe de Design: Bárbara Carmo
+Trabalha no design das páginas e do aplicativo do produto, tendo em base suas funcionalidades e como estas devem ficar no distribuídos no seu produto, sendo extremamente necessárias do início ao fim, tanto como base para o desenvolvimento como a parte final do mesmo.
+
+
+**3. Sistema desenvolvido**
 <!-- Pendente.-->
 Faça aqui uma breve descrição do software e coloque as principais telas com uma explicação de como usar cada uma.
 	
-**3. Modelagem de dados**
+    3.1 Wireframes e fluxo
+<!-- Pendente -->
+
+    3.2 Telas do sistema
+<!-- Pendente -->
+
+**4. Modelagem de dados**
 <!-- Mudar. -->
 Para o funcionamento da aplicação, foi necessário uma estrutura que comportasse os dados dos usuários, os respectivos processos pelos quais cada usuários passa e as tarefas que compões cada processo. Com esta finalidade doi criada a base de dados que é conectada diretamente com o site, tornando a interação do usuário com o sistema funcional e personalizada.
 
@@ -146,16 +173,34 @@ O diagrama abaixo ilustra a estrutura base para o funcionamento do nosso sistema
 
 ![Diagrama de Entidade Relacionamento](imagens/diagramaER.jpeg "Diagrama de Entidade Relacionamento")
 
-**4. Serviços inteligentes**
+
+
+**5. Serviços inteligentes**
+
 Neste projeto foi desenvolvido um ChatBot - software capaz de receber mensagens escritas ou por voz, interpretar seu conteúdo e oferecer respostas adequadas - apelidado de A.Lice. Ela tem como objetivo responder dúvidas de participantes do processo adotivo cadastrados no sistema da A.dota com a mesma fluidez de um agente humano do Conselho Nacional de Justiça, encarregado pelo Cadastro Nacional de Adoção. Desta forma, a aplicação poderá assistir diversas famílias em uma quantidade mínima de tempo, assegurando uma resposta com alto nível de acurácia, melhorando a experiência ofertada pela aplicação como um todo.
 
-A ferramenta utilizada é um Robô Conversacional, desenvolvido a partir do Fluxo de Diálogo especificado pela equipe A.dota. Este sistema analisa perguntas do usuário sobre uma etapa específica do processo de adoção e responde de acordo com a base de dados. Para responder corretamente perguntas dos usuários sobre os processos, a A.Lice conta com entradas de dados sobre adoção retirados de sites e consultas jurídicas, tais como o site do Tribunal Federal de Justiça. Dessa forma, é possível oferecer respostas plausíveis e bem fundamentadas.
+    5.1 Intelligent Systems Canvas
 
-<!-- Descreva o mecanismo de inteligência que será utilizado no seu sistema. Utilize a modelagem baseada em agente
-para definir as entradas e saídas do seu módulo de serviço inteligente. Apresente quem irá fornecer o serviço
-e em que módulo será utilizado. --> 
-  
-**5. Avaliação**
+Para desenvolvimento do ChatBot A.lice, sendo um Sistema Conversacional, foi utilizada a metodologia Intelligent Systems Canvas (IS Canvas), projetado para visualização da proposta da aplicação, como especificado a seguir:
+
+![Intelligent Systems Canvas](imagens/ISCanvas.jpg "IS Canvas")
+
+    5.2 Fluxo de diálogo
+
+A A.Lice foi desenvolvida a partir do Fluxo de Diálogo especificado pela equipe A.dota. A A.Lice conta com entradas de dados sobre adoção retirados de sites e consultas jurídicas, tais como o site do Tribunal Federal de Justiça. Dessa forma, é possível oferecer respostas plausíveis e bem fundamentadas.
+
+Para demonstrar o fluxo de diálogo entre o ChatBot implementado e o usuário, foi utilizada a ferramenta BotMock. Através dela foi possível simular uma conversa entre a A.Lice e um adotante. A imagem a seguir representa o fluxo proposto, entretanto, como a visualização pode ser comprometida devido às restrições da imagem, um pdf do mesmo se encontra nesta mesma pasta (https://github.com/icei-pucminas/ti2-cc-abcl/tree/master/documentacao)
+
+![Fluxo de diálogo](imagens/fluxoDialogo.jpg "Fluxo de diálogo")
+
+    5.3 Implementação
+    
+O primeiro passo foi reunir conteúdo para formar a base de dados com a qual o ChatBot iria trabalhar. Para isso foram selecionados, links de sites do governo, - tais como o site do Tribunal Federal de Justiça e do Conselho Nacional de Justiça  - cartilhas com as principais dúvidas, fóruns sobre o tema e outras fontes confiáveis que nos possibilitaram ter informações suficientes para que, através da aplicação QnA Maker, fossem formuladas as perguntas e respostas utilizadas no ChatBot.
+
+A partir deste ponto foi possível criar, através da aplicação Microsoft Azure, o ChatBot que apelidamos de A.Lice. Para proporcionar uma melhor experiência, as perguntas foram sendo testadas e a partir dos resultados, a base foi sendo atualizada e/ou modificada. Assim que resultados satisfatórios foram obtidos, a API da Microsoft Azure responsável pelo ChatBot foi inserida no projeto A.dota.
+
+
+**6. Avaliação**
 <!-- Refazer. -->
 O processo de realização dos testes da solução foi desenvolvida fazendo o uso da metodologia “Rápida e Suja”, sendo essa uma forma simples e breve, porém eficaz, de realizar testes em uma aplicação, baseando-se na técnica de observação do usuário.
 
@@ -173,7 +218,7 @@ Para não ficar subjetivo, o ideal é fazer um questionário e pedir ao usuário
 | Usuário #7 ~ 50 anos | A utilização do site foi bem sucedida, tendo sido bem explicado o que fazer no cadastro e perguntas de fácil entendimento no questionário. |
 | Usuário #8 ~ 40 anos | O usuário realizou seus primeiros passos de maneira lenta mas depois se adaptou e entendeu como funcionava a plataforma e conseguiu de maneira clara realizar seu cadastro. Fez comentários positivos sobre o site e conseguiu navegar por ele sem dificuldades. |
 
-**6. Conclusão**
+**7. Conclusão**
 <!-- Pendente. -->
 
 Apresente aqui a conclusão do seu trabalho. Discussão dos resultados obtidos no trabalho, onde se verifica as 
@@ -183,12 +228,22 @@ observações pessoais de cada aluno. Poderá também apresentar sugestões de n
 **REFERÊNCIAS**
 
 
-**[1.1]** - _Littlefield, A. **Guia da metodologia ágil e scrum para iniciantes**. 2016. Disponível em: https://blog.trello.com/br/scrum-metodologia-agil._
+**[1.]** - _Littlefield, A. **Guia da metodologia ágil e scrum para iniciantes**. 2016. Disponível em: https://blog.trello.com/br/scrum-metodologia-agil._
 
-**[1.2]** - _Gigante, E. A. **Como funciona o processo de adoção no brasil?**. 2018. Disponível em: https://www.politize.com.br/adocao-no-brasil/._
+**[2.]** - _Gigante, E. A. **Como funciona o processo de adoção no brasil?**. 2018. Disponível em: https://www.politize.com.br/adocao-no-brasil/._
 
-**[1.3]** - _Albuquerque, F. **Adoção sempre foi difícil no Brasil, diz advogada**. 2016. Disponível em: https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2016-10/tema-da-adocao-sempre-foi-dificil-no-brasil-cadastros-dificultam._
+**[3.]** - _Albuquerque, F. **Adoção sempre foi difícil no Brasil, diz advogada**. 2016. Disponível em: https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2016-10/tema-da-adocao-sempre-foi-dificil-no-brasil-cadastros-dificultam._
 
-**[1.4]** - _Pignato, C.; Zanlorenssi, G.; Ostetti, V. **Adoção no Brasil: perfil de crianças e pretendentes e como funciona o processo**. 2018. Disponível em https://www.nexojornal.com.br/grafico/2017/08/11/Ado%C3%A7%C3%A3o-no-Brasil-perfil-de-crian%C3%A7as-e-pretendentes-e-como-funciona-o-processo._
+**[4.]** - _Pignato, C.; Zanlorenssi, G.; Ostetti, V. **Adoção no Brasil: perfil de crianças e pretendentes e como funciona o processo**. 2018. Disponível em https://www.nexojornal.com.br/grafico/2017/08/11/Ado%C3%A7%C3%A3o-no-Brasil-perfil-de-crian%C3%A7as-e-pretendentes-e-como-funciona-o-processo._
 
-**[1.5]** - _Reis, T. **Demora da Justiça faz criança perder chance de adoção, mostra estudo.**. 2015. Disponível em: http://g1.globo.com/bemestar/noticia/2015/06/demora-da-justica-faz-crianca-perder-chance-de-adocao-mostra-estudo.html._
+**[5.]** - _Reis, T. **Demora da Justiça faz criança perder chance de adoção, mostra estudo.**. 2015. Disponível em: http://g1.globo.com/bemestar/noticia/2015/06/demora-da-justica-faz-crianca-perder-chance-de-adocao-mostra-estudo.html._
+
+**[6.]** - _Governo de Minas Gerais. **Adotar criança ou adolescente.**. 2020. Disponível em: https://www.mg.gov.br/servico/adotar-crianca-ou-adolescente_
+
+**[7.]** - _Grupo Acesso – Estudos, Pesquisa e Intervenção em Adoção. **Cartilha passo a passo - Adoção de Crianças e Adolescentes no Brasil.**. 2020. Disponível em: https://www.defensoria.pb.def.br/criative/Documentos/Cartilha-adocaopassoapasso.pdf_
+
+**[8.]** - _Corregedoria Nacional de Justiça. **Passo a passo da adoção.**. 2019. Disponível em: https://www.mg.gov.br/servico/adotar-crianca-ou-adolescente_
+
+**[9.]** - _Tribunal de Justiça do Estado de Minas Gerais. **Adoção de crianças e adolescentes.**. 2020. Disponível em: https://www.tjmg.jus.br/portal-tjmg/servicos/adocao.htm#.X72humhKjIV_
+
+**[10.]** - _Tribunal de Justiça do Estado de Minas Gerais. **Passo a passo para adoção, segundo o CNJ.**. 2020. Disponível em: https://www.tjmg.jus.br/portal-tjmg/servicos/passo-a-passo-para-adocao-segundo-o-cnj.htm#.X72hvWhKjIV_
