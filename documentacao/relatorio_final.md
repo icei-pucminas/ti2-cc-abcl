@@ -157,16 +157,31 @@ A A.dota é uma plataforma para controle do processo adotivo, como já especific
 É possível encontrar na A.dota, notícias, vídeos, depoimentos, leis, detalhamento dos passos dentro do processo de adoção, a possibilidade de enviar um e-mail para nossa equipe, um chat social e os serviços da A.Lice, ChatBot responsável por sanar as principais dúvidas dos adotantes.
 	
     3.1 Wireframes e fluxo
+
 O esquema e os wireframes a seguir representam parte do fluxo de utilização do A.dota e suas funcionalidades em sua fase de prototipação, ou seja, foram desenvolvidas para ilustrar e orientar como o site viria a ser. Estas foram desenvolvidas na plataforma MarvelApp e podem ser visualizadas em sua forma interativa a partir do link: https://marvelapp.com/prototype/7770i1b
 
-A explicação do objetivo e funcionalidades de cada tela serão explicados já em sua visualização final como aplicação web.
+Estão ilustradas as telas iniciais, tais como login, cadastro e primeira tela do sistema, assim como as telas de funcionalidades, tais como home, notícias, vídeos, chat social, chatbot e todas as demais. A explicação do objetivo e funcionalidades de cada tela serão explicados já em sua visualização final como aplicação web.
 
 ![Wireframes](imagens/wireframes01.png "Wireframes")
 ![Wireframes](imagens/wireframes02.png "Wireframes")
 ![Wireframes](imagens/wireframes03.png "Wireframes")
 
     3.2 Telas do sistema
-<!-- Pendente -->
+
+![Tela inicial](imagens/1.jpg "Tela inicial")
+![Entrar](imagens/2.jpg "Entrar")
+![Cadastro](imagens/3.jpg "Cadastro")
+![Home 01](imagens/4.jpg "Home 01")
+![Home 02](imagens/5.jpg "Home 02")
+![Perfil](imagens/6.jpg "Perfil")
+![Notícias](imagens/7.jpg "Notícias")
+![Leis](imagens/8.jpg "Leis")
+![Vídeos](imagens/9.jpg "Vídeos")
+![Ajuda](imagens/10.jpg "Ajuda")
+![Chat Social 01](imagens/11.jpg "Chat Social 01")
+![Chat Social 02](imagens/12.jpg "Chat Social 02")
+![ChatBot](imagens/13.jpg "ChatBot")
+![Sobre](imagens/14.jpg "Sobre")
 
 **4. Modelagem de dados**
 <!-- Mudar. -->
