@@ -157,7 +157,13 @@ A A.dota é uma plataforma para controle do processo adotivo, como já especific
 É possível encontrar na A.dota, notícias, vídeos, depoimentos, leis, detalhamento dos passos dentro do processo de adoção, a possibilidade de enviar um e-mail para nossa equipe, um chat social e os serviços da A.Lice, ChatBot responsável por sanar as principais dúvidas dos adotantes.
 	
     3.1 Wireframes e fluxo
-<!-- Pendente -->
+O esquema e os wireframes a seguir representam parte do fluxo de utilização do A.dota e suas funcionalidades em sua fase de prototipação, ou seja, foram desenvolvidas para ilustrar e orientar como o site viria a ser. Estas foram desenvolvidas na plataforma MarvelApp e podem ser visualizadas em sua forma interativa a partir do link: https://marvelapp.com/prototype/7770i1b
+
+A explicação do objetivo e funcionalidades de cada tela serão explicados já em sua visualização final como aplicação web.
+
+![Wireframes](imagens/wireframes01.png "Wireframes")
+![Wireframes](imagens/wireframes02.png "Wireframes")
+![Wireframes](imagens/wireframes03.png "Wireframes")
 
     3.2 Telas do sistema
 <!-- Pendente -->
