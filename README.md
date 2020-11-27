@@ -1,4 +1,4 @@
-# Adotapp
+# A.dota
 
 No país em que vivemos, o acesso a informações confiáveis é muitas vezes dificultado. Este pode ser um problema em contextos extremamente diversos, inclusive no processo de adoção, tendo em vista que muitos dos interessados em adotar não têm suporte suficiente para se orientarem de forma clara.
 
@@ -11,7 +11,6 @@ Desta forma, passou-se a propor um ambiente digital que facilite o acesso às in
 
 * Anna Puga Campos Rodrigues
 * Barbara Luiza Freitas Carmo
-* Carlos Henrique Cury Ferreira Lima
 * Luiza Ribeiro Parente Silva
 
 
@@ -19,6 +18,7 @@ Desta forma, passou-se a propor um ambiente digital que facilite o acesso às in
 
 * Max do Val Machado
 * Wladmir Cardoso
+* Sandro Gerônimo
 
 ## Instruções de utilização
 
