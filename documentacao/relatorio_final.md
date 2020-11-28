@@ -168,6 +168,10 @@ Estão ilustradas as telas iniciais, tais como login, cadastro e primeira tela d
 
     3.2 Telas do sistema
 
+As telas para cada uma das funcionalidades do sistema, bem como a forma de acesso e utilização são apresentadas a seguir:
+
+        3.2.1 Tela Inicial 
+teste
 ![Tela inicial](imagens/1.jpg "Tela inicial")
 ![Entrar](imagens/2.jpg "Entrar")
 ![Cadastro](imagens/3.jpg "Cadastro")
@@ -184,17 +188,14 @@ Estão ilustradas as telas iniciais, tais como login, cadastro e primeira tela d
 ![Sobre](imagens/14.jpg "Sobre")
 
 **4. Modelagem de dados**
-<!-- Mudar. -->
-Para o funcionamento da aplicação, foi necessário uma estrutura que comportasse os dados dos usuários, os respectivos processos pelos quais cada usuários passa e as tarefas que compões cada processo. Com esta finalidade doi criada a base de dados que é conectada diretamente com o site, tornando a interação do usuário com o sistema funcional e personalizada.
+Para o funcionamento da aplicação, foi necessário uma estrutura que comportasse os dados dos usuários e os respectivos processos pelos quais cada usuários passa até finalizar a adoção. Com esta finalidade, foi criada a base de dados que é conectada diretamente com o site da A.dota, tornando a interação do usuário com o sistema personalizada e funcional.
 
-<!-- Apresente o modelo de dados. Defina o dicionário de dados com os respectivos formatos e significados. -->
+    4.1. Diagrama de Entidade-Relacionamento
+O diagrama abaixo ilustra a estrutura base para o funcionamento do nosso sistema. Nele podemos observar as entidades USUARIO e PROCESSO, que estão ligadas entre si por um relacionamento "realiza", de cardinalidade "1 para n". Dessa forma, um usuário pode realizar vários processos e um processo pode ser realizado por vários usuários.
 
-    3.1. Diagrama de Entidade-Relacionamento
-<!-- Mudar. -->
-O diagrama abaixo ilustra a estrutura base para o funcionamento do nosso sistema. Nele podemos observar as entidades Usuario, Processo e Tarefa que estão ligadas entre si de forma que, um usuário passa por vários processos e cada processo tem várias tarefas.
+As entidades PROCESSO e USUARIO estão representadas pelos retângulos. Seus respectivos atributos estão sendo representados pelas pequenas bolas coloridas, sendo que, as com preenchimento azul representam chaves primárias, as com preenchimento verde representam chaves estrangeiras e as sem preenchimento representam atributos normais. O relacionamento "Realiza" (1,n) é representado pelo losango.
 
-![Diagrama de Entidade Relacionamento](imagens/diagramaER.jpeg "Diagrama de Entidade Relacionamento")
-
+![Diagrama de Entidade Relacionamento](imagens/diagramaER.png "Diagrama de Entidade Relacionamento")
 
 
 **5. Serviços inteligentes**
@@ -211,7 +212,7 @@ Para desenvolvimento do ChatBot A.lice, sendo um Sistema Conversacional, foi uti
 
 A A.Lice foi desenvolvida a partir do Fluxo de Diálogo especificado pela equipe A.dota. A A.Lice conta com entradas de dados sobre adoção retirados de sites e consultas jurídicas, tais como o site do Tribunal Federal de Justiça. Dessa forma, é possível oferecer respostas plausíveis e bem fundamentadas.
 
-Para demonstrar o fluxo de diálogo entre o ChatBot implementado e o usuário, foi utilizada a ferramenta BotMock. Através dela foi possível simular uma conversa entre a A.Lice e um adotante. A imagem a seguir representa o fluxo proposto, entretanto, como a visualização pode ser comprometida devido às restrições da imagem, um pdf do mesmo se encontra nesta mesma pasta (https://github.com/icei-pucminas/ti2-cc-abcl/tree/master/documentacao)
+Para demonstrar o fluxo de diálogo entre o ChatBot implementado e o usuário, foi utilizada a ferramenta BotMock. Através dela foi possível simular uma conversa entre a A.Lice e um adotante. A imagem a seguir representa o fluxo proposto, entretanto, como a visualização pode ser comprometida devido às restrições da imagem, um pdf do mesmo se encontra nesta mesma pasta (https://github.com/icei-pucminas/ti2-cc-abcl/blob/master/documentacao/FluxoDeDialogo.pdf)
 
 ![Fluxo de diálogo](imagens/fluxoDialogo.png "Fluxo de diálogo")
 
