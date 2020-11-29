@@ -43,3 +43,11 @@
 .resposta {
     color: black;
 }
+
+  @media (min-width: 1000px){
+  
+    .logo{
+      width: 70% !important;
+    }
+    
+  }

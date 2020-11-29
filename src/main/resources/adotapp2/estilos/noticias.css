@@ -34,3 +34,11 @@
         letter-spacing: normal !important;
     }
 }
+
+@media (min-width: 1000px){
+  
+    .logo{
+      width: 70% !important;
+    }
+    
+  }
