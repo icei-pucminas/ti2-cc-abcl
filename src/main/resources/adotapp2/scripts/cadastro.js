@@ -3,12 +3,14 @@ onload = () => {
     btn.onclick = senhasCheck;
 }
 
+
+
 function enviarDados(senha) {
     let nome = document.getElementById("nome").value;
     let sobrenome = document.getElementById("sobrenome").value;
     let email = document.getElementById("email").value;
     let telefone = document.getElementById("telefone").value;
-
+    senha = CryptoJS.SHA512(senha)
     let req = new XMLHttpRequest;
     req.open("post", "/adicionarUsuario", false);
 	req.onreadystatechange = () => local(email);	

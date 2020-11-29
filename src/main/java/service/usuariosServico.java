@@ -81,9 +81,8 @@ public class usuariosServico {
 		dao.conectar();
 
 		String email = request.queryParams("email");
-		String senha = request.queryParams("senha");
 
-		Usuario user = DAOUsuarios.loginUsuario(email, senha);
+		Usuario user = DAOUsuarios.loginUsuario(email);
 		response.status(201);
 
 		dao.close();

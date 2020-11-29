@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "aos": "^2.3.4",
+    "cryptr": "^6.0.2",
     "googleapis": "^62.0.0"
   },
   "devDependencies": {},

@@ -55,7 +55,7 @@ public class DAOUsuarios {
 		try {  
 			Statement st = conexao.createStatement();
 			st.executeUpdate("INSERT INTO usuario "
-					       + "VALUES ( '"+ user.getNome()+ "', '" + user.getSobrenome() + "', '" + user.getTelefone()+"', '" + user.getEmail() +"', '" + user.getSenha()+  "');");
+					       + "VALUES ( '"+ user.getNome()+ "', '" + user.getSobrenome() + "', '" + user.getTelefone()+"', '" + user.getEmail() +"', '" + user.getSenha() +  "');");
 			st.close();
 			status = true;
 		} catch (SQLException u) {  
@@ -170,11 +170,11 @@ public class DAOUsuarios {
 		return status;
 	}
 	
-	public static Usuario loginUsuario(String email, String senha) { // LUIZA VOCE TEM Q DEIXAR ESSE TO USANDO ELE NA DAO DE PROCESSOS
+	public static Usuario loginUsuario(String email) { // LUIZA VOCE TEM Q DEIXAR ESSE TO USANDO ELE NA DAO DE PROCESSOS
 		Usuario[] usuarios = new Usuario[1];
 		try {
 			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-			ResultSet rs = st.executeQuery("SELECT * FROM usuario WHERE email = '" + email + "' AND senha = '" + senha + "'");		
+			ResultSet rs = st.executeQuery("SELECT * FROM usuario WHERE email = '" + email + "'");		
 	         if(rs.next()){
 	             rs.last();
 	             usuarios = new Usuario[rs.getRow()];
