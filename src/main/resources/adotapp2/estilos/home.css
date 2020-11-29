@@ -88,6 +88,13 @@
   .dep{
     font-size: 16pt;
   }
+	.row{
+		display: flex;
+	}
+	
+	img{
+		display: none;
+	}
 }
 
 @media (min-width: 1000px){
@@ -109,3 +116,13 @@
   }
   
 }
+
+.row{
+	justify-content: space-evenly;
+}
+
+iframe{
+	width: 100%;
+	height: 125%;
+}
+
