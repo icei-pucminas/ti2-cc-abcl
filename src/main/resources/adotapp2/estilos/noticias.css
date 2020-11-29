@@ -27,3 +27,18 @@
 .azulEscuroFundo{
     background-color:  rgba(0, 119, 182);
 }
+
+@media (max-width: 769px){
+    .h1c{
+        font-size:20pt;
+        letter-spacing: normal !important;
+    }
+}
+
+@media (min-width: 1000px){
+  
+    .logo{
+      width: 70% !important;
+    }
+    
+  }

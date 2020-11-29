@@ -15,6 +15,9 @@
     font-size: 2rem;
 }
 
+.logo{
+	width:100%;
+}
 .faq{
     text-align: end;
 }
@@ -42,4 +45,18 @@
 }
 .resposta {
     color: black;
+}
+
+  @media (min-width: 1000px){
+  
+    .logo{
+      width: 70% !important;
+    }
+    
+  }
+
+@media (max-width: 1000px){
+	.icon img{
+		display: none;
+	}
 }

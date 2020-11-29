@@ -44,14 +44,85 @@
 .apostofro{
   font-size: 30px;
 }
+.carousel-item iframe{
+  width: 100%;
+}
 
-
-@media (max-width: 1024px){
+@media (min-width: 1024px){
   .icones{
     display: none;
   }
   .titulo{
     margin-top: 0px;
   }
+
+  .carousel-item iframe{
+    width: 310px;
+    height:315px;
+  }
+}
+
+@media (max-width: 1025px){
+  .familia{
+      display: none;
+  }
+  .carousel-item iframe{
+    width: 100%;
+  }
+}
+
+@media (max-width: 769px){
+  .carousel-item iframe{
+    width: 100%;
+    height:315px;
+  }
+  #nome_PainelInicial{
+    font-size: 18pt;
+  }
+  .logoImg{
+    width: 50%;
+  }
+  .start{
+    font-size: 20pt;
+  }
+  .dep{
+    font-size: 16pt;
+  }
+	.row{
+		display: flex;
+	}
+	
+	img{
+		display: none;
+	}
+}
+
+@media (min-width: 1000px){
+  .carousel-item iframe{
+    width: 100%;
+    height:720px;
+  }
+  #nome_PainelInicial{
+    font-size: 3rem;
+  }
+  .logoImg{
+    width: 20%;
+  }
+  .start{
+    font-size: 2.7rem;
+  }
+  .logo{
+    width: 70% !important;
+  }
+  
+}
+
+.row{
+	justify-content: space-evenly;
+}
+
+iframe{
+	width: 100%;
+	height: 125%;
 }
 

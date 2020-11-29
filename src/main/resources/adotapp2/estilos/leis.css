@@ -3,3 +3,10 @@
         font-size: 12px;
     }
 }
+@media (min-width: 1000px){
+  
+    .logo{
+      width: 70% !important;
+    }
+    
+  }
