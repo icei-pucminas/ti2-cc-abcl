@@ -170,21 +170,78 @@ Estão ilustradas as telas iniciais, tais como login, cadastro e primeira tela d
 
 As telas para cada uma das funcionalidades do sistema, bem como a forma de acesso e utilização são apresentadas a seguir:
 
-        3.2.1 Tela Inicial 
-teste
+* Tela Inicial 
+
+A tela inicial do A.dota fornece aos usuários breves informações sobre a aplicação e os permitem fazer login ou cadastrar-se no sistema. É a primeira página que os usuários têm acesso ao entrarem no sistema A.dota e sua interface pode ser observada na imagem que segue:
 ![Tela inicial](imagens/1.jpg "Tela inicial")
+
+* Entrar (login)
+
+Após clicar no botão “Entrar”, na tela inicial, o usuário será redirecionado para a página de login. A tela de login permite o usuário seguir dois caminhos, a do cadastramento, caso o usuário não tenha uma conta criada ainda, e a entrada de fato na plataforma. Nesta página podemos ver a utilização da conexão do site com o banco de dados projetado para armazenar as informações dos adotantes. 
+
+Para efetuar o login, o usuário deve informar o endereço de email e senha cadastrados anteriormente no sistema, como pode ser observado na imagem abaixo:
 ![Entrar](imagens/2.jpg "Entrar")
+
+* Cadastro 
+
+Após clicar nem "Cadastrar-se", na tela inicial, o usuário será redirecionado para a página de cadastro, permitindo a ele criar uma conta na aplicação, para salvar as suas informações de processos e permitindo a adaptação do site às suas necessidades. Nesta página é realizada de fato a conexão entre a aplicação web e o banco de dados. 
+
+Neste momento o usuário precisa informar nome, sobrenome, email, telefone e criar uma senha, como mostra a imagem que segue. Todas essas informações são enviadas e salvas no banco de dados da A.dota para que os adotantes enham uma experiência personalizada ao entrar na plataforma e para que o andamento dos processos possa ser controlado sempre.
 ![Cadastro](imagens/3.jpg "Cadastro")
+
+* Home 
+
+Ao entrar no sistema, por login ou cadastro de nova conta, o adotante tem acesso a tela principal do site. Nesta tela estão presentes alguns vídeos, que podem ser assistidos dentro da própria plataforma - que também podem ser encontrados para melhor visualização na página "Vídeos" - e depoimentos de famílias que já passaram pela experiência da adoção. 
+
+Além disso, é utilizada Local Storage para armazenar temporariamente o nome do usuário utilizando o sistema. Dessa forma, o adotante pode receber uma saudação personalida e se sente melhor acolhido pela plataforma A.dota, como mostrado nas duas imagens a seguir:
 ![Home 01](imagens/4.jpg "Home 01")
 ![Home 02](imagens/5.jpg "Home 02")
+
+* Perfil
+
+O perfil é a página mais importante da plataforma A.dota. É nela que o adotante tem controle dos processos em andamento, concluídos e futuros, como demonstra a imagem seguinte. A forma de utilização é simples. Todo usuário começa com o processo 1 ativo e ao clicar no botão "Continuar", ele tem acesso a mais informações sobre aquele processo. Assim que todas as etapas do mesmo forem concluídas, o adotante deve clicar no botão "Concluído" para finalizar um processo. Dessa forma, o processo que foi finalizado passa para a parte de "Etapas concluídas" e o próximo processo passa de "Próximas etapas" para "Etapa atual". Todos os processos presentes em "Próximas etapas" ficam bloqueados até que o processo em andamento seja finalizado. 
+
+Toda essa dinâmica só é possível graças aos dados armazenados no banco de dados. Sempre que um usuário conclui um processo, essa informação é enviada e salva no banco. Dessa forma, as informações do andamento dos processos está sempre segura e o controle de qual processo pode ser acessado se matém lógica e constante. 
 ![Perfil](imagens/6.jpg "Perfil")
+
+* Notícias
+
+Nesta página os adotantes tem acesso às principais notícias sobre o universo da adoção e têm a possibilidade de serem redirecionados para os sites originais caso queiram ler as matérias completas. A estrutura da página em questão é demonstrada na imagem a seguir:
 ![Notícias](imagens/7.jpg "Notícias")
+
+* Leis
+
+A página de leis informa aos adotantes quais são as principais leis em vigor com peso sobre o processo de adoção no Brasil, além de uma breve descrições das mesmas e a possibilidade de serem redirecionados para os sites oficiais nos quais as leis estão publicadas, tais como o site do Planalto Federal e do Tribunal de Justiça. Sua interface está ilustrada abaixo:
 ![Leis](imagens/8.jpg "Leis")
+
+* Vídeos
+
+Como citado anteriormente, a página de vídeos oferece aos usuários acesso a vídeos dentro do tema adoção que podem ser fonte confiável de maiores informações por profissionais da área e pessoas que já passaram pelo processo. Os vídeos podem ser assitidos na própria plataforma A.dota. A interface desta página pode ser observada a seguir:
 ![Vídeos](imagens/9.jpg "Vídeos")
+
+* Ajuda
+
+É oferecida aos adotantes na página ajuda a possibilidade de entrar em contato direto com a equipe A.dota caso tenham alguma dúvida que não pode ser sanada pelos materiais de apoio - vídeos, notícias, leis, depoimentos, chat social e o chatbot A.Lice - ou caso esteja tendo algum problema com a plataforma. O usuário precisa preencher os campos com nome, email, assunto e a mensagem em si a ser enviada. Ao clicar no botão de envio, o email escrito é enviado altomaticamente para a equipe A.dota, como mostra a imagem que segue:
 ![Ajuda](imagens/10.jpg "Ajuda")
+
+* Chat Social
+
+Nesta página está presente um chat social onde os adotantes podem conversar entre si, anonimamente ou não, para sanarem suas dúvidas de forma interativa e descontraída. É um recurso que aproxima os adotantes, possibilitando que eles se ajudem e compartilhem vivências, dicas e conhecimentos. Dessa forma a experiência A.dota se torna única e acolhedora.
+
+Além do chat social, esta página também conta com as dúvidas mais frequentes e suas respostas. Assim, o adotante pode solucionar um questionamento sem precisar contatar um profissional, usar o chat social ou perguntar à A.Lice, caso não queira. 
+
+As duas imagens que seguem demonstram as duas partes citadas acima que compõe a página "Chat Social" da plataforma A.dota.
 ![Chat Social 01](imagens/11.jpg "Chat Social 01")
 ![Chat Social 02](imagens/12.jpg "Chat Social 02")
+
+* ChatBot 
+
+Recebe atenção especial nesta parte da plataforma, a assistente pessoal da A.dota, - batizada de A.Lice - como pode ser observado na imagem que segue. A.Lice foi criada pela equipe da A.dota com o objetivo de responder dúvidas de participantes do processo adotivo cadastrados no sistema da A.dota com a mesma fluidez de um agente humano do Conselho Nacional de Justiça, encarregado pelo Cadastro Nacional de Adoção. Desta forma, a aplicação poderá assistir diversas famílias em uma quantidade mínima de tempo, assegurando uma resposta com alto nível de acurácia, melhorando a experiência ofertada pela aplicação como um todo.
 ![ChatBot](imagens/13.jpg "ChatBot")
+
+* Sobre
+
+Esta é a última tela do sistema A.dota. Nela são ofertadas algumas informações básicas sobre a plataforma, seu intuito e concepção, como mostra a imagem a seguir:
 ![Sobre](imagens/14.jpg "Sobre")
 
 **4. Modelagem de dados**
