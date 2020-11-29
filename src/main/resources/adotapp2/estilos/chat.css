@@ -59,4 +59,7 @@
 	.icon img{
 		display: none;
 	}
+	.logo{
+      width: 70% !important;
+    }
 }
