@@ -22,4 +22,6 @@ Desta forma, passou-se a propor um ambiente digital que facilite o acesso às in
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+A tela inicial do A.dota fornece aos usuários breves informações sobre a aplicação e os permitem fazer login ou cadastrar-se no sistema. Ao entrar no sistema, por login ou cadastro de nova conta, o adotante tem acesso a tela principal do site. Nesta tela estão presentes alguns vídeos, que podem ser assistidos dentro da própria plataforma - que também podem ser encontrados para melhor visualização na página "Vídeos" - e depoimentos de famílias que já passaram pela experiência da adoção. 
+
+A partir deste ponto, o usuário tem acesso a todas as funcionalidades do sistema: controle personalizado do processo (em "Perfil"), leis, notícias, vídeos, depoimentos, chat social, contato direto com a equipe, assitente pessoal (chatbot A.Lice) e muito mais. A navegação pela plataforma é simples e intuitiva.

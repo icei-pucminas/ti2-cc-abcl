@@ -251,7 +251,10 @@ Recebe atenção especial nesta parte da plataforma, a assistente pessoal da A.d
 Esta é a última tela do sistema A.dota. Nela são ofertadas algumas informações básicas sobre a plataforma, seu intuito e concepção, como mostra a imagem a seguir:
 ![Sobre](imagens/14.jpg "Sobre")
 
+
+
 **4. Modelagem de dados**
+
 Para o funcionamento da aplicação, foi necessário uma estrutura que comportasse os dados dos usuários e os respectivos processos pelos quais cada usuários passa até finalizar a adoção. Com esta finalidade, foi criada a base de dados que é conectada diretamente com o site da A.dota, tornando a interação do usuário com o sistema personalizada e funcional.
 
     4.1. Diagrama de Entidade-Relacionamento
@@ -276,7 +279,7 @@ Para desenvolvimento do ChatBot A.lice, sendo um Sistema Conversacional, foi uti
 
 A A.Lice foi desenvolvida a partir do Fluxo de Diálogo especificado pela equipe A.dota. A A.Lice conta com entradas de dados sobre adoção retirados de sites e consultas jurídicas, tais como o site do Tribunal Federal de Justiça. Dessa forma, é possível oferecer respostas plausíveis e bem fundamentadas.
 
-Para demonstrar o fluxo de diálogo entre o ChatBot implementado e o usuário, foi utilizada a ferramenta BotMock. Através dela foi possível simular uma conversa entre a A.Lice e um adotante. A imagem a seguir representa o fluxo proposto, entretanto, como a visualização pode ser comprometida devido às restrições da imagem, um pdf do mesmo se encontra nesta mesma pasta (https://github.com/icei-pucminas/ti2-cc-abcl/blob/master/documentacao/FluxoDeDialogo.pdf)
+Para demonstrar o fluxo de diálogo entre o ChatBot implementado e o usuário, foi utilizada a ferramenta BotMock. Através dela foi possível simular uma conversa entre a A.Lice e um adotante. A imagem a seguir representa o fluxo proposto. Caso tenham dificulade de visualização devido às restrições da imagem, um pdf do mesmo se encontra em: https://github.com/icei-pucminas/ti2-cc-abcl/blob/master/documentacao/FluxoDeDialogo.pdf
 
 ![Fluxo de diálogo](imagens/fluxoDialogo.png "Fluxo de diálogo")
 
@@ -289,28 +292,26 @@ A partir deste ponto foi possível criar, através da aplicação Microsoft Azur
 
 
 **6. Avaliação**
-<!-- Refazer. -->
-O processo de realização dos testes da solução foi desenvolvida fazendo o uso da metodologia “Rápida e Suja”, sendo essa uma forma simples e breve, porém eficaz, de realizar testes em uma aplicação, baseando-se na técnica de observação do usuário.
 
-<!-- Faça aqui sobre a avaliação do software. Indique se ele atendeu as expectativas e ele é viável. 
-Para não ficar subjetivo, o ideal é fazer um questionário e pedir ao usuário do processo que faça a avaliação. -->
+Os resgistros de teste foram efetuados seguindo uma lógica de escala, ou seja, os usuários deveriam responder para cada uma das partes que compõem a tabela abaixo, se a experiência foi ruim, razoável, boa, ótima ou excelente. O intuito era medir a satisfação dos adotantes e a facilidade de manuseio da plaforma A.dota.
 
-| Usuário       | Registro do resultado                             |
-| ------------- |:-------------------------------------------------:|
-| Usuário #1 ~ 50 anos | O resultado dos testes do sistema foram satisfatórios, com o usuário obtendo sucesso em quase todas as tarefas do sistema, tendo apenas dificuldades em saber quando fazer login ou quando cadastrar. |
-| Usuário #2 - menos de 20 anos | O teste obteve resultados satisfatórios. O usuário não apresentou nenhuma dificuldade em realizar o cadastro pelo site ou em responder o questionário, conseguindo compreender o que foi solicitado com clareza. |
-| Usuário #3 - entre 20 e 30 anos | O teste realizado obteve resultados positivos. O usuário foi capaz de realizar todo o procedimento necessário para ingressar ao sistema sem nenhuma dificuldade. |
-| Usuário #4 - entre 50 e 60 anos | O teste apresentou resultados positivos, mas o usuários teve certo impasse ao navegar pela primeira vez nas funcionalidades propostas pelo aplicativo, ficando com dúvidas de como prosseguir a navegação. No entanto, o usuário foi capaz de usufruir da aplicação. |
-| Usuário #5 - menos de 20 anos | O teste obteve resultados satisfatórios, o usuário foi capaz de realizar o cadastro e responder todo o questionário sem nenhuma dificuldade, compreendendo o objetivo proposto pela site. |
-| Usuário #6 - entre 20 e 30 anos | O teste obteve excelentes resultados. O usuário conseguiu realizar seu cadastro com clareza sem nenhuma dúvida. Elogiou o site e seu manejo e conseguiu realizar todas as funções pedidas. |
-| Usuário #7 ~ 50 anos | A utilização do site foi bem sucedida, tendo sido bem explicado o que fazer no cadastro e perguntas de fácil entendimento no questionário. |
-| Usuário #8 ~ 40 anos | O usuário realizou seus primeiros passos de maneira lenta mas depois se adaptou e entendeu como funcionava a plataforma e conseguiu de maneira clara realizar seu cadastro. Fez comentários positivos sobre o site e conseguiu navegar por ele sem dificuldades. |
+Como critérios, foram selecionadas as principais partes da plataforma. Cadastro e login no sistema, navegação geral, - facilidade de compreender e utilizar as páginas do sistema, tais como leis, vídeos, notícias e chat social - manutenção dos processos em andamento de acordo com cada usuário, a experiência com nossa assitente pessoal, A.Lice, e finalmente, uma avaliação da plataforma como um todo, contando como foi a utilização de forma geral. Os resultados obtidos estão descritos na tabela abaixo:
+
+| Usuários | Cadastro | Login | Navegação geral| Processos (perfil) | ChatBot | Avaliação final |
+| -------- |:--------:|:-----:|:--------------:|:------------------:|:-------:| ---------------:|
+| Usuário 01 | Excelente | Excelente | Excelente | Excelente | Excelente | O site esta muito bem estruturado e com um layout agradavel, gostei bastante |
+| Usuário 02 | Excelente | Excelente | Ótima | Excelente | Boa | Gostei do jeito como o site controla os processos |
+| Usuário 03 | Excelente | Excelente | Ótima | Excelente | Ótima | Gostei muito que a equipe desenvolveu um chatbot |
+| Usuário 04 | Excelente | Excelente | Excelente | Ótima | Boa | O sistema é bem interessante e de fácil manuseio. |
+| Usuário 05 | Excelente | Excelente | Excelente | Excelente | Ótima | A parte de notícias e a página de home do site estava bem organizado, muito interessante |
 
 **7. Conclusão**
 
 Ao fim deste projeto, a equipe A.dota se encontra satisfeita com os resultados obtidos durante e depois da realização do mesmo. Acreditamos que o tema "morosidade do sistema adotivo" é bastante pertinente e deve ser discutido, afinal, as maiores dificuldades dos adotantes são a falta de informação, descaso dos profissionais da área e a morosidade em si do Sistema Judiciário brasileiro. 
 
 O sistema A.dota, apesar de não atuar diretamente na agilidade de processamento do Judiciário, oferece aos usuários uma experiência personalizada que permite controlar a conclusão das etapas ao decorrer do processo e muito mais. É fonte de informação confiável vinda de diversas outras fontes seguras através de vídeos, depoimentos, acesso à leis, notícias atuais sobre o tema, a experiência de conversar com outros adotantes através do chat social, além de poder contatar nossa equipe e finalmente uma assistente pessoal 100% disponível para responder os questionamentos dos usuários: nosso chatbot, A.Lice.
+
+A experiência de desenvolvimento da plataforma A.dota exigiu do grupo conhecimentos prévios sobre desenvolvimento web, arquitetura de banco de dados e desenvolvimento de sistemas inteligentes. Alguns aspectos foram desafiadores, porém, o resultado final nos parece satisfatório. A equipe A.dota espera que a plataforma possa ser verdadeiramente útil a adotantes reais em sua jornada por uma família.
 
 
 **REFERÊNCIAS**

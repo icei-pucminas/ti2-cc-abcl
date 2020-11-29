@@ -1,15 +1,3 @@
-# adotapp2
-aplicação adotapp - TI2
+# A.dota
 
-LER ESSE "README" NO MODO DE EDIÇÃO PARA VISUALIZAR MELHOR
-
-Tela inicial do aplicativo está FEITA (index.html)
-
-Simulação do login e cadastro estão COMPLETAS (login.html e cadastro.html)
-  -> Ao clicar Fazer login ou o cadastro o usuário é levado para o painel inicial (home.html)
-  -> Ao clicar na logo do app ele volta pra pagina inicial (index.html)
-  
-Painel inicial precisa ter mudanças (home.html)
-  -> Alterar os nomes das partes dos gráficos
-  -> Pensar se vale ou não apena os blocos de texto embaixo dos gráficos
-    - Se não, remover eles
+A A.dota é uma plataforma para controle do processo adotivo, como já especificado anteriormente. Nela estão reunidos conhecimentos de desenvolvimento web, sistemas inteligentes e banco de dados de forma interligada. Sua estrutura básica é um site, hospedado pelo Heroku, no qual os usuários cadastrados tem suas informações gerenciadas através de um banco de dados e para melhorar a experiênia dos adotantes, foi implementado um ChatBot, de nome A.Lice, que responde as principais dúvidas sobre o processo adotivo.
