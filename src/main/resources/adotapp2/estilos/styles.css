@@ -373,9 +373,9 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.2;
 }
 
-h1, .h1 {
+/* h1, .h1 {
   font-size: 2.5rem;
-}
+} */
 
 h2, .h2 {
   font-size: 2rem;
@@ -4065,7 +4065,7 @@ input[type=button].btn-block {
     padding-left: 0;
   }
 }
-@media (min-width: 576px) {
+@media (min-width: 769px) {
   .navbar-expand-sm {
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -4096,6 +4096,8 @@ input[type=button].btn-block {
     display: none;
   }
 }
+
+
 @media (max-width: 767.98px) {
   .navbar-expand-md > .container,
 .navbar-expand-md > .container-fluid,
@@ -4107,7 +4109,7 @@ input[type=button].btn-block {
     padding-left: 0;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .navbar-expand-md {
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -10025,10 +10027,10 @@ hr.light {
   padding: 0.75rem 0;
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
-  color: #e040fb;
+  color: rgb(0, 119, 182);
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #e040fb !important;
+  color: rgb(0, 119, 182)!important;
 }
 @media (min-width: 992px) {
   #mainNav {
@@ -10081,6 +10083,78 @@ header.masthead {
 header.masthead h1 {
   font-size: 3rem;
 }
+
+
+@media (max-width: 419px){
+  header.masthead {
+    height: 100vh;
+    padding-top: 5px;
+    padding-bottom: 2pt;
+    margin-top: 60px;
+  }
+
+  header.masthead h1 {
+    font-size: 2rem;
+    opacity: 88%;
+  }
+  header.masthead .btn {
+    opacity: 88%;
+    width: 15rem;
+  }
+
+  header.masthead .p-bold {
+    opacity: 88%;
+    font-size: 12pt !important;
+  }
+  header.masthead .cadastrese{
+    color: white;
+    background-color: rgba(0, 119, 182, 0.3);
+    opacity: 100% !important;
+  }
+}
+
+@media (min-width: 420px) and (max-width: 569px){
+  header.masthead h1 {
+    font-size: 2rem;
+    opacity: 88%;
+  }
+  header.masthead .btn {
+    opacity: 88%;
+    width: 15rem;
+  }
+
+  header.masthead .p-bold {
+    opacity: 88%;
+    font-size: 12pt !important;
+  }
+  header.masthead .cadastrese{
+    color: white;
+    background-color: rgba(0, 119, 182, 0.3);
+    opacity: 100% !important;
+  }
+}
+
+@media (min-width: 570px) and (max-width: 799px){
+  header.masthead h1 {
+    font-size: 2rem;
+    opacity: 88%;
+  }
+  header.masthead .btn {
+    opacity: 88%;
+    width: 15rem;
+  }
+
+  header.masthead .p-bold {
+    opacity: 88%;
+    font-size: 12pt !important;
+  }
+  header.masthead .cadastrese{
+    color: white;
+    background-color: rgba(0, 119, 182, 0.3);
+    opacity: 100% !important;
+  }
+}
+
 @media (min-width: 992px) {
   header.masthead {
     height: 100vh;
@@ -10088,21 +10162,52 @@ header.masthead h1 {
     padding-top: 4.5rem;
     padding-bottom: 0;
   }
+  nav a{
+    font-size: 12pt !important;
+  }
+
   header.masthead p {
     opacity: 88%;
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
   header.masthead h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+  }
+
+  header.masthead .p-bold {
+    opacity: 88%;
+    font-size: 14pt !important;
+  }
+
+  header.masthead .btn {
+    opacity: 88%;
+    width: 15rem;
+    font-size: 26pt;
+  }
+  
+  section h2 {
+    font-size: 3rem !important;
+  }
+
+  section p {
+    font-size: 14pt !important;
+  }
+
+
+  header.masthead .cadastrese{
+    color: white;
+    background-color: rgba(0, 119, 182, 0.3);
+    opacity: 100% !important;
   }
 }
-@media (min-width: 1200px) {
+
+@media (min-width: 1365px){
   header.masthead h1 {
     font-size: 3rem;
   }
-  header.masthead p {
+  header.masthead .p-bold {
     opacity: 90%;
-    font-size: 1.5rem;
+    font-size: 1.2rem !important;
   }
 
 }
