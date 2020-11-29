@@ -527,6 +527,17 @@ border-radius: 15px;
 
 }
 
+.tem_que_aparecer{
+	display: none;
+}
+
+#logo{
+	width:70%;
+} important
+
+.sidebar-brand-icon{
+	align-items: center;
+}
 
 /*esconder etapas futuras*/
 
@@ -542,4 +553,80 @@ border-radius: 15px;
 	max-width: 100%;
 	text-align: center;
 	justify-content: center;
+}
+
+.some{
+	display: none;
+}
+
+@media (max-width: 900px){
+	#abelha{
+		display: none;
+	}
+	#titulo_principal{
+		display: none;
+	}
+	.descricao{
+		display: none;
+	}
+	p.card-text{
+		display: none;
+		text-align: center;
+	}
+	div.course-info{
+		display: none;
+		align-items: center;
+		align-content: center;
+	}
+	.esconder{
+		display: none;
+	}
+	h2.black{
+		display:none;
+	}
+	
+	h1.black.inicio{
+		font-size: xx-large;
+		text-align: center;
+		margin-top: 20px;
+	}
+	h2{ 
+		text-align: center; 
+		font-size: x-large;
+	} important
+	
+	p.black.inicio{
+		text-align: center;
+	}
+	.tem_que_sumir{
+		display: none;
+	}
+	div.cardProx_overlay h3{
+		display: none;
+	}
+	#nada{
+		font-size: xx-large;
+	}
+	h1.h3.mb-0.text-gray-800{
+		display: none;
+	} important
+	#inicio_nome{
+		margin: 0;
+	}
+	.tem_que_aparecer{
+		display: contents;
+	}
+}
+@media (max-width: 800px){
+	.btn{
+		display: none;
+	}
+	.some{
+		display:contents;
+		font-size: x-large;
+		text-align: center;
+	}
+	h2{
+		display: none;
+	}
 }
