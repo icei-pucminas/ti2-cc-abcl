@@ -1,7 +1,7 @@
 # A.DOTA
 
 
-**Anna Pugga Campos Rodrigues, anna.campos@sga.pucminas.br**
+**Anna Puga Campos Rodrigues, anna.campos@sga.pucminas.br**
 
 **Bárbara Luiza Freitas Carmo, babi.carmo@outlook.com**
 
