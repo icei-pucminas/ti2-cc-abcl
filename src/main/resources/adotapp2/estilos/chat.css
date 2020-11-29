@@ -15,6 +15,9 @@
     font-size: 2rem;
 }
 
+.logo{
+	width:100%;
+}
 .faq{
     text-align: end;
 }
@@ -51,3 +54,9 @@
     }
     
   }
+
+@media (max-width: 1000px){
+	.icon img{
+		display: none;
+	}
+}
