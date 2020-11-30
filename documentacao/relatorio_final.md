@@ -258,11 +258,11 @@ Esta é a última tela do sistema A.dota. Nela são ofertadas algumas informaç�
 Para o funcionamento da aplicação, foi necessário uma estrutura que comportasse os dados dos usuários e os respectivos processos pelos quais cada usuários passa até finalizar a adoção. Com esta finalidade, foi criada a base de dados que é conectada diretamente com o site da A.dota, tornando a interação do usuário com o sistema personalizada e funcional.
 
     4.1. Diagrama de Entidade-Relacionamento
-O diagrama abaixo ilustra a estrutura base para o funcionamento do nosso sistema. Nele podemos observar as entidades USUARIO e PROCESSO, que estão ligadas entre si por um relacionamento "realiza", de cardinalidade "1 para n". Dessa forma, um usuário pode realizar vários processos e um processo pode ser realizado por vários usuários.
+O diagrama abaixo ilustra a estrutura base para o funcionamento do nosso sistema. Nele podemos observar as entidades USUARIO e PROCESSO, que estão ligadas entre si por um relacionamento "realiza", de cardinalidade "n para 1". Dessa forma, um usuário pode realizar vários processos, porém um de cada vez, e um processo pode ser realizado por vários usuários simultaneamente.
 
-As entidades PROCESSO e USUARIO estão representadas pelos retângulos. Seus respectivos atributos estão sendo representados pelas pequenas bolas coloridas, sendo que, as com preenchimento azul representam chaves primárias, as com preenchimento verde representam chaves estrangeiras e as sem preenchimento representam atributos normais. O relacionamento "Realiza" (1,n) é representado pelo losango.
+As entidades PROCESSO e USUARIO estão representadas pelos retângulos. Seus respectivos atributos estão sendo representados pelas pequenas bolas coloridas, sendo que, a com preenchimento azul representa uma chave primária, a com preenchimento verde representa uma chave primária que também é chave estrangeira e as sem preenchimento representam atributos normais. O relacionamento "Realiza" (n,1) é representado pelo losango.
 
-![Diagrama de Entidade Relacionamento](imagens/diagramaER.png "Diagrama de Entidade Relacionamento")
+![Diagrama de Entidade Relacionamento](imagens/diagrama.png "Diagrama de Entidade Relacionamento")
 
 
 **5. Serviços inteligentes**
