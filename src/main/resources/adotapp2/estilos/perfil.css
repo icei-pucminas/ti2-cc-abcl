@@ -632,6 +632,9 @@ border-radius: 15px;
 	#nada{
 		font-size: 20pt;
 	}
+	h1{
+		font-size: 16pt;
+	}
 }
 
 @media (max-width: 760px){
