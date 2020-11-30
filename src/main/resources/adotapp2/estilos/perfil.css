@@ -495,6 +495,9 @@ border-radius: 15px;
 	z-index: 99999999;
 }
 
+.quebra{
+	display: none;
+}
 /*BLOQUEAR*/
 .embaixo{
 	position: relative;
@@ -566,9 +569,9 @@ border-radius: 15px;
 	#titulo_principal{
 		display: none;
 	}
-	.descricao{
+	/*.descricao{
 		display: none;
-	}
+	} */
 	p.card-text{
 		display: none;
 		text-align: center;
@@ -618,9 +621,6 @@ border-radius: 15px;
 	}
 }
 @media (max-width: 800px){
-	.btn{
-		display: none;
-	}
 	.some{
 		display:contents;
 		font-size: x-large;
@@ -628,5 +628,8 @@ border-radius: 15px;
 	}
 	h2{
 		display: none;
+	}
+	.quebra{
+		display: inline;
 	}
 }
