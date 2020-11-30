@@ -558,12 +558,12 @@ border-radius: 15px;
 	justify-content: center;
 }
 
-.some{
-	display: none;
+.course-preview a{
+	cursor: pointer;
 }
 
-@media (max-width: 900px){
-	#abelha{
+/* @media (max-width: 900px){
+	/* #abelha{
 		display: none;
 	}
 	#titulo_principal{
@@ -571,7 +571,7 @@ border-radius: 15px;
 	}
 	/*.descricao{
 		display: none;
-	} */
+	} 
 	p.card-text{
 		display: none;
 		text-align: center;
@@ -618,16 +618,23 @@ border-radius: 15px;
 	}
 	.tem_que_aparecer{
 		display: contents;
+	} 
+} */
+
+@media (max-width: 500px){
+	h2{
+		font-size: 18pt;
+	}
+	#nada{
+		font-size: 20pt;
 	}
 }
-@media (max-width: 800px){
-	.some{
-		display:contents;
-		font-size: x-large;
-		text-align: center;
-	}
-	h2{
+
+@media (max-width: 760px){
+	div.course-info{
 		display: none;
+		align-items: center;
+		align-content: center;
 	}
 	.quebra{
 		display: inline;
