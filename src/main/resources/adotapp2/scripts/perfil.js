@@ -5,7 +5,8 @@ onload = () => {
 }
 
 
-function atualizarStatus() {
+function atualizarStatus(){
+	$("#continuar").prop('disabled', true)
 	let user = JSON.parse(localStorage.getItem('usuario_ativo'))
 	let req = new XMLHttpRequest;
 	req.open("post", "/processos/update", false);
@@ -37,6 +38,7 @@ function info_() {
 		"processo_ativo": dados.processo_ativo
 	}
 	localStorage.setItem('usuario_ativo', JSON.stringify(filtrado));
+	document.getElementById('continuar').classList.remove('disabled')
 	// location.href = "./home.html";
 }
 

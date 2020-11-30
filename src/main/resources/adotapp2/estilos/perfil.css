@@ -621,12 +621,19 @@ border-radius: 15px;
 	} 
 } */
 
+#continuar:disabled{
+	color: #ccc;
+}
+
 @media (max-width: 500px){
 	h2{
-		font-size: 18pt;
+		font-size: 14pt;
 	}
 	#nada{
 		font-size: 20pt;
+	}
+	h1{
+		font-size: 16pt;
 	}
 }
 
